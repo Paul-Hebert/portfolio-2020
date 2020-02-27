@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev:content": "npx @11ty/eleventy --watch --serve",
-    "dev": "npm-run-all dev:*"
+    "dev:sass-init": "node-sass src -o dist",
+    "dev:sass-watch": "node-sass src -o dist -w",
+    "dev": "run-p dev:*"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "homepage": "https://github.com/Paul-Hebert/portfolio-2020#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5"
   }
 }
