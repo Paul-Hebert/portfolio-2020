@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev:content": "npx @11ty/eleventy --watch --serve",
-    "dev:sass-init": "node-sass src -o dist",
-    "dev:sass-watch": "node-sass src -o dist -w",
+    "dev:sass-init": "node-sass src/assets/styles -o src/assets/styles/compiled",
+    "dev:sass-watch": "node-sass src/assets/styles -o src/assets/styles/compiled -w",
     "dev": "run-p dev:*"
   },
   "repository": {
