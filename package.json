@@ -4,11 +4,18 @@
   "description": "A redesign  of my portfolio site",
   "main": "index.js",
   "scripts": {
+    "dev:clean": "del-cli dist",
     "dev:content": "npx @11ty/eleventy --watch --serve",
     "dev:sass-init": "node-sass src/assets/styles -o dist/assets/styles",
     "dev:sass-watch": "node-sass src/assets/styles -o dist/assets/styles -w",
-    "dev:rollup-watch": "rollup --config --watch",
-    "dev": "run-p dev:*"
+    "dev:rollup": "rollup --config --watch",
+    "start": "run-p dev:*",
+
+    "build:clean": "del-cli dist",
+    "build:content": "npx @11ty/eleventy",
+    "build:sass": "node-sass src/assets/styles -o dist/assets/styles",
+    "build:rollup": "rollup --config",
+    "build": "run-p build:*"
   },
   "repository": {
     "type": "git",
@@ -22,6 +29,7 @@
   "homepage": "https://github.com/Paul-Hebert/portfolio-2020#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "del-cli": "^3.0.0",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
     "rollup": "^1.32.0"
