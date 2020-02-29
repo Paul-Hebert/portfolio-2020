@@ -1,10 +1,9 @@
-const rootPath = "src/assets/scripts";
-const fileName = "index.js";
+const fileName = "assets/scripts/index.js";
 
 module.exports = {
-  input: `${rootPath}/${fileName}`,
+  input: `src/${fileName}`,
   output: {
-    file: `${rootPath}/compiled/${fileName}`,
+    file: `dist/${fileName}`,
     format: "iife"
   }
 };

@@ -105,7 +105,3 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
-
-# Compiled Artifacts
-src/assets/styles/compiled/*.css
-src/assets/scripts/compiled/*.js

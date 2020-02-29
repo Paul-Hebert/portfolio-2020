@@ -1,6 +1,5 @@
 module.exports = eleventyConfig => {
-  eleventyConfig.addPassthroughCopy("src/assets/scripts/compiled/index.js");
-  eleventyConfig.addPassthroughCopy("src/assets/styles/compiled/index.css");
+  eleventyConfig.addWatchTarget("./src/assets/");
 
   return {
     dir: {

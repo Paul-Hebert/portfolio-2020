@@ -1,5 +1,5 @@
 const testRollup = () => {
-  console.log("JS ran");
+  console.log("JS ran, yo!");
 };
 
 testRollup();
