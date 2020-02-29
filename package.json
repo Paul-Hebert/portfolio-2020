@@ -4,18 +4,19 @@
   "description": "A redesign  of my portfolio site",
   "main": "index.js",
   "scripts": {
-    "dev:clean": "del-cli dist",
+    "shared:clean": "del-cli dist",
+    "shared:sass-init": "node-sass src/assets/styles -o dist/assets/styles",
+
     "dev:content": "npx @11ty/eleventy --watch --serve",
-    "dev:sass-init": "node-sass src/assets/styles -o dist/assets/styles",
     "dev:sass-watch": "node-sass src/assets/styles -o dist/assets/styles -w",
     "dev:rollup": "rollup --config --watch",
-    "start": "run-p dev:*",
+
+    "start": "run-p {shared,dev}:*",
 
     "build:clean": "del-cli dist",
     "build:content": "npx @11ty/eleventy",
-    "build:sass": "node-sass src/assets/styles -o dist/assets/styles",
     "build:rollup": "rollup --config",
-    "build": "run-p build:*"
+    "build": "run-p {shared,build}:*"
   },
   "repository": {
     "type": "git",
