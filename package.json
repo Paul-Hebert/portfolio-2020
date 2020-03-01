@@ -7,7 +7,7 @@
     "shared:clean": "del-cli dist",
     "shared:sass-init": "node-sass src/assets/styles -o dist/assets/styles",
 
-    "dev:content": "npx @11ty/eleventy --watch --serve",
+    "dev:content": "npx @11ty/eleventy --watch --serve --quiet",
     "dev:sass-watch": "node-sass src/assets/styles -o dist/assets/styles -w",
     "dev:rollup": "rollup --config --watch",
 
