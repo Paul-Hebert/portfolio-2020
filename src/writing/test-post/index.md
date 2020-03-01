@@ -1,8 +1,5 @@
 ---
 title: Test Post
-labels:
-  - design
-  - development
 dateString: 02-29-2020
 ---
 
