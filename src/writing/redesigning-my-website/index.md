@@ -30,9 +30,15 @@ well it represents _me_ as a person.
 I'd like to inject more personality into the site through illustration, 
 typography, animation, and interaction.
 
+## Adding Another Layer of Polish
+
+I've learned a lot about design since I built my previous site. In addition to
+injecting more of my personality into the site, I hope that this redesign can
+take the site to the next level in terms of design: from good to great!
+
 ## Adding a Blog
 
-At [Cloud Four](https://cloudfour.com/) I've had the opportunity to start 
+At i[Cloud Four](https://cloudfour.com/) I've had the opportunity to start 
 blogging professionally and I've found that I really enjoyed it. With my old
 site I had published a [couple](link to web colors) [articles](link to logo post)
 but they were always 1-offs, and there wasn't a good structure for regular 
@@ -43,11 +49,19 @@ easily write and share my thoughts. I wanted these blog posts to shine with pure
 text content but also allow custom visualizations and interactions to complement
 my writing.
 
-## Adding Another Layer of Polish
+## Highlighting Open Source Contributions
 
-I've learned a lot about design since I built my previous site. In addition to
-injecting more of my personality into the site, I hope that this redesign can
-take the site to the next level in terms of design: from good to great!
+At [Cloud Four](https://cloudfour.com/) I've also had the opportunity to 
+contribute to a variety of open source projects. It's important to me to give
+back to the open source community that has helped me to learn and grow, and I'd
+like to highlight how I've been able to contribute over the years.
+
+## Adding a Place for Art
+
+When I was a teen I wanted to be a professional artist. This is what got me into
+design which snowballed into an interest in web development. I still enjoy
+making art, though I don't have as much time for it as I once did. I wanted a
+place to showcase this art and hoped that it would encourage me to draw more!
 
 ## Moving to a New Tech Stack
 
@@ -70,5 +84,8 @@ writing blog posts to document the process.
 Hopefully these will be links soon ;)
 
 - Keeping things simple with Eleventy, SASS, and Rollup
-- Redesigning my professional identity and brand
+- Using Moodboards and Style Tiles to Create a New Identity
+- Designing a New Color Scheme
+- Picking Typefaces for My Website Redesign
+- Incorporating Illustration Into My Portfolio
 - And more!!

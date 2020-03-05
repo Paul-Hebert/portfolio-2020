@@ -3,3 +3,27 @@ title: Work
 ---
 
 This is the work page
+
+<h2>
+  Open Source Contributions
+</h2>
+
+<ul>
+  {{#each openSource}}
+  <li>
+    <h3>{{this.title}}</h3>
+
+    <div>{{this.description}}</div>
+
+    <div>Role: {{this.role}}</div>
+
+    <ul>
+      {{#each this.links}}
+      <li>
+        <a href="{{this.url}}">{{this.title}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Eleventy Patterns",
+    "description": "TODO",
+    "role": "Primary Contributor",
+    "links": [
+      {
+        "title": "Github",
+        "url": "https://github.com/cloudfour/eleventy-patterns"
+      }
+    ]
+  },
+  {
+    "title": "Transition Hidden Element",
+    "role": "Primary Contributor",
+    "description": "TODO",
+    "links": [
+      {
+        "title": "Github",
+        "url": "https://github.com/cloudfour/transition-hidden-element/"
+      },
+      {
+        "title": "npm",
+        "url": "https://www.npmjs.com/package/@cloudfour/transition-hidden-element"
+      }
+    ]
+  }
+]
