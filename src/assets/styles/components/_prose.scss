@@ -1,13 +1,45 @@
 @use "../base/scale.scss";
+@import "../base/_config.scss";
 
 .prose {
-  width: 60ch;
-}
+  max-width: $prose-width;
 
-.prose * {
-  line-height: 1.4;
-}
+  // Space items vertically in prose blocks
+  > * + * {
+    margin-top: scale.step(-1);
+  }
 
-.prose > * + * {
-  margin-top: scale.step(-1);
+  // Set default styles for non-heading text content.
+  p,
+  ul,
+  ol {
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.2;
+  }
+
+  // TODO: Heading sizes should go down a step on small screens
+  h1 {
+    font-size: scale.step(3);
+  }
+
+  h2 {
+    font-size: scale.step(2);
+  }
+
+  // I don't anticipate needing level 5 or 6 headings. If I do this will need to
+  // be revisited.
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: scale.step(1);
+  }
 }
