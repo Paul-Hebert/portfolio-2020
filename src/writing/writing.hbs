@@ -1,5 +1,6 @@
 ---
 title: Writing
+layout: layouts/base.hbs
 ---
 
 This is the writing page
@@ -7,16 +8,16 @@ This is the writing page
 <ul>
   {{!-- TODO: Sort by date --}}
   {{#each collections.writing}}
-    <li>
-      {{#if data.isExternal}}
-        <a href="{{data.externalUrl}}">
-          {{data.title}} — Written for {{data.externalName}} — {{data.dateString}}
-        </a>
-      {{else}}
-        <a href="{{url url}}">
-          {{data.title}} — {{data.dateString}}
-        </a>
-      {{/if}}
-    </li>
+  <li>
+    {{#if data.isExternal}}
+    <a href="{{data.externalUrl}}">
+      {{data.title}} — Written for {{data.externalName}} — {{data.dateString}}
+    </a>
+    {{else}}
+    <a href="{{url url}}">
+      {{data.title}} — {{data.dateString}}
+    </a>
+    {{/if}}
+  </li>
   {{/each}}
 </ul>
