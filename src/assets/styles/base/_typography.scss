@@ -1,3 +1,17 @@
+// TODO: Optimize font loading strategy
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
 body {
+  font-family: "Roboto", sans-serif;
   font-size: scale.step(0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
 }

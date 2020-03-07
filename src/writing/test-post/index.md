@@ -10,7 +10,7 @@ This is a _test_ **post** used for building out the blog section of my site.
 > It uses a number of different markdown features.
 
 ```js
-  console.log("For example, here's some code!");
+console.log("For example, here's some code!");
 ```
 
 ## Subheadings
@@ -20,3 +20,15 @@ This is a _test_ **post** used for building out the blog section of my site.
 
 1. Unordered
 2. and ordered
+
+# This is a main heading (h1)
+
+## This is a main heading (h2)
+
+### This is a main heading (h3)
+
+#### This is a main heading (h4)
+
+##### This is a main heading (h5)
+
+###### This is a main heading (h6)
