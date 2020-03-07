@@ -4,15 +4,15 @@
   "description": "A redesign  of my portfolio site",
   "main": "index.js",
   "scripts": {
-    "shared:clean": "del-cli dist",
+    "dev:clean": "del-cli dist",
     "dev:content": "npx @11ty/eleventy --watch --serve --quiet",
     "dev:rollup": "rollup --config --watch",
     "dev:sass": "sass src/assets/styles:dist/assets/styles --watch",
-    "start": "run-p {shared,dev}:*",
+    "start": "run-p dev:*",
     "build:content": "npx @11ty/eleventy",
     "build:rollup": "rollup --config",
     "build:sass": "sass src/assets/styles:dist/assets/styles",
-    "build": "run-p {shared,build}:*"
+    "build": "run-p build:*"
   },
   "repository": {
     "type": "git",
