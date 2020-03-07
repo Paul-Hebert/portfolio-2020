@@ -1,6 +1,11 @@
 @use "base/scale.scss";
-@import "base/_reset.scss";
 
-body {
-  padding: scale.step(3);
-}
+@import "base/_config.scss";
+
+@import "base/_reset.scss";
+@import "base/_typography.scss";
+
+@import "components/_prose.scss";
+@import "components/layout/_footer.scss";
+@import "components/layout/_header.scss";
+@import "components/layout/_main.scss";

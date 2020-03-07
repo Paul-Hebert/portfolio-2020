@@ -19,6 +19,11 @@ select {
   font: inherit;
 }
 
+html,
+body {
+  min-height: 100%;
+}
+
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {

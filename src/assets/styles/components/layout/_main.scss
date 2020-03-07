@@ -1,0 +1,6 @@
+@use "../../base/scale.scss";
+
+.main {
+  flex-grow: 1 1 auto;
+  padding: $base-padding;
+}

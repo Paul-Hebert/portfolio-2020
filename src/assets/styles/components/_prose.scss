@@ -1,0 +1,13 @@
+@use "../base/scale.scss";
+
+.prose {
+  width: 60ch;
+}
+
+.prose * {
+  line-height: 1.4;
+}
+
+.prose > * + * {
+  margin-top: scale.step(-1);
+}
