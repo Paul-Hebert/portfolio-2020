@@ -1,9 +1,10 @@
 // TODO: Optimize font loading strategy
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
 
+// Scale up our core font size as the screen size increases.
 body {
   font-family: "Roboto", sans-serif;
-  font-size: scale.step(0);
+  font-size: calc(1em + 0.25vw);
 }
 
 h1,
