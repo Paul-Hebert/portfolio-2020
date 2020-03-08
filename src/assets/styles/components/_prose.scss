@@ -34,12 +34,15 @@
     font-size: scale.step(2);
   }
 
+  h3 {
+    font-size: scale.step(2);
+  }
+
   // I don't anticipate needing level 5 or 6 headings. If I do this will need to
   // be revisited.
-  h3,
   h4,
   h5,
   h6 {
-    font-size: scale.step(1);
+    font-size: scale.step(0);
   }
 }
