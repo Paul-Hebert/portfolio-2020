@@ -60,13 +60,14 @@ header a {
   &::before {
     background-color: $color-interactive-alternate;
     content: "";
-    height: 100%;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     transform: scale(1, 0.1);
     transform-origin: bottom;
     transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+    top: 0;
     z-index: -1;
   }
 
@@ -75,4 +76,25 @@ header a {
     // TODO: Can I make this look good while maintaining color contrast standards?
     opacity: 0.35;
   }
+
+  // TODO: Focus styles
+}
+
+$nav-link-padding: scale.step(-3);
+$nav-link-margin: scale.step(-1);
+
+nav a,
+header a {
+  display: inline-block;
+  padding: $nav-link-padding 0;
+  text-align: center;
+
+  &::before {
+    bottom: $nav-link-padding;
+    top: $nav-link-padding;
+  }
+}
+
+nav a + a {
+  margin-left: $nav-link-margin;
 }
