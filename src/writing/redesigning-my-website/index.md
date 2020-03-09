@@ -13,8 +13,8 @@ feel that my portfolio is designed and developed with the same thought and care
 that I put into my work with [Cloud Four](https://cloudfour.com/).
 
 Because of this I've redesigned my portfolio a few times over the years. The
-latest iteration was from 2016 (about 4 years old at the time of this writing). 
-Reviewing the site now, there are a handful of areas where there are clear 
+latest iteration was from 2016 (about 4 years old at the time of this writing).
+Reviewing the site now, there are a handful of areas where there are clear
 opportunities for improvement.
 
 [Screenshot]
@@ -23,11 +23,11 @@ opportunities for improvement.
 
 When I built the current version of my portfolio I was getting ready to graduate
 college, freelancing, and looking for a professional gig. I was doing everything
-I could to look more like  "professional" and looking back at my portfolio now 
-it shows. There's a lot I still like about my portfolio but I'm not sure how 
+I could to look more like "professional" and looking back at my portfolio now
+it shows. There's a lot I still like about my portfolio but I'm not sure how
 well it represents _me_ as a person.
 
-I'd like to inject more personality into the site through illustration, 
+I'd like to inject more personality into the site through illustration,
 typography, animation, and interaction.
 
 ## Adding Another Layer of Polish
@@ -38,10 +38,10 @@ take the site to the next level in terms of design: from good to great!
 
 ## Adding a Blog
 
-At i[Cloud Four](https://cloudfour.com/) I've had the opportunity to start 
+At [Cloud Four](https://cloudfour.com/) I've had the opportunity to start
 blogging professionally and I've found that I really enjoyed it. With my old
 site I had published a [couple](link to web colors) [articles](link to logo post)
-but they were always 1-offs, and there wasn't a good structure for regular 
+but they were always 1-offs, and there wasn't a good structure for regular
 writing.
 
 One of my priorities in redesigning my site was to add a place where I could
@@ -51,7 +51,7 @@ my writing.
 
 ## Highlighting Open Source Contributions
 
-At [Cloud Four](https://cloudfour.com/) I've also had the opportunity to 
+At [Cloud Four](https://cloudfour.com/) I've also had the opportunity to
 contribute to a variety of open source projects. It's important to me to give
 back to the open source community that has helped me to learn and grow, and I'd
 like to highlight how I've been able to contribute over the years.
@@ -67,9 +67,9 @@ place to showcase this art and hoped that it would encourage me to draw more!
 
 I could technically achieve the goals described above without a full redesign of
 my current site. However, over the last 4 years the tools I enjoy using and feel
-comfortable with have changed a lot. 
+comfortable with have changed a lot.
 
-At the time I was writing a lot of PHP back-ends, while these days I write 
+At the time I was writing a lot of PHP back-ends, while these days I write
 almost exclusively Node apps. The last few years have also seen a huge rise in
 quality tooling for building static sites. I wanted to move to static site
 generation with Node, and hoped that switching to a tech stack I preferred would
@@ -79,7 +79,7 @@ portfolio stagnate for years at a time.
 ## The Next Steps
 
 As I work through the process of redesigning and rebuilding my portfolio I'll be
-writing blog posts to document the process. 
+writing blog posts to document the process.
 
 Hopefully these will be links soon ;)
 
