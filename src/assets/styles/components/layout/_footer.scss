@@ -5,13 +5,6 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: $base-padding;
-}
-
-.footer__message {
-  font-size: scale.step(-1);
-  flex-basis: $prose-width;
-  flex-shrink: 0;
-  max-width: 100%;
 }

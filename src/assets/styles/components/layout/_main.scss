@@ -2,5 +2,6 @@
 
 .main {
   flex-grow: 2;
-  padding: $base-padding;
+  // TODO: On large screens let's pad this more
+  padding: 0 $base-padding;
 }
