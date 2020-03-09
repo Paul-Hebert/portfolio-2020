@@ -1,0 +1,26 @@
+@import "../_config.scss";
+
+// This isn't being imported properly...
+@mixin text-link {
+  color: $color-interactive;
+  text-decoration: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: $color-interactive-alternate;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: scale(1, 0.1);
+    transform-origin: bottom;
+    transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    transform: scale(1.05, 1.05);
+    opacity: 0.5;
+  }
+}

@@ -1,4 +1,6 @@
+@use "sass:color";
 @use "../base/scale.scss";
+@use "../base/mixins/link.scss";
 @import "../base/_config.scss";
 
 .prose {
@@ -44,5 +46,33 @@
   h5,
   h6 {
     font-size: scale.step(0);
+  }
+}
+
+// TODO: Make this a mixin to use in both places. I started this but it wasn't working...
+.prose a,
+nav a,
+header a {
+  color: $color-interactive;
+  text-decoration: none;
+  position: relative;
+
+  &::before {
+    background-color: $color-interactive-alternate;
+    content: "";
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: scale(1, 0.1);
+    transform-origin: bottom;
+    transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    transform: scale(1.05, 1.2) translateY(5%) rotate(-1.5deg);
+    // TODO: Can I make this look good while maintaining color contrast standards?
+    opacity: 0.35;
   }
 }
