@@ -56,6 +56,7 @@ header a {
   color: $color-interactive;
   text-decoration: none;
   position: relative;
+  transition: color 0.15s ease-out;
 
   &::before {
     background-color: $color-interactive-alternate;
@@ -71,10 +72,14 @@ header a {
     z-index: -1;
   }
 
-  &:hover::before {
-    transform: scale(1.05, 1.2) translateY(5%) rotate(-1.5deg);
-    // TODO: Can I make this look good while maintaining color contrast standards?
-    opacity: 0.35;
+  &:hover {
+    color: $color-interactive-active;
+
+    &::before {
+      transform: scale(1.05, 1.2) translateY(5%) rotate(-1.5deg);
+      // TODO: Can I make this look good while maintaining color contrast standards?
+      opacity: 0.6;
+    }
   }
 
   // TODO: Focus styles
