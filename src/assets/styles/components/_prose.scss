@@ -1,6 +1,5 @@
-@use "sass:color";
 @use "../base/scale.scss";
-@use "../base/mixins/link.scss";
+@import "../base/mixins/text-link.scss";
 @import "../base/_config.scss";
 
 .prose {
@@ -49,57 +48,6 @@
   }
 }
 
-// TODO: Make this a mixin to use in both places. I started this but it wasn't working...
-.prose a,
-nav a,
-header a {
-  color: $color-interactive;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.15s ease-out;
-
-  &::before {
-    background-color: $color-interactive-alternate;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transform: scale(1, 0.1);
-    transform-origin: bottom;
-    transition: transform 0.15s ease-out, opacity 0.15s ease-out;
-    top: 0;
-    z-index: -1;
-  }
-
-  &:hover {
-    color: $color-interactive-active;
-
-    &::before {
-      transform: scale(1.05, 1.2) translateY(5%) rotate(-1.5deg);
-      // TODO: Can I make this look good while maintaining color contrast standards?
-      opacity: 0.6;
-    }
-  }
-
-  // TODO: Focus styles
-}
-
-$nav-link-padding: scale.step(-3);
-$nav-link-margin: scale.step(-1);
-
-nav a,
-header a {
-  display: inline-block;
-  padding: $nav-link-padding 0;
-  text-align: center;
-
-  &::before {
-    bottom: $nav-link-padding;
-    top: $nav-link-padding;
-  }
-}
-
-nav a + a {
-  margin-left: $nav-link-margin;
+.prose a {
+  @include text-link();
 }

@@ -1,26 +1,34 @@
+@use "sass:color";
 @import "../_config.scss";
 
-// This isn't being imported properly...
 @mixin text-link {
   color: $color-interactive;
   text-decoration: none;
   position: relative;
+  transition: color 0.15s ease-out;
 
   &::before {
-    content: "";
     background-color: $color-interactive-alternate;
-    height: 100%;
+    content: "";
     position: absolute;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     transform: scale(1, 0.1);
     transform-origin: bottom;
     transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+    top: 0;
     z-index: -1;
   }
 
-  &:hover::before {
-    transform: scale(1.05, 1.05);
-    opacity: 0.5;
+  &:hover {
+    color: $color-interactive-active;
+
+    &::before {
+      transform: scale(1.05, 1.2) translateY(5%) rotate(-1.5deg);
+      opacity: 0.6;
+    }
   }
+
+  // TODO: Focus styles
 }

@@ -10,3 +10,6 @@ $color-dark-alternate: hsla(199, 95%, 15%, 95%);
 $color-interactive: hsl(199, 100%, 32%);
 $color-interactive-active: hsl(199, 100%, 27%);
 $color-interactive-alternate: hsl(19, 65%, 85%);
+
+$nav-link-padding: scale.step(-3);
+$nav-link-margin: scale.step(-1);

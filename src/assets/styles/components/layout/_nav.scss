@@ -1,0 +1,18 @@
+@use "../../base/scale.scss";
+@import "../../base/mixins/text-link.scss";
+
+.nav a {
+  @include text-link();
+  display: inline-block;
+  padding: $nav-link-padding 0;
+  text-align: center;
+
+  &::before {
+    bottom: $nav-link-padding;
+    top: $nav-link-padding;
+  }
+}
+
+.nav a + a {
+  margin-left: $nav-link-margin;
+}
