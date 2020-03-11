@@ -8,7 +8,7 @@
   transition: color 0.15s ease-out;
 
   &::before {
-    background-color: $color-interactive-alternate;
+    background-color: $color-accent;
     content: "";
     position: absolute;
     bottom: 0;
