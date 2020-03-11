@@ -1,17 +1,24 @@
 ---
-title: Test Post
-dateString: 02-29-2020
+title: Typography
 ---
 
-# Test Post
+<div class="prose">
 
-This is a _test_ **post** used for building out the blog section of my site.
+# Typography
+
+Here are some typographic specimens for testing typography changes:
+
+---
+
+This is a _test_ **page** used for testing the typography of my site.
 
 > It uses a [number of different markdown features](http://google.com).
 
 ```js
-console.log("For example, here's some code!");
+console.log("For example, here's a code block!");
 ```
+
+And here's some `inline code`!
 
 ## Subheadings
 
@@ -32,3 +39,5 @@ console.log("For example, here's some code!");
 ##### This is a main heading (h5)
 
 ###### This is a main heading (h6)
+
+</div>

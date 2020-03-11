@@ -9,7 +9,7 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addCollection("styleGuide", function(collection) {
-    return collection.getFilteredByGlob("src/style-guide/*/*.hbs");
+    return collection.getFilteredByGlob("src/style-guide/*/*.{hbs,md}");
   });
 
   return {
