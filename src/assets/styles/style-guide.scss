@@ -7,15 +7,17 @@
   padding: scale.step(1);
   display: flex;
   flex-wrap: wrap;
+  justify-content: stretch;
 }
 
 .color-block {
   align-items: center;
   display: flex;
   justify-content: center;
-  width: scale.step(9);
-  height: scale.step(9);
   padding: scale.step(1);
+  min-width: scale.step(9);
+  height: scale.step(6);
+  flex-grow: 1;
 }
 
 .color-block--hue-main {
@@ -56,6 +58,8 @@
 
 .color-block__inner {
   background: #fff;
+  font-family: $font-code;
   padding: scale.step(-4);
   font-size: scale.step(-2);
+  transform: rotate(-3deg);
 }
