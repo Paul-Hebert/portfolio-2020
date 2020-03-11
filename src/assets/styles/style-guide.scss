@@ -18,6 +18,14 @@
   padding: scale.step(1);
 }
 
+.color-block--hue-main {
+  background: hsl($hue-main, 100%, 50%);
+}
+
+.color-block--hue-complementary {
+  background: hsl($hue-complementary, 100%, 50%);
+}
+
 .color-block--light {
   background: $color-light;
 }
