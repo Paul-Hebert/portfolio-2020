@@ -1,0 +1,26 @@
+---
+title: Identity
+---
+
+<div class="prose">
+  <h1>Identity</h1>
+
+  <p>
+    Since it's only me working on my portfolio I didn't feel the need for a
+    full-blown design system or pattern library. However I did want a playground
+    where I could quickly see how style changes would ripple out throughout the site.
+  </p>
+
+  <p>
+    In order to do that I made a few identity pages where I can review color palettes,
+    typographic specimens and the like.
+  </p>
+
+  <ul>
+    {{#each collections.styleGuide}}
+    <li>
+      <a href="{{url url}}">{{data.title}}</a>
+    </li>
+    {{/each}}
+  </ul>
+</div>

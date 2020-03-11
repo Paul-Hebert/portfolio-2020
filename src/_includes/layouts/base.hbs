@@ -12,6 +12,10 @@
   <!-- TODO: Favicon -->
 
   <link rel="stylesheet" href="/assets/styles/index.css">
+
+  {{#each stylesheets}}
+  <link rel="stylesheet" href="/assets/styles/{{this}}.css">
+  {{/each}}
 </head>
 
 <body class="page">
