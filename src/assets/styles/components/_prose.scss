@@ -55,4 +55,8 @@
   blockquote {
     @include block-quote();
   }
+
+  code {
+    font-family: $font-code;
+  }
 }
