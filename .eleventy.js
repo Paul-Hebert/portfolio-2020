@@ -4,8 +4,12 @@ module.exports = eleventyConfig => {
   // by node-sass and rollup.
   eleventyConfig.addWatchTarget("./src/assets/");
 
-  eleventyConfig.addCollection('writing', function(collection) {
-    return collection.getFilteredByGlob('src/writing/*/*.md');
+  eleventyConfig.addCollection("writing", function(collection) {
+    return collection.getFilteredByGlob("src/writing/*/*.md");
+  });
+
+  eleventyConfig.addCollection("styleGuide", function(collection) {
+    return collection.getFilteredByGlob("src/style-guide/*/*.{hbs,md}");
   });
 
   return {

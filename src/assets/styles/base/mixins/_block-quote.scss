@@ -6,6 +6,7 @@
   color: $color-mid;
   font-family: $font-display;
   font-style: italic;
-  padding-left: scale.step(-1);
+  padding: scale.step(-5) scale.step(-1);
+  padding-right: 0;
   position: relative;
 }

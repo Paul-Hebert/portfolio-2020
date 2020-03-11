@@ -1,0 +1,53 @@
+@use "base/scale.scss";
+@import "base/_config.scss";
+
+.color-block-wrapper {
+  background: #fff;
+  margin-top: scale.step(1);
+  padding: scale.step(1);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-block {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: scale.step(9);
+  height: scale.step(9);
+  padding: scale.step(1);
+}
+
+.color-block--light {
+  background: $color-light;
+}
+
+.color-block--dark {
+  background: $color-dark;
+}
+
+.color-block--dark-alternate {
+  background: $color-dark-alternate;
+}
+
+.color-block--mid {
+  background: $color-mid;
+}
+
+.color-block--interactive {
+  background: $color-interactive;
+}
+
+.color-block--interactive-active {
+  background: $color-interactive-active;
+}
+
+.color-block--accent {
+  background: $color-accent;
+}
+
+.color-block__inner {
+  background: #fff;
+  padding: scale.step(-4);
+  font-size: scale.step(-2);
+}
