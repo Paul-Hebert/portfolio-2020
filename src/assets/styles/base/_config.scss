@@ -4,16 +4,16 @@ $base-padding: scale.step(1);
 
 $prose-width: 60ch;
 
-$hue-main: 199;
-$hue-complementary: 19;
+$hue-main: 10;
+$hue-complementary: 200;
 
 $color-light: hsla($hue-main, 15%, 95%, 95%);
 $color-dark: hsla($hue-main, 95%, 5%, 95%);
-$color-dark-alternate: hsla($hue-main, 95%, 15%, 95%);
+$color-dark-alternate: hsla($hue-complementary, 95%, 15%, 95%);
 $color-mid: hsl($hue-main, 15%, 35%);
 $color-interactive: hsl($hue-main, 100%, 32%);
 $color-interactive-active: hsl($hue-main, 100%, 27%);
-$color-accent: hsl($hue-complementary, 65%, 85%);
+$color-accent: hsl($hue-complementary, 75%, 60%);
 
 $nav-link-padding: scale.step(-3);
 $nav-link-margin: scale.step(-1);
