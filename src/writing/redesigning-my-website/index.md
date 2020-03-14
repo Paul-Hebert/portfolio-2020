@@ -1,7 +1,7 @@
 ---
 title: Redesigning my Website
 description: Here we go again!
-dateString: 02-29-2020
+date: 2020-02-29
 ---
 
 # Redesigning my Website

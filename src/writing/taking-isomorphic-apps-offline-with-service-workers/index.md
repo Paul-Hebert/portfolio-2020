@@ -4,5 +4,5 @@ description: For a recent project, we built an isomorphic PWA. When I added a se
 isExternal: true
 externalUrl: https://cloudfour.com/thinks/taking-isomorphic-apps-offline-with-service-workers/
 externalName: Cloud Four
-dateString: 11-12-2019
+date: 2019-11-12
 ---

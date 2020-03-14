@@ -4,5 +4,5 @@ description: Movement in nature doesn’t happen all at once. I wanted to bring 
 isExternal: true
 externalUrl: https://cloudfour.com/thinks/staggered-animations-with-css-custom-properties/
 externalName: Cloud Four
-dateString: 01-17-2020
+date: 2020-01-17
 ---

@@ -10,7 +10,7 @@ layout: layouts/base.hbs
 
 <ul class="listings">
   {{!-- TODO: Sort by date --}}
-  {{#each collections.writing}}
+  {{#each (reverse collections.writing)}}
   <li class="card">
     {{#if data.isExternal}}
     <a class="card__primary-action" href="{{data.externalUrl}}">
@@ -27,7 +27,7 @@ layout: layouts/base.hbs
     </p>
 
     <div class="card__meta">
-      <span>{{data.dateString}}</span>
+      <span>{{prettyDate data.date}}</span>
 
       {{#if data.isExternal}}
       <span>Written for {{data.externalName}}</span>

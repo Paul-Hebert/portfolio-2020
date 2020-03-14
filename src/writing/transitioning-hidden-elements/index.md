@@ -4,5 +4,5 @@ description: Transitioning hidden elements can be tricky! I wrote an npm package
 isExternal: true
 externalUrl: https://cloudfour.com/thinks/transitioning-hidden-elements/
 externalName: Cloud Four
-dateString: 01-17-2020
+date: 2020-01-17
 ---

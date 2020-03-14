@@ -4,5 +4,5 @@ description: As a JavaScript developer, I’m used to my code running differentl
 isExternal: true
 externalUrl: https://cloudfour.com/thinks/all-mixed-up-isomorphic-sorting-gone-wrong/
 externalName: Cloud Four
-dateString: 10-17-2019
+date: 2019-10-17
 ---

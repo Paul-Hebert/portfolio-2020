@@ -1,7 +1,7 @@
 ---
 title: Keeping the Stack Simple
 description: Experimenting with a new build system for my portfolio.
-dateString: 03-10-2020
+date: 2020-03-10
 ---
 
 # Keeping the Stack Simple
