@@ -3,21 +3,32 @@ title: Writing
 layout: layouts/base.hbs
 ---
 
-<h1>Writing</h1>
+<div class="prose">
+  <h1>Writing</h1>
+  <p>A collection of articles I've written for my blog or other publications.</p>
+</div>
 
-<ul>
+<ul class="listings">
   {{!-- TODO: Sort by date --}}
   {{#each collections.writing}}
-  <li>
+  <li class="card">
     {{#if data.isExternal}}
-    <a href="{{data.externalUrl}}">
-      {{data.title}} — Written for {{data.externalName}} — {{data.dateString}}
+    <a class="card__primary-action" href="{{data.externalUrl}}">
+      <h2 class="card__title">{{data.title}}</h2>
     </a>
     {{else}}
-    <a href="{{url url}}">
-      {{data.title}} — {{data.dateString}}
+    <a class="card__primary-action" href="{{url url}}">
+      <h2 class="card__title">{{data.title}}</h2>
     </a>
     {{/if}}
+
+    <div class="card__meta">
+      <span>{{data.dateString}}</span>
+
+      {{#if data.isExternal}}
+      <span>Written for {{data.externalName}}</span>
+      {{/if}}
+    </div>
   </li>
   {{/each}}
 </ul>

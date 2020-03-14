@@ -1,12 +1,14 @@
 @use "scale.scss";
 
 $base-padding: scale.step(1);
+$base-stagger: scale.step(-1);
 
 $prose-width: 60ch;
 
 $hue-main: 10;
 $hue-complementary: 200;
 
+$color-white: #fff;
 $color-light: hsla($hue-main, 15%, 95%, 95%);
 $color-dark: hsla($hue-main, 95%, 5%, 95%);
 $color-dark-alternate: hsla($hue-complementary, 95%, 15%, 95%);

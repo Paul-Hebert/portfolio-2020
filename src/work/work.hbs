@@ -12,22 +12,16 @@ title: Work
   Open Source Contributions
 </h2>
 
-<ul>
+<ul class="listings">
   {{#each openSource}}
-  <li>
-    <h3>{{this.title}}</h3>
+  <li class="card">
+    <a class="card__primary-action" href="{{this.url}}">
+      <h3 class="card__title">{{this.title}}</h3>
+    </a>
 
-    <div>{{this.description}}</div>
-
-    <div>Role: {{this.role}}</div>
-
-    <ul>
-      {{#each this.links}}
-      <li>
-        <a href="{{this.url}}">{{this.title}}</a>
-      </li>
-      {{/each}}
-    </ul>
+    <div class="card__meta">
+      <span>Role: {{this.role}}</span>
+    </div>
   </li>
   {{/each}}
 </ul>

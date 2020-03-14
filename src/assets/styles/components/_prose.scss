@@ -8,7 +8,7 @@
 
   // Space items vertically in prose blocks
   > * + * {
-    margin-top: scale.step(-1);
+    margin-top: $base-stagger;
   }
 
   // Set default styles for non-heading text content.

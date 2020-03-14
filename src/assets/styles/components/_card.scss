@@ -1,0 +1,39 @@
+@use "../base/scale.scss";
+@import "../base/_config.scss";
+
+.card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: scale.step(0);
+  position: relative;
+}
+
+.card > * + * {
+  margin-top: $base-stagger;
+}
+
+.card__primary-action {
+  color: $color-dark;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.card__title {
+  font-size: scale.step(0);
+}
+
+.card__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: scale.step(-2);
+}
