@@ -2,36 +2,43 @@
   {
     "title": "Eleventy Patterns",
     "role": "Primary Contributor",
+    "description": "(WIP) A boilerplate template used to quickly generate pattern libraries and prototyping environments",
     "url": "https://github.com/cloudfour/eleventy-patterns"
   },
   {
     "title": "Transition Hidden Element",
     "role": "Primary Contributor",
+    "description": "A JavaScript utility to help you use CSS transitions when showing and hiding elements with the `hidden` attribute.",
     "url": "https://github.com/cloudfour/transition-hidden-element/"
   },
   {
     "title": "Cloud Four Guides",
     "role": "Contributor",
-    "url": "https: //github.com/cloudfour/guides/"
+    "description": "Conventions, processes and notes about how we do things",
+    "url": "https://github.com/cloudfour/guides/"
   },
   {
     "title": "Core Handlebars Helpers",
     "role": "Contributor",
+    "description": "Handlebars helpers that we usually need",
     "url": "https://github.com/cloudfour/core-hbs-helpers"
   },
   {
     "title": "PWA Stats",
     "role": "Contributor",
+    "description": "A directory of Progressive Web App case studies.",
     "url": "https://github.com/cloudfour/pwastats"
   },
   {
     "title": "Calendar Link",
     "role": "Contributor",
+    "description": "📅 Calendar link generator for popular services",
     "url": "https://github.com/AnandChowdhary/calendar-link"
   },
   {
     "title": "Who Can Use",
     "role": "Contributor",
-    "url": "https: //github.com/CoreyGinnivan/whocanuse"
+    "description": "WhoCanUse is a tool that brings attention and understanding to how color contrast can affect different people with visual impairments.",
+    "url": "https://github.com/CoreyGinnivan/whocanuse"
   }
 ]

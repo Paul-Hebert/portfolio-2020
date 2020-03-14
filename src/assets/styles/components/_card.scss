@@ -37,3 +37,7 @@
   justify-content: space-between;
   font-size: scale.step(-2);
 }
+
+.card__description {
+  flex-grow: 1;
+}
