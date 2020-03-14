@@ -8,5 +8,30 @@
     "title": "Transition Hidden Element",
     "role": "Primary Contributor",
     "url": "https://github.com/cloudfour/transition-hidden-element/"
+  },
+  {
+    "title": "Cloud Four Guides",
+    "role": "Contributor",
+    "url": "https: //github.com/cloudfour/guides/"
+  },
+  {
+    "title": "Core Handlebars Helpers",
+    "role": "Contributor",
+    "url": "https://github.com/cloudfour/core-hbs-helpers"
+  },
+  {
+    "title": "PWA Stats",
+    "role": "Contributor",
+    "url": "https://github.com/cloudfour/pwastats"
+  },
+  {
+    "title": "Calendar Link",
+    "role": "Contributor",
+    "url": "https://github.com/AnandChowdhary/calendar-link"
+  },
+  {
+    "title": "Who Can Use",
+    "role": "Contributor",
+    "url": "https: //github.com/CoreyGinnivan/whocanuse"
   }
 ]
