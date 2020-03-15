@@ -11,22 +11,6 @@
     margin-top: $base-stagger;
   }
 
-  // Set default styles for non-heading text content.
-  p,
-  ul,
-  ol {
-    line-height: 1.5;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    line-height: 1.2;
-  }
-
   // TODO: Heading sizes should go down a step on small screens
   h1 {
     font-size: scale.step(4);

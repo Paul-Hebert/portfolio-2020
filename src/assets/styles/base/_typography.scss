@@ -11,6 +11,13 @@ body {
   font-size: calc(1em + 0.25vw);
 }
 
+// Set default styles for non-heading text content.
+p,
+ul,
+ol {
+  line-height: 1.5;
+}
+
 h1,
 h2,
 h3,
@@ -19,4 +26,5 @@ h5,
 h6 {
   font-family: $font-display;
   font-weight: 700;
+  line-height: 1.2;
 }
