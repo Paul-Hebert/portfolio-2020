@@ -29,13 +29,13 @@
 }
 
 .card__title {
-  font-size: scale.step(0);
+  font-size: scale.step(1);
 }
 
 .card__meta {
   display: flex;
   justify-content: space-between;
-  font-size: scale.step(-2);
+  font-size: scale.step(-1);
 }
 
 .card__description {

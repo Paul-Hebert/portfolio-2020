@@ -1,5 +1,5 @@
 @use "sass:math";
 
 @function step($step) {
-  @return math.pow(1.25, $step) * 1.25em;
+  @return math.pow(1.25, $step) * 1em;
 }
