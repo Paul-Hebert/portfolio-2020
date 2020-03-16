@@ -26,6 +26,7 @@
   "homepage": "https://github.com/Paul-Hebert/portfolio-2020#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "@cloudfour/hbs-helpers": "^0.11.0",
     "del-cli": "^3.0.0",
     "handlebars": "^4.7.3",
     "moment": "^2.24.0",

@@ -4,6 +4,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
   grid-gap: scale.step(-1);
+  grid-auto-flow: dense;
   list-style: none;
   margin-top: scale.step(1);
+}
+
+.listings__featured-item {
+  grid-column: 1 / -2;
 }

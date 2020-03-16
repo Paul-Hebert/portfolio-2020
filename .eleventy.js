@@ -1,9 +1,9 @@
 const Handlebars = require("handlebars");
 const prettyDate = require("./helpers/prettyDate");
 const reverse = require("./helpers/reverse");
+const { compare } = require("@cloudfour/hbs-helpers");
 
 module.exports = eleventyConfig => {
-  console.log(prettyDate);
   // Rebuild the site when CSS or JS is updated
   // By default 11ty wouldn't know to watch these files since they're processed
   // by node-sass and rollup.
@@ -21,6 +21,7 @@ module.exports = eleventyConfig => {
 
   Handlebars.registerHelper("prettyDate", prettyDate);
   Handlebars.registerHelper("reverse", reverse);
+  Handlebars.registerHelper("compare", compare);
 
   return {
     dir: {

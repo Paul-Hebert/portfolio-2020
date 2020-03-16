@@ -11,7 +11,7 @@ layout: layouts/base.hbs
 <ul class="listings">
   {{!-- TODO: Sort by date --}}
   {{#each (reverse collections.writing)}}
-  <li class="card">
+  <li class="card {{#if (compare @index '===' 0)}} listings__featured-item {{/if}}">
     {{#if data.isExternal}}
     <a class="card__primary-action" href="{{data.externalUrl}}">
       <h2 class="card__title">{{data.title}}</h2>
