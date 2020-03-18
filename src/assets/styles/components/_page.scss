@@ -1,0 +1,19 @@
+@use "../base/scale.scss";
+@import "../base/_config.scss";
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page__header,
+.page__footer {
+  padding: $base-padding;
+  flex-shrink: 0;
+}
+
+.page__main {
+  flex-grow: 10;
+  // TODO: On large screens let's pad this more
+  padding: 0 calc(#{$base-padding} + 2vw);
+}

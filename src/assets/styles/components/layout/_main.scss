@@ -1,7 +1,0 @@
-@use "../../base/scale.scss";
-
-.main {
-  flex-grow: 2;
-  // TODO: On large screens let's pad this more
-  padding: 0 calc(#{$base-padding} + 2vw);
-}

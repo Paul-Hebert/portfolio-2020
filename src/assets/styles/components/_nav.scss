@@ -1,5 +1,13 @@
-@use "../../base/scale.scss";
-@import "../../base/mixins/text-link.scss";
+@use "../base/scale.scss";
+@import "../base/mixins/text-link.scss";
+
+.nav {
+  align-items: center;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
 
 .nav a {
   @include text-link();
@@ -11,6 +19,10 @@
     bottom: $nav-link-padding;
     top: $nav-link-padding;
   }
+}
+
+.nav__left-item {
+  margin-right: auto;
 }
 
 .nav a + a {
