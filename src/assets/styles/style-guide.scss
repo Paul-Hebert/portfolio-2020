@@ -57,9 +57,15 @@
 }
 
 .color-block__inner {
-  background: #fff;
+  background: $color-white;
   font-family: $font-code;
   padding: scale.step(-4);
   font-size: scale.step(-2);
   transform: rotate(-3deg);
+}
+
+.example {
+  border: 2px solid $color-white;
+  margin-top: scale.step(0);
+  padding: scale.step(0);
 }

@@ -1,5 +1,3 @@
-@use "../base/scale.scss";
-
 .listings {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));

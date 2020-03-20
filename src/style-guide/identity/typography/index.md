@@ -6,38 +6,20 @@ title: Typography
 
 # Typography
 
-Here are some typographic specimens for testing typography changes:
+This site uses Libre Baskerville for headings, block quotes, and other display text. Roboto is used for body copy. For code, it falls back to a stack using commonly installed monospace fonts.
 
----
+</div>
 
-This is a _test_ **page** used for testing the typography of my site.
+<div class="prose example">
 
-> It uses a [number of different markdown features](http://google.com).
+# Libre Baskerville
 
-```js
-console.log("For example, here's a code block!");
+This is Roboto
+
+> This also uses Libre Baskerville
+
 ```
-
-And here's some `inline code`!
-
-## Subheadings
-
-- Lists are cool too
-- Don'tcha know?
-
-1. Unordered
-2. and ordered
-
-# This is a main heading (h1)
-
-## This is a main heading (h2)
-
-### This is a main heading (h3)
-
-#### This is a main heading (h4)
-
-##### This is a main heading (h5)
-
-###### This is a main heading (h6)
+This code uses the monospaced font.
+```
 
 </div>

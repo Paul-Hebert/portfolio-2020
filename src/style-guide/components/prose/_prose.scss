@@ -1,8 +1,3 @@
-@use "../base/scale.scss";
-@import "../base/mixins/text-link.scss";
-@import "../base/mixins/block-quote.scss";
-@import "../base/_config.scss";
-
 .prose {
   max-width: $prose-width;
 

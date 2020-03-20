@@ -2,6 +2,7 @@ const Handlebars = require("handlebars");
 const prettyDate = require("./helpers/prettyDate");
 const reverse = require("./helpers/reverse");
 const { compare } = require("@cloudfour/hbs-helpers");
+const markdown = require('helper-markdown');
 
 module.exports = eleventyConfig => {
   // Rebuild the site when CSS or JS is updated
@@ -19,9 +20,14 @@ module.exports = eleventyConfig => {
     );
   });
 
+  eleventyConfig.addCollection("components", function(collection) {
+    return collection.getFilteredByGlob("src/style-guide/components/*/*.{hbs,md}");
+  });
+
   Handlebars.registerHelper("prettyDate", prettyDate);
   Handlebars.registerHelper("reverse", reverse);
   Handlebars.registerHelper("compare", compare);
+  Handlebars.registerHelper("markdown", markdown);
 
   return {
     dir: {

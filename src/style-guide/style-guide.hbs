@@ -34,5 +34,11 @@ title: Style Guide
     throughout the site:
   </p>
 
-  <b>TODO</b>
+  <ul>
+    {{#each collections.components}}
+    <li>
+      <a href="{{url url}}">{{data.title}}</a>
+    </li>
+    {{/each}}
+  </ul>
 </div>
