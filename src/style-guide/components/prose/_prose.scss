@@ -44,4 +44,8 @@
   code {
     font-family: $font-code;
   }
+
+  :not(pre) > code {
+    color: $color-interactive;
+  }
 }
