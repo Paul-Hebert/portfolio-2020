@@ -1,7 +1,7 @@
 @use "scale.scss";
 
 $base-padding: scale.step(1);
-$base-stagger: scale.step(-1);
+$base-stagger: scale.step(0);
 
 $prose-width: 45rem;
 $breakout-width: 60rem;

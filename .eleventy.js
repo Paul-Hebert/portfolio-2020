@@ -2,7 +2,7 @@ const Handlebars = require("handlebars");
 const prettyDate = require("./helpers/prettyDate");
 const reverse = require("./helpers/reverse");
 const { compare } = require("@cloudfour/hbs-helpers");
-var hljs = require('highlight.js');
+const hljs = require('highlight.js');
 const md = require('markdown-it')({
   html: true,
   typographer: true,
