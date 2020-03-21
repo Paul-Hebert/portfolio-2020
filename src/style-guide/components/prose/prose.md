@@ -14,7 +14,7 @@ Here are some typographic specimens for testing typography changes:
 
 ---
 
-This is a _test_ **page** used for testing the typography of my site.
+This is a _test_ **page** used for testing the "typography" of my site.
 
 > It uses a [number of different markdown features](http://google.com).
 
@@ -22,7 +22,7 @@ This is a _test_ **page** used for testing the typography of my site.
 console.log("For example, here's a code block!");
 ```
 
-And here's some `inline code`!
+And here's some `console.log('inline code')`!
 
 ## Subheadings
 

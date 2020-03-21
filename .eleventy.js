@@ -5,6 +5,7 @@ const { compare } = require("@cloudfour/hbs-helpers");
 var hljs = require('highlight.js');
 const md = require('markdown-it')({
   html: true,
+  typographer: true,
   highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {
