@@ -6,11 +6,11 @@
     "dev:clean": "del-cli dist",
     "dev:content": "npx @11ty/eleventy --watch --serve --quiet",
     "dev:rollup": "rollup --config --watch",
-    "dev:sass": "sass src/assets/styles:dist/assets/styles --watch",
+    "dev:sass": "sass src:dist --watch",
     "start": "run-p dev:*",
     "build:content": "npx @11ty/eleventy",
     "build:rollup": "rollup --config",
-    "build:sass": "sass src/assets/styles:dist/assets/styles",
+    "build:sass": "sass src:dist",
     "build": "run-p build:*"
   },
   "repository": {
