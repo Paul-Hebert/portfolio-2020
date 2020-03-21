@@ -2,7 +2,21 @@ const Handlebars = require("handlebars");
 const prettyDate = require("./helpers/prettyDate");
 const reverse = require("./helpers/reverse");
 const { compare } = require("@cloudfour/hbs-helpers");
-const markdown = require('helper-markdown');
+var hljs = require('highlight.js');
+const md = require('markdown-it')({
+  html: true,
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return '<pre class="hljs"><code>' +
+               hljs.highlight(lang, str, true).value +
+               '</code></pre>';
+      } catch (__) {}
+    }
+
+    return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+  }
+});
 
 module.exports = eleventyConfig => {
   // Rebuild the site when CSS or JS is updated
@@ -27,7 +41,9 @@ module.exports = eleventyConfig => {
   Handlebars.registerHelper("prettyDate", prettyDate);
   Handlebars.registerHelper("reverse", reverse);
   Handlebars.registerHelper("compare", compare);
-  Handlebars.registerHelper("markdown", markdown);
+
+  eleventyConfig.setLibrary('md', md);
+  eleventyConfig.addFilter('markdown', value => { return value; });
 
   return {
     dir: {
