@@ -44,7 +44,7 @@ module.exports = eleventyConfig => {
   Handlebars.registerHelper("compare", compare);
 
   eleventyConfig.setLibrary('md', md);
-  eleventyConfig.addFilter('markdown', value => { return value; });
+  eleventyConfig.addFilter('markdown', value => { return md.render(value); });
 
   return {
     dir: {
