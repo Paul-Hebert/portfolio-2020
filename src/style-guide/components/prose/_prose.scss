@@ -1,5 +1,11 @@
 .prose {
-  max-width: $prose-width;
+  > * {
+    max-width: $prose-width;
+  }
+
+  > .prose__breakout {
+    max-width: $breakout-width;
+  }
 
   // Space items vertically in prose blocks
   > * + * {
