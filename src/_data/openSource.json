@@ -40,5 +40,11 @@
     "role": "Contributor",
     "description": "WhoCanUse is a tool that brings attention and understanding to how color contrast can affect different people with visual impairments.",
     "url": "https://github.com/CoreyGinnivan/whocanuse"
+  },
+  {
+    "title": "scroll-lock",
+    "role": "Contributor",
+    "description": "🔨 Cross-browser JavaScript library to disable scrolling page",
+    "url": "https://github.com/FL3NKEY/scroll-lock"
   }
 ]
