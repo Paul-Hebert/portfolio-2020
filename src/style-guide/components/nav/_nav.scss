@@ -8,6 +8,7 @@
 
 .nav a {
   @include text-link();
+  background-position-y: calc(1.1em + #{$nav-link-padding});
   display: inline-block;
   padding: $nav-link-padding 0;
   text-align: center;

@@ -1,33 +1,27 @@
 @import "../_config.scss";
 
+$text-link-border-size: scale.step(-8);
+
 @mixin text-link {
   color: $color-interactive;
   text-decoration: none;
   position: relative;
-  transition: color 0.15s ease-out;
 
-  &::before {
-    background-color: $color-accent;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transform: scale(1, 0.1);
-    transform-origin: bottom;
-    transition: transform 0.15s ease-out, opacity 0.15s ease-out;
-    top: 0;
-    z-index: -1;
-  }
+  background-image: linear-gradient($color-accent, $color-accent);
+  background-position-y: 1.05em;
+  background-repeat: no-repeat;
+  background-size: 100% $text-link-border-size;
+
+  transition: background 0.2s ease-out;
 
   &:hover {
-    color: $color-interactive-active;
-
-    &::before {
-      transform: scale(1.05, 1.2) translateY(5%) rotate(-1deg);
-      opacity: 0.2;
-    }
+    background-image: linear-gradient($color-accent-faded, $color-accent-faded);
+    background-position-y: 0;
+    background-size: 100% 100%;
   }
 
-  // TODO: Focus styles
+  &:focus {
+    outline: 0.3em solid $color-accent;
+    outline-offset: $text-link-border-size;
+  }
 }

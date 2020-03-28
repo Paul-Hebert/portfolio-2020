@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "scale.scss";
 
 $base-padding: scale.step(1);
@@ -17,6 +18,7 @@ $color-mid: hsl($hue-complementary, 15%, 35%);
 $color-interactive: hsl($hue-main, 100%, 32%);
 $color-interactive-active: hsl($hue-main, 100%, 27%);
 $color-accent: hsl($hue-complementary, 75%, 60%);
+$color-accent-faded: hsla($hue-complementary, 75%, 60%, 0.3);
 
 $nav-link-padding: scale.step(-3);
 $nav-link-margin: scale.step(-1);
