@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/assets/styles/index.css">
 
   {{#each stylesheets}}
-  <link rel="stylesheet" href="/assets/styles/{{this}}.css">
+  <link rel="stylesheet" href="/{{this}}.css">
   {{/each}}
 </head>
 
@@ -44,6 +44,10 @@
   </footer>
 
   <script src="/assets/scripts/index.js"></script>
+
+  {{#each scripts}}
+  <script src="/{{this}}.js"></script>
+  {{/each}}
 </body>
 
 </html>
