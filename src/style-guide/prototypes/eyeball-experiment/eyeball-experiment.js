@@ -18,12 +18,12 @@ function fetchCreatures() {
   return (creatures = [...document.querySelectorAll(".js-creature")].map(
     creature => {
       return {
+        eye: new ElementWithDimensions(creature.querySelector(".js-eye")),
         eyeball: new ElementWithDimensions(
           creature.querySelector(".js-eyeball")
         ),
-        iris: new ElementWithDimensions(
-          creature.querySelector(".js-eyeball-center")
-        )
+        iris: new ElementWithDimensions(creature.querySelector(".js-iris")),
+        body: new ElementWithDimensions(creature.querySelector(".js-body"))
       };
     }
   ));
@@ -52,15 +52,31 @@ function addEyeTracking() {
         y: (creature.eyeball.height - creature.iris.height) / 2
       };
 
-      const relativeSizes = {
+      // The radius of the body minus the radius of the eye
+      const eyeMovementRange = {
+        x: (creature.body.width - creature.eye.width) / 2,
+        y: (creature.body.height - creature.eye.height) / 2
+      };
+
+      const relativeIrisSizes = {
         x: irisMovementRange.x / (page.width * 2),
         y: irisMovementRange.y / (page.height * 2)
       };
 
-      const x = mouseDistanceFromEyeballCenter.x * relativeSizes.x;
-      const y = mouseDistanceFromEyeballCenter.y * relativeSizes.y;
+      const relativeEyeSizes = {
+        x: eyeMovementRange.x / (page.width * 2),
+        y: eyeMovementRange.y / (page.height * 2)
+      };
 
-      creature.iris.element.style.transform = `translate(${x}px, ${y}px)`;
+      const irisX = mouseDistanceFromEyeballCenter.x * relativeIrisSizes.x;
+      const irisY = mouseDistanceFromEyeballCenter.y * relativeIrisSizes.y;
+
+      creature.iris.element.style.transform = `translate(${irisX}px, ${irisY}px)`;
+
+      const eyeX = mouseDistanceFromEyeballCenter.x * relativeEyeSizes.x;
+      const eyeY = mouseDistanceFromEyeballCenter.y * relativeEyeSizes.y;
+
+      creature.eye.element.style.transform = `translate(${eyeX}px, ${eyeY}px)`;
     });
   });
 }
