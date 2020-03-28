@@ -15,25 +15,22 @@ body {
 }
 
 .creature-container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
   height: 100%;
   background: rgb(185, 133, 133);
 }
 
 .creature {
   cursor: pointer;
-  height: 12vw;
-  width: 12vw;
 }
 
 .eye {
   transition: transform 0.3s ease-out;
   transform-origin: center;
+  // Force transform-origin to be based off the eye, not the SVG wrapper.
+  transform-box: fill-box;
 }
 
-.creature.is-blinking .eye {
+.creature:hover .eye {
   transform: scaleY(0.0005) !important;
 }
 
