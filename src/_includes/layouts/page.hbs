@@ -1,0 +1,33 @@
+---
+layout: layouts/base.hbs
+---
+
+<header class="page__header">
+  <nav class="nav">
+    <a href="/" class="nav__left-item">Paul Hebert</a>
+    <a href="/work">Work</a>
+    <a href="/writing">Writing</a>
+    <a href="/art">Art</a>
+  </nav>
+</header>
+
+<main class="page__main">
+  {{{content}}}
+</main>
+
+<footer class="page__footer">
+  <nav class="nav">
+    <a href="/style-guide">Style Guide</a>
+    <a href="/work">Work</a>
+    <a href="/writing">Writing</a>
+    <a href="/art">Art</a>
+    <a href="https://github.com/Paul-Hebert">Github</a>
+    <a href="https://twitter.com/HaulPebert">Twitter</a>
+  </nav>
+</footer>
+
+<script src="/assets/scripts/index.js"></script>
+
+{{#each scripts}}
+<script src="/{{this}}.js"></script>
+{{/each}}
