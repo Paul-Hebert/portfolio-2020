@@ -14,9 +14,15 @@ body {
   border-radius: 50%;
 }
 
-.creature-container {
+.container {
   height: 100%;
-  background: rgb(185, 133, 133);
+  background: #5f81b2;
+  position: relative;
+}
+
+.creature-container {
+  position: absolute;
+  bottom: 0;
 }
 
 .creature {
