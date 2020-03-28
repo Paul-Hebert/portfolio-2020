@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.eyeball,
+.iris,
+.pupil {
+  border-radius: 50%;
+}
+
+.creature-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: rgb(185, 133, 133);
+}
+
+.creature {
+  cursor: pointer;
+  height: 12vw;
+  width: 12vw;
+}
+
+.eye {
+  transition: transform 0.3s ease-out;
+  transform-origin: center;
+}
+
+.creature.is-blinking .eye {
+  transform: scaleY(0.0005) !important;
+}
+
+.wrinkle {
+  fill: #b56f6f;
+}
+
+.eye-white,
+.eye-catch-light {
+  fill: #fff;
+}
+
+.iris {
+  fill: #71a4f4;
+}
+
+.pupil {
+  fill: #262020;
+}
+
+.body-main,
+.eye-skin {
+  fill: #ea6a6a;
+}
