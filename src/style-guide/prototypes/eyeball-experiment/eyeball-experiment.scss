@@ -91,6 +91,7 @@ body {
 }
 
 html body.page a {
+  background-image: none !important;
   // font-style: italic;
   text-decoration: underline;
   text-decoration-color: #f47676 !important;
@@ -103,7 +104,7 @@ html body.page a:hover {
   text-decoration-thickness: 9px;
 }
 
-.prose a::before,
-.prose a::after {
+html body.page a::before,
+html body.page a::after {
   content: none;
 }
