@@ -40,6 +40,7 @@ function fetchPage() {
 }
 
 function addEyeTracking() {
+  // I should also move eyes on scroll for touch screens
   document.addEventListener("mousemove", debounce(moveEyes), 25);
 }
 
@@ -142,14 +143,15 @@ function generateCreatures({ canvasHeight, canvasWidth }) {
       y += size;
 
       const speed = 100 + Math.random() * 500;
-      createCreature({ x: column, y, speed });
+      const scale = 1 + Math.random() * 0.2;
+      createCreature({ x: column, y, speed, scale });
     }
   });
 }
 
-function createCreature({ x, y, speed }) {
+function createCreature({ x, y, speed, scale }) {
   wrapper.innerHTML += `
-    <g class="creature js-creature" style="transform: translate(${x}px, ${y}px)">
+    <g class="creature js-creature" style="transform: translate(${x}px, ${y}px) scale(${scale})">
       <g class="js-body">
         <circle cx="30" cy="30" r="29" class="body-main" />
         <path
