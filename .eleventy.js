@@ -2,20 +2,26 @@ const Handlebars = require("handlebars");
 const prettyDate = require("./helpers/prettyDate");
 const reverse = require("./helpers/reverse");
 const { compare } = require("@cloudfour/hbs-helpers");
-const hljs = require('highlight.js');
-const md = require('markdown-it')({
+const hljs = require("highlight.js");
+const md = require("markdown-it")({
   html: true,
   typographer: true,
-  highlight: function (str, lang) {
+  highlight: function(str, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {
-        return '<pre class="hljs prose__breakout"><code>' +
-               hljs.highlight(lang, str, true).value +
-               '</code></pre>';
+        return (
+          '<pre class="hljs prose__breakout"><code>' +
+          hljs.highlight(lang, str, true).value +
+          "</code></pre>"
+        );
       } catch (__) {}
     }
 
-    return '<pre class="hljs prose__breakout"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+    return (
+      '<pre class="hljs prose__breakout"><code>' +
+      md.utils.escapeHtml(str) +
+      "</code></pre>"
+    );
   }
 });
 
@@ -36,15 +42,23 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addCollection("components", function(collection) {
-    return collection.getFilteredByGlob("src/style-guide/components/*/*.{hbs,md}");
+    return collection.getFilteredByGlob(
+      "src/style-guide/components/*/*.{hbs,md}"
+    );
+  });
+
+  eleventyConfig.addCollection("prototypes", function(collection) {
+    return collection.getFilteredByGlob("src/style-guide/prototypes/*/*.hbs");
   });
 
   Handlebars.registerHelper("prettyDate", prettyDate);
   Handlebars.registerHelper("reverse", reverse);
   Handlebars.registerHelper("compare", compare);
 
-  eleventyConfig.setLibrary('md', md);
-  eleventyConfig.addFilter('markdown', value => { return md.render(value); });
+  eleventyConfig.setLibrary("md", md);
+  eleventyConfig.addFilter("markdown", value => {
+    return md.render(value);
+  });
 
   return {
     dir: {

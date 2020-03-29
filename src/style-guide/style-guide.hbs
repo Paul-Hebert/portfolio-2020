@@ -41,4 +41,19 @@ title: Style Guide
     </li>
     {{/each}}
   </ul>
+
+  <h2>Prototypes</h2>
+
+  <p>
+    There's also an area to prototype ideas without polluting the main
+    code base.
+  </p>
+
+  <ul>
+    {{#each collections.prototypes}}
+    <li>
+      <a href="{{url url}}">{{data.title}}</a>
+    </li>
+    {{/each}}
+  </ul>
 </div>
