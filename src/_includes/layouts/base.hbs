@@ -22,4 +22,10 @@
   {{{ content }}}
 </body>
 
+<script src="/assets/scripts/index.js"></script>
+
+{{#each scripts}}
+<script src="/{{this}}.js"></script>
+{{/each}}
+
 </html>

@@ -11,6 +11,7 @@ window.addEventListener("load", () => {
   creatures = fetchCreatures();
   page = fetchPage();
 
+  // TODO: disable based on prefers-reduced-motion
   addEyeTracking();
 });
 
@@ -119,21 +120,31 @@ function generateCreatures({ canvasHeight, canvasWidth }) {
 
   let x = (size / 2) * -1;
 
-  const columns = Math.round((canvasWidth + size) / size);
+  const columnCount = Math.round((canvasWidth + size) / size);
   const rows = Math.round((canvasHeight + size) / size);
 
-  for (let c = 0; c < columns; c++) {
+  const columns = [];
+
+  for (let cc = 0; cc < columnCount; cc++) {
+    columns.push(x);
+
+    x += size;
+  }
+
+  shuffle(columns);
+
+  console.log(columns);
+
+  columns.forEach(column => {
     let y = 0 + size * Math.random();
 
     for (let r = 0; r < rows; r++) {
       y += size;
 
-      const speed = 100 + Math.random() * 200;
-      createCreature({ x, y, speed });
+      const speed = 100 + Math.random() * 500;
+      createCreature({ x: column, y, speed });
     }
-
-    x += size;
-  }
+  });
 }
 
 function createCreature({ x, y, speed }) {
@@ -151,7 +162,7 @@ function createCreature({ x, y, speed }) {
         />
       </g>
 
-      <g class="eye js-eye">
+      <g class="eye js-eye" style="transition-duration: ${speed}ms">
         <g class="js-eyeball">
           <circle cx="30" cy="30" r="10.8" class="eye-white" />
 
@@ -215,4 +226,25 @@ function debounce(func, wait, immediate) {
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
   };
+}
+
+// TODO: Use an npm import
+function shuffle(array) {
+  var currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
 }

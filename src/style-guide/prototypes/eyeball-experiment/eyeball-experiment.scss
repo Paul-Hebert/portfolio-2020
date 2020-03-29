@@ -1,5 +1,6 @@
 html,
 body {
+  background: #5f81b2;
   margin: 0;
   padding: 0;
 }
@@ -16,7 +17,6 @@ body {
 
 .container {
   height: 100%;
-  background: #5f81b2;
   position: relative;
 }
 
@@ -36,6 +36,7 @@ body {
   transform-box: fill-box;
 }
 
+// TODO: disable based on prefers-reduced-motion
 .creature:hover .eye {
   transform: scaleY(0.0005) !important;
 }
@@ -59,4 +60,50 @@ body {
 .body-main,
 .eye-skin {
   fill: #ea6a6a;
+}
+
+/**
+ * Page Layout Stuff
+ */
+
+.page__main {
+  padding: 0 !important;
+}
+
+.page__footer {
+  background: #ba6060;
+  flex-shrink: 0;
+}
+
+.nav a {
+  color: #fff !important;
+}
+
+.prose * {
+  color: #fff !important;
+}
+
+.prose {
+  margin-left: 80px;
+  max-width: 45rem;
+  z-index: 1;
+  position: relative;
+}
+
+html body.page a {
+  // font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: #f47676 !important;
+  text-decoration-thickness: 3px;
+  transition: color 0.3s ease-out, text-decoration 0.3s ease-out;
+}
+
+html body.page a:hover {
+  color: #fff;
+  text-decoration-thickness: 9px;
+}
+
+.prose a::before,
+.prose a::after {
+  content: none;
 }
