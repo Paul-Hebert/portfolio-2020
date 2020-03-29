@@ -122,7 +122,8 @@ function generateCreatures({ canvasHeight, canvasWidth }) {
   let x = (size / 2) * -1;
 
   const columnCount = Math.round((canvasWidth + size) / size);
-  const rows = Math.round((canvasHeight + size) / size);
+  // TODO: I'm confused about why this -2 works
+  const rows = Math.round((canvasHeight + size) / size) - 2;
 
   const columns = [];
 
