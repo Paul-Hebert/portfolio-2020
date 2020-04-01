@@ -1,18 +1,19 @@
-@use "base/scale.scss";
+@use "base/scale";
 
-@import "base/_config.scss";
+@import "base/_config";
 
-@import "base/mixins/text-link.scss";
-@import "base/mixins/block-quote.scss";
+@import "base/mixins/text-link";
+@import "base/mixins/block-quote";
 
-@import "base/_reset.scss";
-@import "base/_colors.scss";
-@import "base/_typography.scss";
+@import "base/_reset";
+@import "base/_colors";
+@import "base/_typography";
 
-@import "vendor/_highlight.scss";
+@import "vendor/_highlight";
 
-@import "../../style-guide/components/card/_card.scss";
-@import "../../style-guide/components/listings/_listings.scss";
-@import "../../style-guide/components/prose/_prose.scss";
-@import "../../style-guide/components/nav/_nav.scss";
-@import "../../style-guide/components/page/_page.scss";
+@import "../../style-guide/components/card/_card";
+@import "../../style-guide/components/listings/_listings";
+@import "../../style-guide/components/prose/_prose";
+@import "../../style-guide/components/nav/_nav";
+@import "../../style-guide/components/page/_page";
+@import "../../style-guide/components/figure/_figure";

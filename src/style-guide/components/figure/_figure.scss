@@ -1,0 +1,11 @@
+.figure__content,
+.figure__caption {
+  max-width: 100%;
+}
+
+.figure__caption {
+  font-size: scale.step(-1);
+  font-style: italic;
+  margin-top: scale.step(-3);
+  text-align: center;
+}
