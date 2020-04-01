@@ -31,6 +31,8 @@ module.exports = eleventyConfig => {
   // by node-sass and rollup.
   eleventyConfig.addWatchTarget("./src/**/*.{js,scss}");
 
+  eleventyConfig.addPassthroughCopy("./src/**/*.{png,svg,jpeg,jpg}");
+
   eleventyConfig.addCollection("writing", function(collection) {
     return collection.getFilteredByGlob("src/writing/*/*.md");
   });

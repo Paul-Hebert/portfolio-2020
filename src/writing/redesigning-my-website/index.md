@@ -85,8 +85,8 @@ writing blog posts to document the process.
 Hopefully these will be links soon ;)
 
 - [Keeping things simple with Eleventy, SASS, and Rollup](/writing/keeping-the-stack-simple)
-- Using Moodboards and Style Tiles to Create a New Identity
-- Designing a New Color Scheme
-- Picking Typefaces for My Website Redesign
-- Incorporating Illustration Into My Portfolio
+- Creating a New Personal Identity
+  - Designing a New Color Scheme
+  - Picking Typefaces for My Website Redesign
+  - Incorporating Illustration Into My Portfolio
 - And more!!
