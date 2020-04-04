@@ -1,19 +1,27 @@
 :root {
-  --color-background: #{$color-light};
-  --color-text: #{$color-dark};
-  --color-interactive: #{$color-interactive};
-  --color-accent: #{$color-accent};
-  --color-accent-faded: #{$color-accent-faded};
-  --color-heading: #{$color-dark-alternate};
-  --color-mid: #{$color-mid};
+  --color-bg: #{$color-main-lighter};
+  --color-bg-alt: #{$color-white};
+  --color-text: #{$color-main-darker};
+  --color-interactive: #{$color-secondary-dark};
+  --color-accent: #{$color-main};
+  --color-heading: #{$color-main-dark};
+  --color-mid: #{$color-main};
+
+  --color-link: var(--color-interactive);
+  --color-link-underline: var(--color-accent);
+  --color-link-hover:#{$color-main-light};
 }
 
-// .theme--blue {
-//   --color-background: #{$color-light};
-//   --color-text: #{$color-dark};
-//   --color-interactive: #{$color-interactive};
-//   --color-accent: #{$color-accent};
-//   --color-accent-faded: #{$color-accent-faded};
-//   --color-heading: #{$color-dark-alternate};
-//   --color-mid: #{$color-mid};
-// }
+.theme--alt {
+  --color-bg: #{$color-main-lighter};
+  --color-bg-alt: #{$color-white};
+  --color-text: #{$color-main-darker};
+  --color-interactive: #{$color-secondary-dark};
+  --color-accent: #{$color-main};
+  --color-heading: #{$color-main-dark};
+  --color-mid: #{$color-main};
+
+  --color-link: var(--color-interactive);
+  --color-link-underline: var(--color-accent);
+  --color-link-hover:#{$color-main-light};
+}

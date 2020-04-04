@@ -3,11 +3,11 @@
 $text-link-border-size: scale.step(-8);
 
 @mixin text-link {
-  color: var(--color-interactive);
+  color: var(--color-link);
   text-decoration: none;
   position: relative;
 
-  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-image: linear-gradient(var(--color-link-underline), var(--color-link-underline));
   background-position-y: 1.05em;
   background-repeat: no-repeat;
   background-size: 100% $text-link-border-size;
@@ -15,7 +15,7 @@ $text-link-border-size: scale.step(-8);
   transition: background 0.2s ease-out;
 
   &:hover {
-    background-image: linear-gradient(var(--color-accent-faded), var(--color-accent-faded));
+    background-image: linear-gradient(var(--color-link-hover), var(--color-link-hover));
     background-position-y: 0;
     background-size: 100% 100%;
   }

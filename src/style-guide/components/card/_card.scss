@@ -1,5 +1,5 @@
 .card {
-  background: #fff;
+  background: var(--color-bg-alt);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,7 +12,7 @@
 }
 
 .card__primary-action {
-  color: $color-dark;
+  color: var(--color-text);
   text-decoration: none;
 
   &::before {

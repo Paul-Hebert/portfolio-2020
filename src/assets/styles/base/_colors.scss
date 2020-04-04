@@ -1,7 +1,10 @@
 @import "_config.scss";
 
 body {
-  background: var(--color-background);
+  background: var(--color-bg);
+}
+
+* {
   color: var(--color-text);
 }
 

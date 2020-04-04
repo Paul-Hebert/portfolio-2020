@@ -19,6 +19,31 @@ colors:
     - color-secondary
     - color-secondary-dark
     - color-secondary-darker
+  - title: Default Theme Colors
+    subColors:
+    - color-bg
+    - color-bg-alt
+    - color-text
+    - color-interactive
+    - color-accent
+    - color-heading
+    - color-mid
+    - color-link
+    - color-link-underline
+    - color-link-hover
+  - title: Alt Theme Colors
+    themeClass: theme--alt
+    subColors:
+    - color-bg
+    - color-bg-alt
+    - color-text
+    - color-interactive
+    - color-accent
+    - color-heading
+    - color-mid
+    - color-link
+    - color-link-underline
+    - color-link-hover
 ---
 
 <div class="prose">
@@ -37,48 +62,4 @@ colors:
       {{/each}}
     </div>
   {{/each}}
-
-  <div class="color-block-wrapper">
-    <div class="color-block color-block--light">
-      <div class="color-block__inner">
-        $color-light
-      </div>
-    </div>
-
-    <div class="color-block color-block--dark">
-      <div class="color-block__inner">
-        $color-dark
-      </div>
-    </div>
-
-    <div class="color-block color-block--dark-alternate">
-      <div class="color-block__inner">
-        $color-dark-alternate
-      </div>
-    </div>
-
-    <div class="color-block color-block--mid">
-      <div class="color-block__inner">
-        $color-mid
-      </div>
-    </div>
-
-    <div class="color-block color-block--interactive">
-      <div class="color-block__inner">
-        $color-interactive
-      </div>
-    </div>
-
-    <div class="color-block color-block--interactive-active">
-      <div class="color-block__inner">
-        $color-interactive-active
-      </div>
-    </div>
-
-    <div class="color-block color-block--accent">
-      <div class="color-block__inner">
-        $color-accent
-      </div>
-    </div>
-  </div>
 </div>

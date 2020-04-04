@@ -8,8 +8,8 @@ $prose-width: 45rem;
 $breakout-width: 60rem;
 $container-width: 90rem;
 
-$hue-main: 216;
-$hue-secondary: 0;
+$hue-main: 213;
+$hue-secondary: 33;
 
 $color-main-darker: hsl($hue-main, 95%, 5%);
 $color-main-dark: hsl($hue-main, 95%, 25%);
@@ -23,16 +23,7 @@ $color-secondary: hsl($hue-secondary, 95%, 50%);
 $color-secondary-light: hsl($hue-secondary, 95%, 75%);
 $color-secondary-lighter: hsl($hue-secondary, 95%, 95%);
 
-
 $color-white: #fff;
-$color-light: hsla($hue-main, 15%, 95%, 100%);
-$color-dark: $color-main-darker;
-$color-dark-alternate: hsla($hue-secondary, 95%, 15%, 100%);
-$color-mid: hsl($hue-secondary, 25%, 35%);
-$color-interactive: hsl($hue-secondary, 100%, 32%);
-$color-interactive-active: hsl($hue-secondary, 100%, 27%);
-$color-accent: hsl($hue-main, 75%, 60%);
-$color-accent-faded: hsla($hue-main, 75%, 60%, 0.3);
 
 $nav-link-padding: scale.step(-3);
 $nav-link-margin: scale.step(-1);
