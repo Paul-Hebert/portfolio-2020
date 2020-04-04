@@ -1,8 +1,8 @@
 @import "_config.scss";
 
 body {
-  background: $color-light;
-  color: $color-dark;
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
 h1,
@@ -11,5 +11,5 @@ h3,
 h4,
 h5,
 h6 {
-  color: $color-dark-alternate;
+  color: var(--color-heading);
 }

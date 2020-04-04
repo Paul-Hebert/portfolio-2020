@@ -1,0 +1,19 @@
+:root {
+  --color-background: #{$color-light};
+  --color-text: #{$color-dark};
+  --color-interactive: #{$color-interactive};
+  --color-accent: #{$color-accent};
+  --color-accent-faded: #{$color-accent-faded};
+  --color-heading: #{$color-dark-alternate};
+  --color-mid: #{$color-mid};
+}
+
+// .theme--blue {
+//   --color-background: #{$color-light};
+//   --color-text: #{$color-dark};
+//   --color-interactive: #{$color-interactive};
+//   --color-accent: #{$color-accent};
+//   --color-accent-faded: #{$color-accent-faded};
+//   --color-heading: #{$color-dark-alternate};
+//   --color-mid: #{$color-mid};
+// }
