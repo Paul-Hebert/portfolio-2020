@@ -1,119 +1,84 @@
 ---
 title: Colors
+colors:
+  - title: Primary Hues
+    subColors:
+    - hue-main
+    - hue-secondary
+  - title: Main Hue Shades
+    subColors:
+    - color-main-lighter
+    - color-main-light
+    - color-main
+    - color-main-dark
+    - color-main-darker
+  - title: Secondary Hue Shades
+    subColors:
+    - color-secondary-lighter
+    - color-secondary-light
+    - color-secondary
+    - color-secondary-dark
+    - color-secondary-darker
 ---
 
-<h1>Colors</h1>
+<div class="prose">
+  <h1>Colors</h1>
 
-<div class="color-block-wrapper">
-  <div class="color-block color-block--hue-main">
-    <div class="color-block__inner">
-      $hue-main
-    </div>
-  </div>
+  {{#each colors}}
+    <h2>{{this.title}}</h2>
 
-  <div class="color-block color-block--hue-secondary">
-    <div class="color-block__inner">
-      $hue-secondary
+    <div class="color-block-wrapper prose__breakout">
+      {{#each this.subColors}}
+        <div class="color-block color-block--{{this}} {{this.themeClass}}">
+          <div class="color-block__inner">
+            ${{this}}
+          </div>
+        </div>
+      {{/each}}
     </div>
-  </div>
-</div>
+  {{/each}}
 
-<div class="color-block-wrapper">
-  <div class="color-block color-block--color-main-lighter">
-    <div class="color-block__inner">
-      $color-main-lighter
+  <div class="color-block-wrapper">
+    <div class="color-block color-block--light">
+      <div class="color-block__inner">
+        $color-light
+      </div>
     </div>
-  </div>
-  <div class="color-block color-block--color-main-light">
-    <div class="color-block__inner">
-      $color-main-light
-    </div>
-  </div>
-  <div class="color-block color-block--color-main">
-    <div class="color-block__inner">
-      $color-main
-    </div>
-  </div>
-  <div class="color-block color-block--color-main-dark">
-    <div class="color-block__inner">
-      $color-main-dark
-    </div>
-  </div>
-  <div class="color-block color-block--color-main-darker">
-    <div class="color-block__inner">
-      $color-main-darker
-    </div>
-  </div>
-</div>
 
-<div class="color-block-wrapper">
-  <div class="color-block color-block--color-secondary-lighter">
-    <div class="color-block__inner">
-      $color-secondary-lighter
+    <div class="color-block color-block--dark">
+      <div class="color-block__inner">
+        $color-dark
+      </div>
     </div>
-  </div>
-  <div class="color-block color-block--color-secondary-light">
-    <div class="color-block__inner">
-      $color-secondary-light
-    </div>
-  </div>
-  <div class="color-block color-block--color-secondary">
-    <div class="color-block__inner">
-      $color-secondary
-    </div>
-  </div>
-  <div class="color-block color-block--color-secondary-dark">
-    <div class="color-block__inner">
-      $color-secondary-dark
-    </div>
-  </div>
-  <div class="color-block color-block--color-secondary-darker">
-    <div class="color-block__inner">
-      $color-secondary-darker
-    </div>
-  </div>
-</div>
 
-<div class="color-block-wrapper">
-  <div class="color-block color-block--light">
-    <div class="color-block__inner">
-      $color-light
+    <div class="color-block color-block--dark-alternate">
+      <div class="color-block__inner">
+        $color-dark-alternate
+      </div>
     </div>
-  </div>
 
-  <div class="color-block color-block--dark">
-    <div class="color-block__inner">
-      $color-dark
+    <div class="color-block color-block--mid">
+      <div class="color-block__inner">
+        $color-mid
+      </div>
     </div>
-  </div>
 
-  <div class="color-block color-block--dark-alternate">
-    <div class="color-block__inner">
-      $color-dark-alternate
+    <div class="color-block color-block--interactive">
+      <div class="color-block__inner">
+        $color-interactive
+      </div>
     </div>
-  </div>
 
-  <div class="color-block color-block--mid">
-    <div class="color-block__inner">
-      $color-mid
+    <div class="color-block color-block--interactive-active">
+      <div class="color-block__inner">
+        $color-interactive-active
+      </div>
     </div>
-  </div>
 
-  <div class="color-block color-block--interactive">
-    <div class="color-block__inner">
-      $color-interactive
-    </div>
-  </div>
-
-  <div class="color-block color-block--interactive-active">
-    <div class="color-block__inner">
-      $color-interactive-active
-    </div>
-  </div>
-
-  <div class="color-block color-block--accent">
-    <div class="color-block__inner">
-      $color-accent
+    <div class="color-block color-block--accent">
+      <div class="color-block__inner">
+        $color-accent
+      </div>
     </div>
   </div>
 </div>
