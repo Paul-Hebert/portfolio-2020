@@ -3,7 +3,7 @@ layout: layouts/base.hbs
 ---
 
 <header class="page__header container">
-  <nav class="nav">
+  <nav class="container__inner nav">
     <a href="/" class="nav__left-item">Paul Hebert</a>
     <a href="/work">Work</a>
     <a href="/writing">Writing</a>
@@ -11,11 +11,11 @@ layout: layouts/base.hbs
   </nav>
 </header>
 
-<main class="page__main container container--inner">
+<main class="page__main">
   {{{content}}}
 </main>
 
-<footer class="page__footer container">
+<footer class="page__footer container container__inner">
   <nav class="nav">
     <a href="/style-guide">Style Guide</a>
     <a href="/work">Work</a>

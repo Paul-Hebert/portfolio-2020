@@ -1,10 +1,15 @@
 .container {
+  background: var(--color-background);
+  width: 100%;
+}
+
+.container__inner {
   margin: 0 auto;
   max-width: $container-width;
   width: 100%;
   padding: $base-padding;
 }
 
-.container--inner {
+.container--secondary > .container__inner {
   padding: $base-padding calc(#{$base-padding} + 2vw);
 }
