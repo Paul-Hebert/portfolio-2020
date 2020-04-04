@@ -24,8 +24,48 @@
   background: hsl($hue-main, 100%, 50%);
 }
 
-.color-block--hue-complementary {
-  background: hsl($hue-complementary, 100%, 50%);
+.color-block--hue-secondary {
+  background: hsl($hue-secondary, 100%, 50%);
+}
+
+.color-block--color-main {
+  background: $color-main;
+}
+
+.color-block--color-main-light {
+  background: $color-main-light;
+}
+
+.color-block--color-main-lighter {
+  background: $color-main-lighter;
+}
+
+.color-block--color-main-dark {
+  background: $color-main-dark;
+}
+
+.color-block--color-main-darker {
+  background: $color-main-darker;
+}
+
+.color-block--color-secondary {
+  background: $color-secondary;
+}
+
+.color-block--color-secondary-light {
+  background: $color-secondary-light;
+}
+
+.color-block--color-secondary-lighter {
+  background: $color-secondary-lighter;
+}
+
+.color-block--color-secondary-dark {
+  background: $color-secondary-dark;
+}
+
+.color-block--color-secondary-darker {
+  background: $color-secondary-darker;
 }
 
 .color-block--light {
