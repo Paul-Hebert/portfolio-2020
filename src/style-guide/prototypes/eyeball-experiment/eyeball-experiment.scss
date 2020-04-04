@@ -5,6 +5,10 @@ body {
   padding: 0;
 }
 
+.container {
+  background: #3d6db3;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -15,7 +19,7 @@ body {
   border-radius: 50%;
 }
 
-.container {
+.proto-container {
   height: 100%;
   position: relative;
 }
