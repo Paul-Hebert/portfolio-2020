@@ -8,16 +8,16 @@ $prose-width: 45rem;
 $breakout-width: 60rem;
 $container-width: 90rem;
 
-$hue-main: 213;
+$hue-main: 216;
 $hue-secondary: 16;
 
 $color-main-darker: hsl($hue-main, 55%, 2%);
 $color-main-dark: hsl($hue-main, 85%, 18%);
-$color-main: hsl($hue-main, 60%, 40%);
+$color-main: hsl($hue-main, 50%, 45%);
 $color-main-light: hsl($hue-main, 95%, 85%);
 $color-main-lighter: hsl($hue-main, 95%, 97%);
 
-$color-secondary-darker: hsl($hue-secondary, 95%, 5%);
+$color-secondary-darker: hsl($hue-secondary, 100%, 15%);
 $color-secondary-dark: hsl($hue-secondary, 95%, 25%);
 $color-secondary: hsl($hue-secondary, 75%, 40%);
 $color-secondary-light: hsl($hue-secondary, 95%, 75%);
@@ -25,7 +25,7 @@ $color-secondary-lighter: hsl($hue-secondary, 95%, 95%);
 
 $color-white: #fff;
 $color-black-30: rgba(0, 0, 0, 0.3);
-$color-gray-10: rgba(122, 122, 122, 0.1);
+$color-gray-20: rgba(122, 122, 122, 0.2);
 
 $nav-link-padding: scale.step(-3);
 $nav-link-margin: scale.step(-1);

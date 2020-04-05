@@ -3,10 +3,13 @@
 
 @mixin block-quote {
   border-left: scale.step(-7) solid var(--color-accent);
-  color: var(--color-mid);
   font-family: $font-display;
   font-style: italic;
   padding: scale.step(-5) scale.step(-1);
   padding-right: 0;
   position: relative;
+
+  p {
+    color: var(--color-mid);
+  }
 }
