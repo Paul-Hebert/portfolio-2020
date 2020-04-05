@@ -7,6 +7,10 @@
     max-width: $breakout-width;
   }
 
+  > .prose__breakout-full {
+    max-width: none;
+  }
+
   // Space items vertically in prose blocks
   > * + * {
     margin-top: $base-stagger;

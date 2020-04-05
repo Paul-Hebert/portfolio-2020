@@ -52,9 +52,9 @@ colors:
   {{#each colors}}
     <h2>{{this.title}}</h2>
 
-    <div class="color-block-wrapper prose__breakout">
+    <div class="color-block-wrapper prose__breakout-full {{this.themeClass}}">
       {{#each this.subColors}}
-        <div class="color-block color-block--{{this}} {{this.themeClass}}">
+        <div class="color-block color-block--{{this}}">
           <div class="color-block__inner">
             ${{this}}
           </div>

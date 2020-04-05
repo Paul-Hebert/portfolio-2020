@@ -2,7 +2,7 @@
 @import "base/_config.scss";
 
 .color-block-wrapper {
-  background: #fff;
+  background: var(--color-bg-alt);
   margin-top: scale.step(1);
   padding: scale.step(1);
   display: flex;
@@ -12,6 +12,7 @@
 
 .color-block {
   align-items: center;
+  border: 1px solid $color-gray-10;
   display: flex;
   justify-content: center;
   padding: scale.step(1);
@@ -109,7 +110,9 @@
 }
 
 .color-block__inner {
+  border: 1px solid $color-black-30;
   background: $color-white;
+  color: $color-main-darker;
   font-family: $font-code;
   padding: scale.step(-4);
   font-size: scale.step(-2);
