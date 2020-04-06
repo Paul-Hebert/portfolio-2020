@@ -12,10 +12,11 @@ $text-link-border-size: scale.step(-8);
   background-repeat: no-repeat;
   background-size: 100% $text-link-border-size;
 
-  transition: background 0.2s ease-out;
+  transition: color 0.2s ease-out, background 0.2s ease-out;
 
   &:hover {
-    background-image: linear-gradient(var(--color-link-hover), var(--color-link-hover));
+    background-image: linear-gradient(var(--color-link-underline-hover), var(--color-link-underline-hover));
+    color: var(--color-link-hover);
     background-position-y: 0;
     background-size: 100% 100%;
   }

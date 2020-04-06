@@ -9,7 +9,8 @@
 
   --color-link: var(--color-interactive);
   --color-link-underline: var(--color-accent);
-  --color-link-hover:#{$color-main-light};
+  --color-link-underline-hover: #{$color-main};
+  --color-link-hover:#{$color-white};
 }
 
 .theme--alt {
@@ -23,5 +24,6 @@
 
   --color-link: var(--color-interactive);
   --color-link-underline: var(--color-accent);
-  --color-link-hover:#{$color-secondary};
+  --color-link-underline-hover: #{$color-white};
+  --color-link-hover: #{$color-main};
 }
