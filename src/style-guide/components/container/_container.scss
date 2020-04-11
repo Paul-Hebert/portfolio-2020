@@ -11,5 +11,13 @@
 }
 
 .container--secondary > .container__inner {
-  padding: $base-padding calc(#{$base-padding} + 2vw);
+  padding-left: calc(#{$base-padding} + 2vw);
+  padding-right: calc(#{$base-padding} + 2vw);
+}
+
+
+
+.container--tall > .container__inner {
+  padding-top: calc(#{$base-padding} * 2);
+  padding-bottom: calc(#{$base-padding} * 2);
 }

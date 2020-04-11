@@ -1,5 +1,5 @@
 :root {
-  --color-bg: #{$color-main-lighter};
+  --color-bg: #{$color-secondary-lighter};
   --color-bg-alt: #{$color-white};
   --color-text: #{$color-main-darker};
   --color-interactive: #{$color-secondary};
@@ -8,7 +8,7 @@
   --color-mid: #{$color-secondary-darker};
 
   --color-link: var(--color-interactive);
-  --color-link-underline: var(--color-accent);
+  --color-link-underline: #{$color-main-light};
   --color-link-underline-hover: #{$color-main};
   --color-link-hover:#{$color-white};
 }
@@ -19,7 +19,7 @@
   --color-text: #{$color-white};
   --color-interactive: #{$color-white};
   --color-accent: #{$color-secondary-light};
-  --color-heading: #{$color-main-lighter};
+  --color-heading: #{$color-white};
   --color-mid: #{$color-main};
 
   --color-link: var(--color-interactive);

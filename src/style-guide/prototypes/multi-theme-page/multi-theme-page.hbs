@@ -1,0 +1,109 @@
+---
+title: Multi Theme Page
+layout: layouts/page.hbs
+headerClass: theme--alt
+footerClass: theme--alt
+---
+
+<div class="container container--secondary container--tall theme--alt">
+  <div class="container__inner">
+    <div class="prose">
+      <h1>Hey, I'm Paul!</h1>
+      <p>
+        I design and code inclusive websites and web apps.
+        I love switching back and forth between my sketchbook and code editor,
+        obsessing over design systems, accessible interfaces, and performant code.
+      </p>
+
+      <p>
+        I live in
+        <a href="https://www.currentresults.com/Weather-Extremes/US/cloudiest-cities.php">sunny Portland Oregon</a>
+        where I build accessible design systems and progressive web apps with the
+        talented folks at <a href="https://cloudfour.com">Cloud Four</a>.
+      </p>
+
+      <p>
+        In addition to designing and developing websites I enjoy
+        <a href="/writing">writing</a>, <a href="/art">drawing</a>,
+        gardening, cooking, and exploring the great outdoors.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container container--tall container--secondary">
+  <div class="container__inner">
+    <div class="prose">
+      <h2>Writing</h2>
+      <p>A collection of articles I've written for my blog or other publications.</p>
+    </div>
+
+    <ul class="listings">
+      {{!-- TODO: Sort by date --}}
+      {{#each (reverse collections.writing)}}
+      <li class="card {{#if (compare @index '===' 0)}} listings__featured-item {{/if}}">
+        <div class="card__content">
+          {{#if data.isExternal}}
+          <a class="card__primary-action" href="{{data.externalUrl}}">
+            <h2 class="card__title">{{data.title}}</h2>
+          </a>
+          {{else}}
+          <a class="card__primary-action" href="{{url url}}">
+            <h2 class="card__title">{{data.title}}</h2>
+          </a>
+          {{/if}}
+
+          <p class="card__description">
+            {{data.description}}
+          </p>
+
+          <div class="card__meta">
+            <span>{{prettyDate data.date}}</span>
+
+            {{#if data.isExternal}}
+            <span>Written for {{data.externalName}}</span>
+            {{/if}}
+          </div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
+
+<div class="container container--secondary container--tall theme--alt">
+  <div class="container__inner">
+    <div class="prose">
+      <h2>
+        Open Source Contributions
+      </h2>
+
+      <p>
+        Open source projects have been a huge help for me learning and working as a
+        designer and developer. I'm happy to have the opportunity to give back and
+        contribute to the Open Source community.
+      </p>
+    </div>
+
+    <ul class="listings">
+      {{#each openSource}}
+      <li class="card">
+        <div class="card__content">
+          <a class="card__primary-action" href="{{this.url}}">
+            <h3 class="card__title">{{this.title}}</h3>
+          </a>
+
+          <p class="card__description">
+            {{this.description}}
+          </p>
+
+          <div class="card__meta">
+            <span>Role: {{this.role}}</span>
+          </div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

@@ -12,16 +12,16 @@ $hue-main: 216;
 $hue-secondary: 16;
 
 $color-main-darker: hsl($hue-main, 55%, 2%);
-$color-main-dark: hsl($hue-main, 95%, 20%);
+$color-main-dark: hsl($hue-main, 75%, 30%);
 $color-main: hsl($hue-main, 60%, 45%);
-$color-main-light: hsl($hue-main, 95%, 85%);
+$color-main-light: hsl($hue-main, 95%, 75%);
 $color-main-lighter: hsl($hue-main, 95%, 97%);
 
 $color-secondary-darker: hsl($hue-secondary, 100%, 15%);
 $color-secondary-dark: hsl($hue-secondary, 95%, 25%);
 $color-secondary: hsl($hue-secondary, 75%, 40%);
 $color-secondary-light: hsl($hue-secondary, 95%, 75%);
-$color-secondary-lighter: hsl($hue-secondary, 95%, 95%);
+$color-secondary-lighter: hsl($hue-secondary, 75%, 97%);
 
 $color-white: #fff;
 $color-black-30: rgba(0, 0, 0, 0.3);
