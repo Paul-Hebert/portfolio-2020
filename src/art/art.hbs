@@ -1,5 +1,20 @@
 ---
 title: Art
+layout: layouts/single-container-page.hbs
 ---
 
-<h1>Art</h1>
+<div class="container">
+  <div class="container__inner">
+    <h1>Art</h1>
+    <ul class="gallery">
+      {{#each collections.art}}
+        <li class="gallery__item">
+          <a href="{{url url}}">
+            {{!-- TODO: Should the alt be a description? --}}
+            <img src="{{data.name}}/{{data.name}}.{{data.extension}}" alt="{{data.title}}">
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

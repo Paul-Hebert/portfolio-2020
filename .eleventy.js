@@ -37,6 +37,10 @@ module.exports = eleventyConfig => {
     return collection.getFilteredByGlob("src/writing/*/*.md");
   });
 
+  eleventyConfig.addCollection("art", function(collection) {
+    return collection.getFilteredByGlob("src/art/**/*.md");
+  });
+
   eleventyConfig.addCollection("identity", function(collection) {
     return collection.getFilteredByGlob(
       "src/style-guide/identity/*/*.{hbs,md}"
