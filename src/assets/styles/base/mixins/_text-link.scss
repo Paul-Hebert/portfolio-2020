@@ -5,20 +5,22 @@ $text-link-border-size: scale.step(-8);
 @mixin text-link {
   color: var(--color-link);
   text-decoration: none;
-  position: relative;
 
   background-image: linear-gradient(var(--color-link-underline), var(--color-link-underline));
   background-position-y: 1.05em;
   background-repeat: no-repeat;
   background-size: 100% $text-link-border-size;
 
-  transition: color 0.2s ease-out, background 0.2s ease-out;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transition-property: color, background, box-shadow;
 
   &:hover {
     background-image: linear-gradient(var(--color-link-underline-hover), var(--color-link-underline-hover));
     color: var(--color-link-hover);
     background-position-y: 0;
     background-size: 100% 100%;
+    box-shadow: 0 0 0 $text-link-border-size var(--color-link-underline-hover);
   }
 
   &:focus {
