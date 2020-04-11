@@ -1,0 +1,13 @@
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery__image {
+  display: block;
+  max-height: scale.step(12);
+  max-width: 100%;
+  margin: scale.step(-1);
+}

@@ -11,7 +11,7 @@ layout: layouts/single-container-page.hbs
         <li class="gallery__item">
           <a href="{{url url}}">
             {{!-- TODO: Should the alt be a description? --}}
-            <img src="{{data.name}}/{{data.name}}.{{data.extension}}" alt="{{data.title}}">
+            <img src="{{data.name}}/{{data.name}}.{{data.extension}}" alt="{{data.title}}" class="gallery__image">
           </a>
         </li>
       {{/each}}

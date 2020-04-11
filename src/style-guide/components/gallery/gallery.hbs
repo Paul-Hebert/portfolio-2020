@@ -1,0 +1,16 @@
+---
+title: Gallery
+notes: |
+  A grid layout for displaying artwork
+---
+
+<ul class="gallery">
+  {{#each collections.art}}
+    <li class="gallery__item">
+      <a href="{{url url}}">
+        {{!-- TODO: Should the alt be a description? --}}
+        <img src="/art/{{data.name}}/{{data.name}}.{{data.extension}}" alt="{{data.title}}" class="gallery__image">
+      </a>
+    </li>
+  {{/each}}
+</ul>
