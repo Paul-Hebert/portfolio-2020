@@ -1,0 +1,18 @@
+@use '../../../assets/styles/base/scale';
+
+.hero {
+  padding-bottom: scale.step(4);
+}
+
+.hero h1 {
+  font-size: scale.step(5);
+}
+
+.hero p {
+  font-size: scale.step(1);
+  font-style: italic;
+}
+
+.listings {
+  margin-top: calc(#{scale.step(4)} * -1);
+}

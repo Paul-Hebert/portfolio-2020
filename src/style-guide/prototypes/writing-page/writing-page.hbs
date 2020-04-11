@@ -1,0 +1,54 @@
+---
+title: Writing Page
+layout: layouts/page.hbs
+headerClass: theme--alt
+stylesheets:
+- style-guide/prototypes/writing-page/writing-page
+---
+
+<div class="container container--secondary container--tall theme--alt hero">
+  <div class="container__inner">
+    <div class="prose">
+      <h1>Writing</h1>
+      <p>
+        A collection of articles I've written for my blog or
+        <a href="https://cloudfour.com">Cloud Four</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container container--secondary">
+  <div class="container__inner">
+    <ul class="listings">
+      {{!-- TODO: Sort by date --}}
+      {{#each (reverse collections.writing)}}
+      <li class="card {{#if (compare @index '===' 0)}} listings__featured-item {{/if}}">
+        <div class="card__content">
+          {{#if data.isExternal}}
+          <a class="card__primary-action" href="{{data.externalUrl}}">
+            <h2 class="card__title">{{data.title}}</h2>
+          </a>
+          {{else}}
+          <a class="card__primary-action" href="{{url url}}">
+            <h2 class="card__title">{{data.title}}</h2>
+          </a>
+          {{/if}}
+
+          <p class="card__description">
+            {{data.description}}
+          </p>
+
+          <div class="card__meta">
+            <span>{{prettyDate data.date}}</span>
+
+            {{#if data.isExternal}}
+            <span>Written for {{data.externalName}}</span>
+            {{/if}}
+          </div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
