@@ -3,7 +3,7 @@
   --color-bg-alt: #{$color-white};
   --color-text: #{$color-main-darker};
   --color-interactive: #{$color-secondary};
-  --color-accent: #{$color-main};
+  --color-accent: #{$color-main-dark};
   --color-heading: #{$color-main-dark};
   --color-mid: #{$color-secondary-darker};
 
@@ -20,7 +20,7 @@
   --color-interactive: #{$color-white};
   --color-accent: #{$color-secondary-light};
   --color-heading: #{$color-white};
-  --color-mid: #{$color-main};
+  --color-mid: #{$color-secondary-lighter};
 
   --color-link: var(--color-interactive);
   --color-link-underline: var(--color-accent);
