@@ -1,3 +1,5 @@
+$gallery-offset: calc(#{scale.step(-7)} * -1);
+
 .gallery {
   list-style: none;
   display: flex;
@@ -5,9 +7,43 @@
   justify-content: center;
 }
 
+.gallery__item {
+  transition: transform 0.2s ease-out;
+
+  margin: scale.step(-1);
+  position:relative;
+}
+
+.gallery__item:hover {
+  transform: scale(1.02);
+}
+
+.gallery__item::before {
+  content: '';
+
+  background: var(--color-interactive);
+
+  position: absolute;
+  bottom: $gallery-offset;
+  top: $gallery-offset;
+  left: $gallery-offset;
+  right: $gallery-offset;
+
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.2s ease-out;
+
+  z-index: -1;
+}
+
+.gallery__item:hover::before {
+  transform: scale(1);
+}
+
 .gallery__image {
   display: block;
   max-height: scale.step(12);
   max-width: 100%;
-  margin: scale.step(-1);
 }
+
+// TODO: Focus styles
