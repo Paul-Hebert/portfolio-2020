@@ -34,7 +34,7 @@ body {
 }
 
 .eye {
-  transition: transform 0.3s $transition-easing;
+  transition: transform 0.3s ease-out;
   transform-origin: center;
   // Force transform-origin to be based off the eye, not the SVG wrapper.
   transform-box: fill-box;
@@ -100,7 +100,7 @@ html body.page a {
   text-decoration: underline;
   text-decoration-color: #f47676 !important;
   text-decoration-thickness: 3px;
-  transition: color 0.3s $transition-easing, text-decoration 0.3s $transition-easing;
+  transition: color 0.3s ease-out, text-decoration 0.3s ease-out;
 }
 
 html body.page a:hover {
