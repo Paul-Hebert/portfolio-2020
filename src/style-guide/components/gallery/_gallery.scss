@@ -1,5 +1,3 @@
-$gallery-offset: calc(#{scale.step(-7)} * -1);
-
 .gallery {
   list-style: none;
   display: flex;
@@ -8,14 +6,14 @@ $gallery-offset: calc(#{scale.step(-7)} * -1);
 }
 
 .gallery__item {
-  transition: transform 0.2s ease-out;
+  transition: transform $transition-speed $transition-easing;
 
   margin: scale.step(-1);
   position:relative;
 }
 
 .gallery__item:hover {
-  transform: scale(1.02);
+  transform: $scale-small;
 }
 
 .gallery__item::before {
@@ -24,16 +22,16 @@ $gallery-offset: calc(#{scale.step(-7)} * -1);
   background: var(--color-interactive);
 
   position: absolute;
-  bottom: $gallery-offset;
-  top: $gallery-offset;
-  left: $gallery-offset;
-  right: $gallery-offset;
+  bottom: $border-thick-offset;
+  top: $border-thick-offset;
+  left: $border-thick-offset;
+  right: $border-thick-offset;
 
   transform: scaleY(0);
   transform-origin: bottom;
-  transition: transform 0.2s ease-out;
+  transition: transform $transition-speed $transition-easing;
 
-  z-index: -1;
+  z-index: 0;
 }
 
 .gallery__item:hover::before {
@@ -44,6 +42,8 @@ $gallery-offset: calc(#{scale.step(-7)} * -1);
   display: block;
   max-height: scale.step(12);
   max-width: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 // TODO: Focus styles

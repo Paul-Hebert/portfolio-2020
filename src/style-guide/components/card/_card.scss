@@ -1,22 +1,20 @@
-$card-offset: calc(#{scale.step(-7)} * -1);
-
 .card {
   position: relative;
-  transition: transform 0.2s ease-out;
-  border-radius: 0.2em;
+  transition: transform $transition-speed $transition-easing;
+  border-radius: $border-radius-med;
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: scale($scale-small);
 }
 
 .card::before,
 .card::after {
   content: '';
   position: absolute;
-  bottom: $card-offset;
+  bottom: $border-thick-offset;
   z-index: 0;
-  border-radius: 0.2em;
+  border-radius: $border-radius-med;
 }
 
 .card::before {
@@ -28,12 +26,12 @@ $card-offset: calc(#{scale.step(-7)} * -1);
 
 .card::after {
   background: var(--color-interactive);
-  top: $card-offset;
-  left: $card-offset;
-  right: $card-offset;
+  top: $border-thick-offset;
+  left: $border-thick-offset;
+  right: $border-thick-offset;
   transform: scaleY(0);
   transform-origin: bottom;
-  transition: transform 0.2s ease-out;
+  transition: transform $transition-speed $transition-easing;
 }
 
 .card:hover::after {
@@ -71,7 +69,7 @@ $card-offset: calc(#{scale.step(-7)} * -1);
 
 .card__title {
   font-size: scale.step(1);
-  transition: color 0.2s ease-out;
+  transition: color $transition-speed $transition-easing;
 }
 
 .card:hover .card__title {

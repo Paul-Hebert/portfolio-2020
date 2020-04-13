@@ -35,3 +35,13 @@ $font-display: "Libre Baskerville", serif;
 $font-code: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
   "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
   "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+
+$border-thick: scale.step(-7);
+$border-thick-offset: calc(#{$border-thick} * -1);
+
+$border-radius-med: scale.step(-8);
+
+$scale-small: 1.02;
+
+$transition-speed: 0.2s;
+$transition-easing: ease-out;

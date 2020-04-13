@@ -11,8 +11,8 @@ $text-link-border-size: scale.step(-8);
   background-repeat: no-repeat;
   background-size: 100% $text-link-border-size;
 
-  transition-duration: 0.2s;
-  transition-timing-function: ease-out;
+  transition-duration: $transition-speed;
+  transition-timing-function: $transition-easing;
   transition-property: color, background, box-shadow;
 
   &:hover {

@@ -10,12 +10,11 @@
   padding: $base-padding;
 }
 
+// TODO: This should only take effect on larger screens
 .container--secondary > .container__inner {
   padding-left: calc(#{$base-padding} + 2vw);
   padding-right: calc(#{$base-padding} + 2vw);
 }
-
-
 
 .container--tall > .container__inner {
   padding-top: calc(#{$base-padding} * 2);

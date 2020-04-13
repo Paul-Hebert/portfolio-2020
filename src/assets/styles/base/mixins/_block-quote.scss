@@ -2,7 +2,7 @@
 @import "../_config.scss";
 
 @mixin block-quote {
-  border-left: scale.step(-7) solid var(--color-accent);
+  border-left: $border-thick solid var(--color-accent);
   font-family: $font-display;
   font-style: italic;
   padding: scale.step(-5) scale.step(-1);
