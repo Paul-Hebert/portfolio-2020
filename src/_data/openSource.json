@@ -42,6 +42,12 @@
     "url": "https://github.com/CoreyGinnivan/whocanuse"
   },
   {
+    "title": "Custom Elements Everywhere",
+    "role": "Contributor",
+    "description": "Making sure frameworks and custom elements can be BFFs 🍻",
+    "url": "https://custom-elements-everywhere.com"
+  },
+  {
     "title": "scroll-lock",
     "role": "Contributor",
     "description": "🔨 Cross-browser JavaScript library to disable scrolling page",
