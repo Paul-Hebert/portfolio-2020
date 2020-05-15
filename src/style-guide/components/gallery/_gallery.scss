@@ -27,6 +27,8 @@
   left: $border-thick-offset;
   right: $border-thick-offset;
 
+  border-radius: $border-radius-med;
+
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform $transition-speed $transition-easing;

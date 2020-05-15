@@ -3,17 +3,29 @@
 
 .hero {
   padding-bottom: scale.step(4);
+  // margin-bottom: scale.step(4);
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  border-top: scale.step(7) solid var(--color-bg);
+  border-right: 100vw solid transparent;
+  position: absolute;
+  top: 100%;
+  width: 100%;
 }
 
 .hero h1 {
+  // font-family: $font-body;
   font-size: scale.step(5);
   // text-shadow:
   // 0.03em 0.03em 0 var(--color-bg),
   // 0.05em 0.05em 0 var(--color-accent);
-  // transform: rotate(-3deg);
 }
 
 .hero p {
+  // font-family:$font-display;
   font-size: scale.step(1);
   font-style: italic;
 }

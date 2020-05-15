@@ -50,7 +50,7 @@
 }
 
 .card__content > * + * {
-  margin-top: $base-stagger;
+  margin-top: scale.step(-2);
 }
 
 .card__primary-action {
