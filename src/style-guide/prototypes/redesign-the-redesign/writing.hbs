@@ -1,0 +1,67 @@
+---
+title: Redesign The Redesign
+layout: layouts/base
+stylesheets:
+- style-guide/prototypes/redesign-the-redesign/redesign-the-redesign
+---
+
+<header class="page__header container">
+  <nav class="container__inner nav">
+    <a href="/" class="nav__left-item">Paul Hebert</a>
+    <a href="/work">Work</a>
+    <a href="/writing">Writing</a>
+    <a href="/art">Art</a>
+  </nav>
+</header>
+
+<main class="page__main container">
+  <div class="container__inner">
+
+    <div class="hero">
+      <h1>Writing</h1>
+      <p>A collection of articles I've written for my blog or other publications.</p>
+    </div>
+
+    <ul class="listings">
+      {{!-- TODO: Sort by date --}}
+      {{#each (reverse collections.writing)}}
+      <li class="card {{#if (compare @index '===' 0)}} listings__featured-item {{/if}}">
+        <div class="card__content">
+          {{#if data.isExternal}}
+          <a class="card__primary-action" href="{{data.externalUrl}}">
+            <h2 class="card__title">{{data.title}}</h2>
+          </a>
+          {{else}}
+          <a class="card__primary-action" href="{{url url}}">
+            <h2 class="card__title">{{data.title}}</h2>
+          </a>
+          {{/if}}
+
+          <p class="card__description">
+            {{data.description}}
+          </p>
+
+          <div class="card__meta">
+            <span>{{prettyDate data.date}}</span>
+
+            {{#if data.isExternal}}
+            <span>Written for {{data.externalName}}</span>
+            {{/if}}
+          </div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</main>
+
+<footer class="page__footer container">
+  <nav class="container__inner nav">
+    <a href="/style-guide">Style Guide</a>
+    <a href="/work">Work</a>
+    <a href="/writing">Writing</a>
+    <a href="/art">Art</a>
+    <a href="https://github.com/Paul-Hebert">Github</a>
+    <a href="https://twitter.com/HaulPebert">Twitter</a>
+  </nav>
+</footer>
