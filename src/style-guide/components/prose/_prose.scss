@@ -52,4 +52,18 @@
   :not(pre) > code {
     color: var(--color-interactive);
   }
+
+  li > ul,
+  li > ol {
+    margin-top: scale.step(-9);
+    padding-left: scale.step(3);
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  li + li {
+    margin-top: scale.step(-9);
+  }
 }
