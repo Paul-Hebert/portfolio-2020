@@ -6,7 +6,7 @@ const hljs = require("highlight.js");
 const md = require("markdown-it")({
   html: true,
   typographer: true,
-  highlight: function(str, lang) {
+  highlight: function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {
         return (
@@ -22,10 +22,10 @@ const md = require("markdown-it")({
       md.utils.escapeHtml(str) +
       "</code></pre>"
     );
-  }
+  },
 });
 
-module.exports = eleventyConfig => {
+module.exports = (eleventyConfig) => {
   // Rebuild the site when CSS or JS is updated
   // By default 11ty wouldn't know to watch these files since they're processed
   // by node-sass and rollup.
@@ -33,28 +33,30 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addPassthroughCopy("./src/**/*.{png,svg,jpeg,jpg}");
 
-  eleventyConfig.addCollection("writing", function(collection) {
+  eleventyConfig.addCollection("writing", function (collection) {
     return collection.getFilteredByGlob("src/writing/*/*.md");
   });
 
-  eleventyConfig.addCollection("art", function(collection) {
+  eleventyConfig.addCollection("art", function (collection) {
     return collection.getFilteredByGlob("src/art/**/*.md");
   });
 
-  eleventyConfig.addCollection("identity", function(collection) {
+  eleventyConfig.addCollection("identity", function (collection) {
     return collection.getFilteredByGlob(
       "src/style-guide/identity/*/*.{hbs,md}"
     );
   });
 
-  eleventyConfig.addCollection("components", function(collection) {
+  eleventyConfig.addCollection("components", function (collection) {
     return collection.getFilteredByGlob(
       "src/style-guide/components/*/*.{hbs,md}"
     );
   });
 
-  eleventyConfig.addCollection("prototypes", function(collection) {
-    return collection.getFilteredByGlob("src/style-guide/prototypes/*/*.hbs");
+  eleventyConfig.addCollection("prototypes", function (collection) {
+    return collection.getFilteredByGlob(
+      "src/style-guide/prototypes/*/*.{hbs,md}"
+    );
   });
 
   Handlebars.registerHelper("prettyDate", prettyDate);
@@ -62,14 +64,14 @@ module.exports = eleventyConfig => {
   Handlebars.registerHelper("compare", compare);
 
   eleventyConfig.setLibrary("md", md);
-  eleventyConfig.addFilter("markdown", value => {
+  eleventyConfig.addFilter("markdown", (value) => {
     return md.render(value);
   });
 
   return {
     dir: {
       input: "src",
-      output: "dist"
-    }
+      output: "dist",
+    },
   };
 };
