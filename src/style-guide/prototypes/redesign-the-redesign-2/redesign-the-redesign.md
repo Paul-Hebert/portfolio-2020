@@ -1,18 +1,18 @@
 ---
-title: Redesign The Redesign (Blog Post)
+title: Redesign The Redesign (Blog Post) V2
 layout: layouts/base
 stylesheets:
-  - style-guide/prototypes/redesign-the-redesign/redesign-the-redesign
+  - style-guide/prototypes/redesign-the-redesign-2/redesign-the-redesign
 ---
 
-<header class="page__header container">
-  <nav class="container__inner nav">
-    <a href="/" class="nav__left-item">Paul Hebert</a>
+<aside class="sidebar">
+  <nav class="nav">
+    <a href="/">Paul Hebert</a>
     <a href="/work">Work</a>
     <a href="/writing">Writing</a>
     <a href="/art">Art</a>
   </nav>
-</header>
+</aside>
 
 <main class="page__main container">
   <div class="container__inner prose">
@@ -112,14 +112,3 @@ Hopefully these will be links soon ;)
 - And more!!
   </div>
 </main>
-
-<footer class="page__footer container">
-  <nav class="container__inner nav">
-    <a href="/style-guide">Style Guide</a>
-    <a href="/work">Work</a>
-    <a href="/writing">Writing</a>
-    <a href="/art">Art</a>
-    <a href="https://github.com/Paul-Hebert">Github</a>
-    <a href="https://twitter.com/HaulPebert">Twitter</a>
-  </nav>
-</footer>

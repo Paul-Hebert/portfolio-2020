@@ -1,0 +1,46 @@
+.container__inner {
+  max-width: 40em;
+}
+
+.hero {
+  margin-bottom: 2em;
+}
+
+.hero h1 {
+  // font-family: "Roboto";
+}
+
+.hero p {
+  font-family: "Libre Baskerville";
+  font-style: italic;
+  margin-top: 0.5em;
+  color: #4d1400;
+}
+
+.listings {
+  display: block;
+}
+
+.card {
+  margin-top: 1em;
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav {
+  position: sticky;
+  flex-direction: column;
+  align-items: start;
+  padding: 1.25em;
+}
+
+.nav a {
+  white-space: nowrap;
+}
+
+.nav a + a {
+  margin-left: 0;
+}
