@@ -65,6 +65,18 @@
     bottom: 0;
     left: 0;
   }
+
+  &:focus {
+    outline: none;
+
+    &::before {
+      outline: 0.3em solid var(--color-accent);
+    }
+
+    &:hover::before {
+      outline-offset: $text-link-border-size;
+    }
+  }
 }
 
 .card__title {
@@ -85,5 +97,3 @@
 .card__description {
   flex-grow: 1;
 }
-
-// TODO: Focus styles
