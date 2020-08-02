@@ -7,20 +7,11 @@ notes: |
   Cards work best in [listings](/components/listings).
 ---
 
-<div class="card">
-  <div class="card__content">
-    <a class="card__primary-action" href="https://cloudfour.com/thinks/transitioning-hidden-elements/">
-      <h2 class="card__title">Transitioning Hidden Elements</h2>
-    </a>
-
-    <p class="card__description">
-      Transitioning hidden elements can be tricky! I wrote an npm package to provide a reusable solution.
-    </p>
-
-    <div class="card__meta">
-      <span>January 16th, 2020</span>
-
-      <span>Written for Cloud Four</span>
-    </div>
-  </div>
-</div>
+{{#> card
+  link="https://cloudfour.com/thinks/transitioning-hidden-elements/"
+  title="Transitioning Hidden Elements"
+  description="Transitioning hidden elements can be tricky! I wrote an npm package to provide a reusable solution."
+}}
+  <span>January 16th, 2020</span>
+  <span>Written for Cloud Four</span>
+{{/card}}

@@ -2,7 +2,11 @@ const Handlebars = require("handlebars");
 const prettyDate = require("./helpers/prettyDate");
 const reverse = require("./helpers/reverse");
 const { compare } = require("@cloudfour/hbs-helpers");
+const ternary = require('handlebars-helper-ternary');
 const hljs = require("highlight.js");
+const path = require('path');
+const fg = require('fast-glob');
+const fs = require('fs');
 const md = require("markdown-it")({
   html: true,
   typographer: true,
@@ -59,9 +63,20 @@ module.exports = (eleventyConfig) => {
     );
   });
 
+
   Handlebars.registerHelper("prettyDate", prettyDate);
   Handlebars.registerHelper("reverse", reverse);
   Handlebars.registerHelper("compare", compare);
+  Handlebars.registerHelper("ternary", ternary);
+
+  // Register handlebars partials
+  fg.sync('src/style-guide/components/**/partials/**/*.hbs').forEach(file => {
+    const partial = fs.readFileSync(file, 'utf8');
+    const pathSegments = file.split('/');
+    let key = pathSegments[pathSegments.length - 1];
+    key = key.replace(path.extname(file), '');
+    Handlebars.registerPartial(key, partial);
+  });
 
   eleventyConfig.setLibrary("md", md);
   eleventyConfig.addFilter("markdown", (value) => {

@@ -11,30 +11,17 @@ layout: layouts/single-container-page.hbs
 <ul class="listings">
   {{!-- TODO: Sort by date --}}
   {{#each (reverse collections.writing)}}
-  <li class="card {{#if (compare @index '===' 0)}} listings__featured-item {{/if}}">
-    <div class="card__content">
+    {{#> card
+      link=(ternary data.isExternal data.externalUrl (url url))
+      title=data.title
+      description=data.description
+      cardClass=(ternary (compare @index "===" 0) "listings__featured-item" "")
+    }}
+      <span>{{prettyDate data.date}}</span>
+
       {{#if data.isExternal}}
-      <a class="card__primary-action" href="{{data.externalUrl}}">
-        <h2 class="card__title">{{data.title}}</h2>
-      </a>
-      {{else}}
-      <a class="card__primary-action" href="{{url url}}">
-        <h2 class="card__title">{{data.title}}</h2>
-      </a>
-      {{/if}}
-
-      <p class="card__description">
-        {{data.description}}
-      </p>
-
-      <div class="card__meta">
-        <span>{{prettyDate data.date}}</span>
-
-        {{#if data.isExternal}}
         <span>Written for {{data.externalName}}</span>
-        {{/if}}
-      </div>
-    </div>
-  </li>
+      {{/if}}
+    {{/card}}
   {{/each}}
 </ul>

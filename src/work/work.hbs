@@ -23,20 +23,12 @@ title: Work
 
 <ul class="listings">
   {{#each openSource}}
-  <li class="card">
-    <div class="card__content">
-      <a class="card__primary-action" href="{{this.url}}">
-        <h3 class="card__title">{{this.title}}</h3>
-      </a>
-
-      <p class="card__description">
-        {{this.description}}
-      </p>
-
-      <div class="card__meta">
-        <span>Role: {{this.role}}</span>
-      </div>
-    </div>
-  </li>
+    {{#> card
+      link=this.url
+      title=this.title
+      description=this.description
+    }}
+      <span>Role: {{this.role}}</span>
+    {{/card}}
   {{/each}}
 </ul>
