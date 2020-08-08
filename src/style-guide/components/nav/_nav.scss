@@ -6,7 +6,7 @@
   justify-content: flex-end;
 }
 
-.nav a {
+.nav__link {
   @include text-link();
   background-position-y: calc(1.1em + #{$nav-link-padding});
   display: inline-block;
@@ -19,10 +19,15 @@
   }
 }
 
-.nav__left-item {
-  margin-right: auto;
+.nav__item,
+.nav__group {
+  display: inline-flex;
 }
 
-.nav a + a {
+.nav__item + .nav__item {
   margin-left: $nav-link-margin;
+}
+
+.nav__group--left {
+  margin-right: auto;
 }

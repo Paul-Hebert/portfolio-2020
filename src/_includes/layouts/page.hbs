@@ -4,10 +4,13 @@ layout: layouts/base.hbs
 
 <header class="page__header container {{headerClass}}">
   <nav class="container__inner nav">
-    <a href="/" class="nav__left-item">Paul Hebert</a>
-    <a href="/work">Work</a>
-    <a href="/writing">Writing</a>
-    <a href="/art">Art</a>
+    <div class="nav__group nav__group--left">
+      <a href="/" class="nav__link nav__item">Paul Hebert</a>
+    </div>
+
+    <a href="/work" class="nav__link nav__item">Work</a>
+    <a href="/writing" class="nav__link nav__item">Writing</a>
+    <a href="/art" class="nav__link nav__item">Art</a>
   </nav>
 </header>
 
@@ -17,11 +20,18 @@ layout: layouts/base.hbs
 
 <footer class="page__footer container {{footerClass}}">
   <nav class="container__inner nav">
-    <a href="/style-guide">Style Guide</a>
-    <a href="/work">Work</a>
-    <a href="/writing">Writing</a>
-    <a href="/art">Art</a>
-    <a href="https://github.com/Paul-Hebert">Github</a>
-    <a href="https://twitter.com/HaulPebert">Twitter</a>
+    <div class="nav__group nav__group--left">
+      <a href="https://github.com/Paul-Hebert" class="nav__item nav__link u-size1">
+        {{>github-icon}}
+      </a>
+      <a href="https://twitter.com/HaulPebert" class="nav__item nav__link u-size1">
+        {{>twitter-icon}}
+      </a>
+    </div>
+
+    <a href="/style-guide" class="nav__link nav__item">Style Guide</a>
+    <a href="/work" class="nav__link nav__item">Work</a>
+    <a href="/writing" class="nav__link nav__item">Writing</a>
+    <a href="/art" class="nav__link nav__item">Art</a>
   </nav>
 </footer>
