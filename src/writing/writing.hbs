@@ -20,7 +20,14 @@ layout: layouts/single-container-page.hbs
       <span>{{prettyDate data.date}}</span>
 
       {{#if data.isExternal}}
-        <span>Written for {{data.externalName}}</span>
+          <span class="u-flex u-align-center">
+            Written for
+            {{#if (compare data.externalName "===" "Cloud Four")}}
+              {{>c4-icon iconClass="u-size2 u-space-left-7"}}
+            {{else}}
+              {{data.externalName}}
+            {{/if}}
+          </span>
       {{/if}}
     {{/card}}
   {{/each}}
