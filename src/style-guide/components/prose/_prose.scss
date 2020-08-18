@@ -49,8 +49,12 @@
     font-family: $font-code;
   }
 
+  // Inline code examples
   :not(pre) > code {
+    background: var(--color-bg-alt);
+    border-radius: scale.step(-9);
     color: var(--color-interactive);
+    padding: 0 scale.step(-9);
   }
 
   li > ul,
