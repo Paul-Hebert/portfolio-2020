@@ -26,4 +26,7 @@
   --color-link-underline: var(--color-accent);
   --color-link-underline-hover: #{$color-white};
   --color-link-hover: #{$color-main};
+
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
