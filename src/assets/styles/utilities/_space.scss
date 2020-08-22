@@ -3,5 +3,5 @@
 }
 
 .u-space-items > * + * {
-  margin-top: scale.step(0);
+  margin-top: $base-stagger;
 }

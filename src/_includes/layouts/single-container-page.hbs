@@ -1,8 +1,8 @@
 ---
 layout: layouts/page.hbs
-containerModifier: container--secondary
+layoutContainerClass: container--secondary
 ---
 
-{{#>container containerModifier=containerModifier}}
+{{#>container containerModifier=(concat layoutContainerClass containerModifier)}}
   {{{content}}}
 {{/container}}

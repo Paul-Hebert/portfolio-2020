@@ -5,12 +5,20 @@ notes: |
 
   Theming is achieved by using CSS custom properties to overwrite color values in themed contexts.
 layout: layouts/documentation.hbs
+exampleClass: ""
 ---
 
-{{#>container containerModifier="theme-dark" innerClass="prose"}}
+{{#>container innerClass="prose"}}
+  <h2>Default</h2>
+  <p>
+    This is how content will be displayed when no theme is applied.
+  </p>
+{{/container}}
+
+{{#>container containerModifier="theme--dark" innerClass="prose"}}
   <h2>Dark</h2>
   <p>
-    The <code>theme-dark</code> theme can be used to invert the site's colors
+    The <code>theme--dark</code> theme can be used to invert the site's colors
     and apply a dark blue background.
   </p>
 {{/container}}

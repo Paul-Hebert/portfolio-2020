@@ -123,8 +123,4 @@
   border: 2px solid $color-white;
   margin-top: scale.step(0);
   padding: scale.step(0);
-
-  > * + * {
-    margin-top: $base-stagger;
-  }
 }
