@@ -48,7 +48,7 @@ And here's some `console.log('inline code')`!
   </div>
 </div>
 
-<div class="container container--tall theme--alt">
+<div class="container container--tall theme-dark">
   <div class="container__inner prose">
 
 # Typography

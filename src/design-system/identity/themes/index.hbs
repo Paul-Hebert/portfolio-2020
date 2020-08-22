@@ -1,0 +1,16 @@
+---
+title: Themes
+notes: |
+  Themes can be applied to entire pages or sections of content to alter their colors.
+
+  Theming is achieved by using CSS custom properties to overwrite color values in themed contexts.
+layout: layouts/documentation.hbs
+---
+
+{{#>container containerModifier="theme-dark" innerClass="prose"}}
+  <h2>Dark</h2>
+  <p>
+    The <code>theme-dark</code> theme can be used to invert the site's colors
+    and apply a dark blue background.
+  </p>
+{{/container}}
