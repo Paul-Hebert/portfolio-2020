@@ -4,8 +4,6 @@ description: Here we go again!
 date: 2020-02-29
 ---
 
-# Redesigning my Website
-
 As a web designer and developer, my portfolio is the best representation of my
 skills and talents. More than my resume, [GitHub profile](https://github.com/Paul-Hebert),
 or [work bio](https://cloudfour.com/is/paul/), my portfolio represents me as a

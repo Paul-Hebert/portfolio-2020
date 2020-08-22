@@ -4,8 +4,6 @@ description: Description
 date: 2020-04-01
 ---
 
-# Redesigning my Website
-
 One thing I knew about the new site identity is that I wanted to inject a lot of
 fun and quirky illustration, animation and interactivity into the site.
 

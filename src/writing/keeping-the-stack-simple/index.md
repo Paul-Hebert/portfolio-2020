@@ -1,10 +1,9 @@
 ---
 title: Keeping the Stack Simple
 description: Experimenting with a new build system for my portfolio.
+subhead: Experimenting with a new build system for my portfolio.
 date: 2020-03-10
 ---
-
-# Keeping the Stack Simple
 
 My colleague [Tyler Sticka](https://tylersticka.com/) recently published [Tiny Web Stacks](https://cloudfour.com/thinks/tiny-web-stacks/).
 After reading it I was inspired to rethink the stack I use for my portfolio:
