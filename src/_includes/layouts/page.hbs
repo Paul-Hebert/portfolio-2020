@@ -2,36 +2,42 @@
 layout: layouts/base.hbs
 ---
 
-<header class="page__header container {{headerClass}}">
-  <nav class="container__inner nav">
-    <div class="nav__group nav__group--left">
-      <a href="/" class="nav__link nav__item">Paul Hebert</a>
-    </div>
+{{#>container
+  containerModifier=(concat "page__header container " headerClass)
+  innerClass="nav"
+  containerEl="header"
+  innerEl="nav"
+}}
+  <div class="nav__group nav__group--left">
+    <a href="/" class="nav__link nav__item">Paul Hebert</a>
+  </div>
 
-    <a href="/work" class="nav__link nav__item">Work</a>
-    <a href="/writing" class="nav__link nav__item">Writing</a>
-    <a href="/art" class="nav__link nav__item">Art</a>
-  </nav>
-</header>
+  <a href="/work" class="nav__link nav__item">Work</a>
+  <a href="/writing" class="nav__link nav__item">Writing</a>
+  <a href="/art" class="nav__link nav__item">Art</a>
+{{/container}}
 
 <main class="page__main {{mainClass}}">
   {{{content}}}
 </main>
 
-<footer class="page__footer container {{footerClass}}">
-  <nav class="container__inner nav">
-    <div class="nav__group nav__group--left">
-      <a href="https://github.com/Paul-Hebert" class="nav__item nav__link u-size1">
-        {{>github-icon}}
-      </a>
-      <a href="https://twitter.com/HaulPebert" class="nav__item nav__link u-size1">
-        {{>twitter-icon}}
-      </a>
-    </div>
+{{#>container
+  containerModifier=(concat "page__footer container " footerClass)
+  innerClass="nav"
+  containerEl="footer"
+  innerEl="nav"
+}}
+  <div class="nav__group nav__group--left">
+    <a href="https://github.com/Paul-Hebert" class="nav__item nav__link u-size1">
+      {{>github-icon}}
+    </a>
+    <a href="https://twitter.com/HaulPebert" class="nav__item nav__link u-size1">
+      {{>twitter-icon}}
+    </a>
+  </div>
 
-    <a href="/design-system" class="nav__link nav__item">Design System</a>
-    <a href="/work" class="nav__link nav__item">Work</a>
-    <a href="/writing" class="nav__link nav__item">Writing</a>
-    <a href="/art" class="nav__link nav__item">Art</a>
-  </nav>
-</footer>
+  <a href="/design-system" class="nav__link nav__item">Design System</a>
+  <a href="/work" class="nav__link nav__item">Work</a>
+  <a href="/writing" class="nav__link nav__item">Writing</a>
+  <a href="/art" class="nav__link nav__item">Art</a>
+{{/container}}

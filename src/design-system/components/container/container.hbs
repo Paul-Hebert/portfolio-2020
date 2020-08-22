@@ -8,20 +8,26 @@ notes: |
   padding.
 ---
 
-<div class="container">
-  <div class="container__inner">
-    This is a full width container.
-  </div>
-</div>
+{{#>container}}
+  This is a full width container.
+{{/container}}
 
-<div class="container container--secondary">
-  <div class="container__inner">
-    This is a <code>container--secondary</code>.
-  </div>
-</div>
+{{#>container containerModifier="container--secondary"}}
+  This is a <code>container--secondary</code> container.
+{{/container}}
 
-<div class="container container--prose-width">
-  <div class="container__inner">
-    This is a <code>container--prose-width</code>.
-  </div>
-</div>
+{{#>container containerModifier="container--prose-width"}}
+  This is a <code>container--prose-width</code> container.
+{{/container}}
+
+{{#>container containerModifier="theme--alt"}}
+  This is a <code>theme--alt</code> container.
+{{/container}}
+
+{{#>container containerModifier="container--tall"}}
+  This is a <code>container--tall</code> container.
+{{/container}}
+
+{{#>container containerModifier="container--tall theme--alt"}}
+  This is a <code>container--tall</code> <code>theme--alt</code> container.
+{{/container}}

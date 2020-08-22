@@ -1,7 +1,7 @@
 const Handlebars = require("handlebars");
 const prettyDate = require("./helpers/prettyDate");
 const reverse = require("./helpers/reverse");
-const { compare } = require("@cloudfour/hbs-helpers");
+const { concat, compare, defaultTo } = require("@cloudfour/hbs-helpers");
 const ternary = require('handlebars-helper-ternary');
 const hljs = require("highlight.js");
 const path = require('path');
@@ -37,6 +37,10 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPassthroughCopy("./src/**/*.{png,svg,jpeg,jpg}");
 
+  eleventyConfig.addCollection("work", function (collection) {
+    return collection.getFilteredByGlob("src/work/*/*.{hbs,md}");
+  });
+
   eleventyConfig.addCollection("writing", function (collection) {
     return collection.getFilteredByGlob("src/writing/*/*.md");
   });
@@ -66,7 +70,9 @@ module.exports = (eleventyConfig) => {
 
   Handlebars.registerHelper("prettyDate", prettyDate);
   Handlebars.registerHelper("reverse", reverse);
+  Handlebars.registerHelper("concat", concat);
   Handlebars.registerHelper("compare", compare);
+  Handlebars.registerHelper("defaultTo", defaultTo);
   Handlebars.registerHelper("ternary", ternary);
 
   // Register handlebars partials
