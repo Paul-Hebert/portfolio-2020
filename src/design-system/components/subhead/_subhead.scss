@@ -1,0 +1,11 @@
+.subhead {
+  color: var(--color-subhead);
+  font-family: $font-display;
+  font-size: scale.step(1);
+  font-style: italic;
+  max-width: none;
+}
+
+h2 + .subhead {
+  font-size: scale.step(0);
+}

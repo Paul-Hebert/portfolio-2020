@@ -7,6 +7,8 @@
   --color-heading: #{$color-main-dark};
   --color-mid: #{$color-secondary-darker};
 
+  --color-subhead: #{$color-secondary-darker};
+
   --color-link: var(--color-interactive);
   --color-link-underline: #{$color-main-light};
   --color-link-underline-hover: #{$color-main};
@@ -21,6 +23,8 @@
   --color-accent: #{$color-secondary-light};
   --color-heading: #{$color-white};
   --color-mid: #{$color-secondary-lighter};
+
+  --color-subhead: #{$color-white};
 
   --color-link: var(--color-interactive);
   --color-link-underline: var(--color-accent);
