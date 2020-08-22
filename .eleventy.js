@@ -47,19 +47,19 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addCollection("identity", function (collection) {
     return collection.getFilteredByGlob(
-      "src/style-guide/identity/*/*.{hbs,md}"
+      "src/design-system/identity/*/*.{hbs,md}"
     );
   });
 
   eleventyConfig.addCollection("components", function (collection) {
     return collection.getFilteredByGlob(
-      "src/style-guide/components/*/*.{hbs,md}"
+      "src/design-system/components/*/*.{hbs,md}"
     );
   });
 
   eleventyConfig.addCollection("prototypes", function (collection) {
     return collection.getFilteredByGlob(
-      "src/style-guide/prototypes/*/*.{hbs,md}"
+      "src/design-system/prototypes/*/*.{hbs,md}"
     );
   });
 
@@ -70,7 +70,7 @@ module.exports = (eleventyConfig) => {
   Handlebars.registerHelper("ternary", ternary);
 
   // Register handlebars partials
-  fg.sync('src/style-guide/components/**/partials/**/*.hbs').forEach(file => {
+  fg.sync('src/design-system/components/**/partials/**/*.hbs').forEach(file => {
     const partial = fs.readFileSync(file, 'utf8');
     const pathSegments = file.split('/');
     let key = pathSegments[pathSegments.length - 1];

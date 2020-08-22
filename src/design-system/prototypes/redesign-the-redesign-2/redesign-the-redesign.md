@@ -2,7 +2,7 @@
 title: Redesign The Redesign (Blog Post) V2
 layout: layouts/base
 stylesheets:
-  - style-guide/prototypes/redesign-the-redesign-2/redesign-the-redesign
+  - design-system/prototypes/redesign-the-redesign-2/redesign-the-redesign
 ---
 
 <aside class="sidebar">

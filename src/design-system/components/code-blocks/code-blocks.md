@@ -41,12 +41,12 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addCollection("identity", function(collection) {
     return collection.getFilteredByGlob(
-      "src/style-guide/identity/*/*.{hbs,md}"
+      "src/design-system/identity/*/*.{hbs,md}"
     );
   });
 
   eleventyConfig.addCollection("components", function(collection) {
-    return collection.getFilteredByGlob("src/style-guide/components/*/*.{hbs,md}");
+    return collection.getFilteredByGlob("src/design-system/components/*/*.{hbs,md}");
   });
 
   Handlebars.registerHelper("prettyDate", prettyDate);
@@ -135,7 +135,7 @@ h6 {
 
   <footer class="page__footer">
     <nav class="nav">
-      <a href="/style-guide">Style Guide</a>
+      <a href="/design-system">Design System</a>
       <a href="/work">Work</a>
       <a href="/writing">Writing</a>
       <a href="/art">Art</a>

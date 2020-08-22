@@ -2,7 +2,7 @@
 title: Redesign The Redesign (Blog Post)
 layout: layouts/base
 stylesheets:
-  - style-guide/prototypes/redesign-the-redesign/redesign-the-redesign
+  - design-system/prototypes/redesign-the-redesign/redesign-the-redesign
 ---
 
 <header class="page__header container">
@@ -115,7 +115,7 @@ Hopefully these will be links soon ;)
 
 <footer class="page__footer container">
   <nav class="container__inner nav">
-    <a href="/style-guide">Style Guide</a>
+    <a href="/design-system">Design System</a>
     <a href="/work">Work</a>
     <a href="/writing">Writing</a>
     <a href="/art">Art</a>
