@@ -11,3 +11,9 @@ layout: layouts/design-system.hbs
 <div class="example {{defaultTo exampleClass 'u-space-items'}}">
   {{{content}}}
 </div>
+
+{{#unless hideDarkExample}}
+  <div class="example {{defaultTo exampleClass 'u-space-items theme--dark'}}">
+    {{{content}}}
+  </div>
+{{/unless}}
