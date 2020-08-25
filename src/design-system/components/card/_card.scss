@@ -2,6 +2,7 @@
   position: relative;
   transition: transform $transition-speed $transition-easing;
   border-radius: $border-radius-med;
+  z-index: 1;
 }
 
 .card:hover {

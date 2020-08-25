@@ -13,7 +13,7 @@ $text-link-border-size: scale.step(-8);
 
   transition-duration: $transition-speed;
   transition-timing-function: $transition-easing;
-  transition-property: color, background, box-shadow;
+  transition-property: color, background-image, background-size, background-position, box-shadow;
 
   &:hover {
     background-image: linear-gradient(var(--color-link-underline-hover), var(--color-link-underline-hover));

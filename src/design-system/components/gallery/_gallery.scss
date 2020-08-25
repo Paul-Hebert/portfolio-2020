@@ -10,10 +10,11 @@
 
   margin: scale.step(-1);
   position:relative;
+  z-index: 1;
 }
 
 .gallery__item:hover {
-  transform: $scale-small;
+  transform: scale($scale-small);
 }
 
 .gallery__item::before {
