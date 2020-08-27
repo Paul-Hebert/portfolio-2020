@@ -16,27 +16,6 @@
     margin-top: $base-stagger;
   }
 
-  // TODO: Heading sizes should go down a step on small screens
-  h1 {
-    font-size: scale.step(4);
-  }
-
-  h2 {
-    font-size: scale.step(3);
-  }
-
-  h3 {
-    font-size: scale.step(2);
-  }
-
-  // I don't anticipate needing level 5 or 6 headings. If I do this will need to
-  // be revisited.
-  h4,
-  h5,
-  h6 {
-    font-size: scale.step(0);
-  }
-
   a {
     @include text-link();
   }

@@ -1,0 +1,38 @@
+---
+title: Blog Header
+notes: |
+  The Blog Header can be displayed at the top of blog posts to organize
+  and display meta info.
+---
+
+{{>blog-header title="My blog Post" subhead="You've gotta read this one!" date="2020-03-10"}}
+
+<div class="prose">
+  <p>
+    My colleague <a href="https://tylersticka.com/">Tyler Sticka</a> recently published
+    <a href="https://cloudfour.com/thinks/tiny-web-stacks/">Tiny Web Stacks</a>.
+    After reading it I was inspired to rethink the stack I use for my portfolio:
+  </p>
+
+  <blockquote>
+    <p>
+      I’ve grown to love small, simple tech stacks for those occasional side projects,
+      micro-sites and one-off experiments that don’t demand as many features or justify
+      such diligent maintenance.
+    </p>
+  </blockquote>
+
+  <p>
+    I took a step back and considered what my needs were. There were four main capabilities I
+    wanted that aren’t provided by the web out of the box:
+  </p>
+
+  <ul>
+    <li>HTML templating</li>
+    <li>Hot reloading</li>
+    <li>CSS mixins, imports, and nesting</li>
+    <li>JS package management and transpilation</li>
+  </ul>
+
+  <p>I wanted to see how I could achieve these capabilities without adding a beefy build step, or writing a bunch of configuration code. I reached for a few trusty tools:</p>
+</div>

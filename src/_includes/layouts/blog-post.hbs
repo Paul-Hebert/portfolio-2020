@@ -1,14 +1,11 @@
 ---
-layout: layouts/single-container-page.hbs
-layoutContainerClass: "container--prose-width"
+layout: layouts/page.hbs
 ---
 
-<div class="prose">
-  <h1>{{{title}}}</h1>
+{{#>container containerModifier="container--prose-width"}}
+  {{>blog-header}}
 
-  {{#if subhead}}
-    <p class="subhead">{{subhead}}</p>
-  {{/if}}
-
-  {{{ content }}}
-</div>
+  <div class="prose">
+    {{{ content }}}
+  </div>
+{{/container}}

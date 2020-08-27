@@ -1,0 +1,21 @@
+.blog-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: scale.step(1);
+}
+
+.blog-header__title {
+  order: 2;
+}
+
+.blog-header__subhead {
+  margin-top: scale.step(-5);
+  order: 3;
+}
+
+.blog-header__date {
+  @include all-caps();
+  color: var(--color-subtle);
+  font-size: scale.step(-1);
+  order: 1;
+}
