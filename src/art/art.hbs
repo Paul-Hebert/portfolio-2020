@@ -13,8 +13,16 @@ layout: layouts/single-container-page.hbs
     {{#each collections.art}}
       <li class="gallery__item">
         <a href="{{url url}}">
-          {{!-- TODO: Should the alt be a description? --}}
-          <img src="{{data.name}}/{{data.name}}.{{data.extension}}" alt="{{data.title}}" class="gallery__image">
+          {{!--
+            TODO: The Alt Text Should be more descriptive
+            TODO: loading="lazy" isn't working...
+          --}}
+          <img
+            src="{{data.name}}/{{data.name}}.{{data.extension}}"
+            alt="{{data.title}}"
+            loading="lazy"
+            class="gallery__image"
+          >
         </a>
       </li>
     {{/each}}
