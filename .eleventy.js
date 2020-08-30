@@ -15,11 +15,11 @@ const md = require("markdown-it")({
     if (lang && hljs.getLanguage(lang)) {
       try {
         return (
-          '<pre class="hljs prose__breakout"><code>' +
-          hljs.highlight(lang, str, true).value +
-          "</code></pre>"
+          `<pre class="hljs prose__breakout"><code>${hljs.highlight(lang, str, true).value.trim()}</code></pre>`
         );
-      } catch (__) {}
+      } catch (e) {
+        console.error('Code Highlighting Failed')
+      }
     }
 
     return (
