@@ -22,7 +22,7 @@ title: Design System
   </p>
 
   <ul>
-    {{#each collections.identity}}
+    {{#each (sortCollection collections.identity 'title')}}
     <li>
       <a href="{{url url}}">{{data.title}}</a>
     </li>
@@ -37,7 +37,7 @@ title: Design System
   </p>
 
   <ul>
-    {{#each collections.components}}
+    {{#each (sortCollection collections.components 'title')}}
     <li>
       <a href="{{url url}}">{{data.title}}</a>
     </li>

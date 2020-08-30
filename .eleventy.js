@@ -1,6 +1,7 @@
 const Handlebars = require("handlebars");
 const prettyDate = require("./helpers/prettyDate");
 const reverse = require("./helpers/reverse");
+const sortCollection = require("./helpers/sortCollection");
 const { concat, compare, defaultTo } = require("@cloudfour/hbs-helpers");
 const ternary = require('handlebars-helper-ternary');
 const hljs = require("highlight.js");
@@ -70,6 +71,7 @@ module.exports = (eleventyConfig) => {
 
   Handlebars.registerHelper("prettyDate", prettyDate);
   Handlebars.registerHelper("reverse", reverse);
+  Handlebars.registerHelper("sortCollection", sortCollection);
   Handlebars.registerHelper("concat", concat);
   Handlebars.registerHelper("compare", compare);
   Handlebars.registerHelper("defaultTo", defaultTo);
