@@ -2,6 +2,8 @@
 title: Creating a New Personal Identity
 description: Description
 date: 2020-04-01
+metaDescription: Test Meta Description
+ogImage: eyeballs.png
 ---
 
 One thing I knew about the new site identity is that I wanted to inject a lot of

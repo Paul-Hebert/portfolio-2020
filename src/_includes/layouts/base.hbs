@@ -1,31 +1,46 @@
+---
+  title: Paul Hebert
+  metaDescription: Test
+---
 <!doctype html>
 <html lang="en">
+  <head>
+    <title>
+      {{ title }}
+    </title>
 
-<head>
-  <meta charset="utf-8">
-  <title>
-    {{ title }}
-  </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{!-- Meta tags for robots --}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- TODO: Meta Description -->
-  <!-- TODO: Favicon -->
+    {{!-- SEO and sharing meta tags --}}
+    <meta name="og:title" content="{{title}}">
+    <meta name="og:site_name" content="Paul Hebert">
 
-  <link rel="stylesheet" href="/assets/styles/index.css">
+    <meta name="description" content="{{metaDescription}}">
+    <meta name="og:description" content="{{metaDescription}}">
 
-  {{#each stylesheets}}
-  <link rel="stylesheet" href="/{{this}}.css">
-  {{/each}}
-</head>
+    {{!-- To Do: Add a default --}}
+    {{#if ogImage}}
+      <meta name="og:image" content="{{ogImage}}"/>
+    {{/if}}
 
-<body class="page {{bodyClass}}">
-  {{{ content }}}
-</body>
+    <!-- TODO: Favicon -->
 
-<script src="/assets/scripts/index.js"></script>
+    <link rel="stylesheet" href="/assets/styles/index.css">
 
-{{#each scripts}}
-<script src="/{{this}}.js"></script>
-{{/each}}
+    {{#each stylesheets}}
+    <link rel="stylesheet" href="/{{this}}.css">
+    {{/each}}
+  </head>
 
+  <body class="page {{bodyClass}}">
+    {{{ content }}}
+
+    <script src="/assets/scripts/index.js"></script>
+
+    {{#each scripts}}
+    <script src="/{{this}}.js"></script>
+    {{/each}}
+  </body>
 </html>
