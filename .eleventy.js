@@ -31,6 +31,8 @@ const md = require("markdown-it")({
 });
 
 module.exports = (eleventyConfig) => {
+  eleventyConfig.setDataDeepMerge(true);
+
   // Rebuild the site when CSS or JS is updated
   // By default 11ty wouldn't know to watch these files since they're processed
   // by node-sass and rollup.

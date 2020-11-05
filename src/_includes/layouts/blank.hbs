@@ -1,0 +1,45 @@
+---
+  title: Paul Hebert
+  metaDescription:
+    Paul Hebert lives in Portland and designs and codes inclusive websites and
+    web apps with the talented folks at Cloud Four.
+  siteUrl: ph-portfolio.netlify.app/
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+      {{ title }}
+    </title>
+
+    {{!-- Meta tags for robots --}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{!-- SEO and sharing meta tags --}}
+    <meta name="og:title" content="{{title}}">
+    <meta name="og:site_name" content="Paul Hebert">
+
+    <meta name="description" content="{{metaDescription}}">
+    <meta name="og:description" content="{{metaDescription}}">
+
+    {{!-- To Do: Add a default --}}
+    {{#if ogImage}}
+      <meta name="og:image" content="ph-portfolio.netlify.app/{{ogImage}}"/>
+    {{/if}}
+
+    <!-- TODO: Favicon -->
+
+    {{#each stylesheets}}
+    <link rel="stylesheet" href="{{this}}.css">
+    {{/each}}
+  </head>
+
+  <body class="page {{bodyClass}}">
+    {{{ content }}}
+
+    {{#each scripts}}
+    <script src="{{this}}.js"></script>
+    {{/each}}
+  </body>
+</html>
