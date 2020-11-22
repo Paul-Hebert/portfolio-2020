@@ -1,0 +1,136 @@
+@import url("https://use.typekit.net/kag1kjz.css");
+
+body {
+  background: #f4f4f4;
+  color: #111;
+  font-family: fira-sans, sans-serif;
+  padding: 1em;
+  font-size: 1.3em;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  color: #222;
+  font-family: peachy-keen-jf, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  margin-bottom: 0.8rem;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+nav, main {
+  max-width: 110ch;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a.left {
+  margin-right: auto;
+}
+
+nav a:not(.left) {
+  margin-left: 1em;
+}
+
+.sticky-grid {
+  display: flex;
+  margin: 3em 0;
+  position: relative;
+}
+
+.sticky-grid__content {
+  padding-right: 3em;
+  position: relative;
+}
+
+.sticky-grid__content-inner {
+  position: sticky;
+  top: 1em;
+}
+
+.paper {
+  background: #fafafa;
+  width: 15em;
+  height: 15em;
+  transform: rotate(-1deg);
+
+  box-shadow:
+    0 0.4px 0.8px rgba(0, 0, 0, 0.037),
+    0 1px 1.9px rgba(0, 0, 0, 0.053),
+    0 1.9px 3.6px rgba(0, 0, 0, 0.065),
+    0 3.4px 6.5px rgba(0, 0, 0, 0.077),
+    0 6.3px 12.1px rgba(0, 0, 0, 0.093),
+    0 15px 29px rgba(0, 0, 0, 0.13)
+  ;
+}
+
+
+/**
+ * Stack styles
+ */
+
+.stack {
+  position: relative;
+}
+
+.stack__card {
+  --rotate-value: 1.5deg;
+  --rotate-direction: -1;
+  --translate-x: 3px;
+  --translate-x-direction: -1;
+  --translate-y: 1px;
+  --translate-y-direction: 1;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 2em;
+  transform: rotate(calc(var(--rotate-value) * var(--rotate-direction))) translate(calc(var(--translate-x) * var(--translate-x-direction)), calc(var(--translate-y) * var(--translate-y-direction)));
+}
+
+.stack__card:nth-of-type(2n) {
+  --rotate-direction: 1;
+  --translate-x: 5px;
+}
+
+.stack__card:nth-of-type(3n) {
+  --rotate-value: 2deg;
+  --translate-x-direction: 1;
+}
+
+.stack__card:nth-of-type(2n + 1) {
+  --translate-y: 6px;
+}
+
+.stack__card:nth-of-type(3n + 1) {
+  --rotate-value: 2.5deg;
+  --rotate-direction: -1;
+  --translate-y-direction: -1;
+  --translate-y: 6px;
+}
+
+.stack__card:nth-of-type(4n) {
+  --rotate-value: 3deg;
+  --rotate-direction: 1;
+  --translate-x: 15px;
+  --translate-x-direction: -1;
+}
+
+.stack__card:nth-of-type(2n + 3) {
+  --translate-y: 10px;
+  --translate-x: 8px;
+}
+
+.stack__card + .stack__card {
+  margin-top: 3em;
+}
