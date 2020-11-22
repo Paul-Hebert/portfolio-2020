@@ -1,12 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
+:root {
+  --scale-value: 0.9;
+
+  /* Based off of info from https://support.polaroid.com/hc/en-us/articles/115012363647-Polaroid-Originals-photo-dimensions */
+  --polaroid-width: calc(3.5in * var(--scale-value));
+  --polaroid-height: calc(4.2in * var(--scale-value));
+  --polaroid-image-size: calc(3.1in * var(--scale-value));
+  --polaroid-gutter: calc((var(--polaroid-width) - var(--polaroid-image-size)) / 2);
+  --polaroid-caption-height: calc(var(--polaroid-height) - var(--polaroid-image-size));
+
+  --stack-card-offset: calc(2em * var(--scale-value));
+}
+
+@media (min-width: 3.5in) {
+  :root {
+    --scale-value: 0.95;
+  }
+}
+
+@media (min-width: 4.4in) {
+  :root {
+    --scale-value: 1;
+  }
+}
+
 /**
  * Stack styles
  */
 
 .stack {
-  /* 4.2in is the polaroid height */
-  padding-bottom: calc(100vh - 4.2in);
+  padding-bottom: calc(100vh - var(--polaroid-height) - var(--stack-card-offset));
   position: relative;
 }
 
@@ -19,10 +43,11 @@
   --translate-y-direction: 1;
   position: sticky;
   position: -webkit-sticky;
-  top: 2em;
+  top: var(--stack-card-offset);
   transform:
     rotate(calc(var(--rotate-value) * var(--rotate-direction)))
-    translate(calc(var(--translate-x) * var(--translate-x-direction)), calc(var(--translate-y) * var(--translate-y-direction)));
+    translate(calc(var(--translate-x) * var(--translate-x-direction)), calc(var(--translate-y) * var(--translate-y-direction)))
+    scale(var(--scale-value));
 }
 
 .stack__card:nth-of-type(2n){
@@ -71,13 +96,6 @@
 }
 
 .polaroid {
-  /* Based off of info from https://support.polaroid.com/hc/en-us/articles/115012363647-Polaroid-Originals-photo-dimensions */
-  --polaroid-width: 3.5in;
-  --polaroid-height: 4.2in;
-  --polaroid-image-size: 3.1in;
-  --polaroid-gutter: calc((var(--polaroid-width) - var(--polaroid-image-size)) / 2);
-  --polaroid-caption-height: calc(var(--polaroid-height) - var(--polaroid-image-size));
-
   background: #fff;
   /* Generated using https://brumm.af/shadows */
   box-shadow:
