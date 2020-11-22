@@ -1,0 +1,14 @@
+.alert-banner {
+  background: var(--color-bg-alt);
+  border-bottom: var(--color-link-underline) scale.step(-10) solid;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: scale.step(0);
+}
+
+.alert-banner__action {
+  @include text-link();
+  margin-left: scale.step(-4);
+}

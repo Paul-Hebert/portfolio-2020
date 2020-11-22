@@ -1,12 +1,12 @@
 ---
 layout: layouts/base.hbs
 ---
-{{#>container containerModifier="theme--dark prose"}}
-  <p>
-    I'm doing a public redesign of my portfolio website so this site is a work in progress.
-    <a href="http://paulhebertdesigns.com">Visit the old site.</a>
-  </p>
-{{/container}}
+{{>alert-banner
+  alertBannerMessage="This site is undergoing a public redesign."
+  alertBannerActionUrl="http://paulhebertdesigns.com"
+  alertBannerActionText="View my old site."
+  alertBannerClass="theme--dark"
+}}
 
 {{#>container
   containerModifier=(concat "page__header container " headerClass)
