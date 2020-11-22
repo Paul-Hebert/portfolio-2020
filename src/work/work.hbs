@@ -13,7 +13,7 @@ layout: layouts/page.hbs
   <ul class="listings">
     {{#each collections.work}}
       {{#> card
-        link=(url url)
+        link=(ternary data.externalUrl data.externalUrl (url url))
         title=data.title
         description=data.description
         cardClass=(ternary (compare @index "===" 0) "listings__featured-item" "")
