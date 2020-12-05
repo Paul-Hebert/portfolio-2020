@@ -39,6 +39,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addWatchTarget("./src/**/*.{js,scss}");
 
   eleventyConfig.addPassthroughCopy("./src/**/*.{png,svg,jpeg,jpg}");
+  eleventyConfig.addPassthroughCopy("./src/experiments/**/*.js");
 
   eleventyConfig.addCollection("work", function (collection) {
     return collection.getFilteredByGlob("src/work/*/*.{hbs,md}");

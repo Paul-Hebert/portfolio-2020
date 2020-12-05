@@ -1,5 +1,5 @@
 const globby = require("globby");
-const configs = globby.sync("src/**/*.js").map(inputFile => ({
+const configs = globby.sync("src/!(experiments)/**/*.js").map(inputFile => ({
   input: inputFile,
   output: {
     file: inputFile.replace("src", "dist"),
