@@ -3,6 +3,14 @@
   max-width: 100%;
 }
 
+.figure__content--iframe {
+  border: none;
+  background: var(--color-bg-alt);
+  height: var(--example-embed-height, min(27em, 100vh));
+  width: 100%;
+  --webkit-overflow-scrolling: touch;
+}
+
 .figure__caption {
   font-size: scale.step(-1);
   font-style: italic;

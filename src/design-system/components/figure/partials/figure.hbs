@@ -1,0 +1,21 @@
+<figure class="figure">
+  {{#if iframeSrc}}
+    <iframe
+      src="{{iframeSrc}}"
+      class="figure__content figure__content--iframe"
+      loading="lazy">
+  {{else if imgSrc}}
+    <img
+      src="{{imgSrc}}"
+      class="figure__content"
+      loading="lazy">
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
+
+  {{#if caption}}
+    <figcaption class="figure__caption">
+      {{caption}}
+    </figcaption>
+  {{/if}}
+</figure>
