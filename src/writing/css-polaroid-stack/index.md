@@ -8,10 +8,7 @@ date: 2020-12-03
 
 Recently my girlfriend and I took our puppy to the coast for the first time. I thought it would be fun to commemorate our trip by creating a unique web page displaying our pictures as a stack of polaroids. Here's the finished product:
 
-<figure class="figure">
-  <iframe src="/experiments/polaroid-stack/" class="figure__content figure__content--iframe" loading="lazy">
-  </iframe>
-</figure>
+{% partial 'figure', '{"iframeSrc": "/experiments/polaroid-stack/"}' %}
 
 I had to solve a few different problems to get this working how I wanted:
 

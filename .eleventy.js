@@ -80,13 +80,28 @@ module.exports = (eleventyConfig) => {
   Handlebars.registerHelper("defaultTo", defaultTo);
   Handlebars.registerHelper("ternary", ternary);
 
+  // Store handlebars template functions so we can use them from shortcodes
+  const templates = {};
+
   // Register handlebars partials
   fg.sync('src/design-system/components/**/partials/**/*.hbs').forEach(file => {
+    // Read our partial's markup
     const partial = fs.readFileSync(file, 'utf8');
+    // Generate a simplied key from the final chunk of the path
     const pathSegments = file.split('/');
     let key = pathSegments[pathSegments.length - 1];
     key = key.replace(path.extname(file), '');
+
+    // Register our partial
     Handlebars.registerPartial(key, partial);
+
+    // Store the partial template for short code use later.
+    templates[key] = Handlebars.compile(Handlebars.partials[key]);
+  });
+
+  // Add a shortcode to allow us to render Handlebars partials
+  eleventyConfig.addShortcode("partial", (name, params) => {
+    return templates[name](JSON.parse(params));
   });
 
   eleventyConfig.setLibrary("md", md);
