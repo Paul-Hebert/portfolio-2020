@@ -5,5 +5,11 @@
     <p class="blog-header__subhead subhead">{{subhead}}</p>
   {{/if}}
 
-  <p class="blog-header__date">{{prettyDate data.date false}}</p>
+  <p class="blog-header__date">
+    {{prettyDate data.date false}}
+    {{#if (compare status '===' 'draft')}}
+      &mdash;
+      Draft
+    {{/if}}
+  </p>
 </div>

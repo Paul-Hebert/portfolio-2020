@@ -5,4 +5,5 @@ isExternal: true
 externalUrl: https://cloudfour.com/thinks/staggered-animations-with-css-custom-properties/
 externalName: Cloud Four
 date: 2020-01-17
+status: published
 ---

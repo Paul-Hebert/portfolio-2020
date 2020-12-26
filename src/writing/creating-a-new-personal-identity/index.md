@@ -4,7 +4,7 @@ description: Description
 date: 2020-04-01
 metaDescription: Test Meta Description
 ogImage: writing/creating-a-new-personal-identity/eyeballs.png
-hidden: true
+status: draft
 ---
 
 One thing I knew about the new site identity is that I wanted to inject a lot of

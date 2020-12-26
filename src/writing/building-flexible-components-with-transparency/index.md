@@ -5,4 +5,5 @@ isExternal: true
 externalUrl: https://cloudfour.com/thinks/building-flexible-components-with-transparency/
 externalName: Cloud Four
 date: 2020-11-19
+status: published
 ---

@@ -5,4 +5,5 @@ isExternal: true
 externalUrl: https://cloudfour.com/thinks/taking-isomorphic-apps-offline-with-service-workers/
 externalName: Cloud Four
 date: 2019-11-12
+status: published
 ---

@@ -5,4 +5,5 @@ isExternal: true
 externalUrl: https://cloudfour.com/thinks/css-animation-timelines-building-a-rube-goldberg-machine/
 externalName: Cloud Four
 date: 2020-04-13
+status: published
 ---

@@ -5,4 +5,5 @@ isExternal: true
 externalUrl: https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/
 externalName: Cloud Four
 date: 2019-02-25
+status: published
 ---

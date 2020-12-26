@@ -2,7 +2,7 @@
 title: Using Handlebars Partials In Markdown With Eleventy
 description: Combining the power of Handlebars with the simplicity of Markdown.
 date: 2020-12-13
-hidden: true
+status: draft
 ---
 
 I've been rebuilding my portfolio with [Eleventy](https://www.11ty.dev/) and loving it. One of my favorite features is that I can use different templating languages for different files. I can harness all the strengths of a templating language like [Handlebars](https://handlebarsjs.com/) when building out pages, and enjoy the simplicity of [Markdown](https://daringfireball.net/projects/markdown/syntax) when writing blog posts.

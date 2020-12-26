@@ -10,27 +10,25 @@ layout: layouts/single-container-page.hbs
 
 <ul class="listings">
   {{!-- TODO: Sort by date --}}
-  {{#each (reverse collections.writing)}}
-    {{#unless data.hidden}}
-      {{#> card
-        link=(ternary data.isExternal data.externalUrl (url url))
-        title=data.title
-        description=data.description
-        cardClass=(ternary (compare @index "===" 0) "listings__featured-item" "")
-      }}
-        <span>{{prettyDate data.date}}</span>
+  {{#each (preparePosts collections.writing)}}
+    {{#> card
+      link=(ternary data.isExternal data.externalUrl (url url))
+      title=data.title
+      description=data.description
+      cardClass=(ternary (compare @index "===" 0) "listings__featured-item" "")
+    }}
+      <span>{{prettyDate data.date}}</span>
 
-        {{#if data.isExternal}}
-            <span class="u-flex u-align-center">
-              Written for
-              {{#if (compare data.externalName "===" "Cloud Four")}}
-                {{>c4-icon iconClass="u-size2 u-space-left-7"}}
-              {{else}}
-                {{data.externalName}}
-              {{/if}}
-            </span>
-        {{/if}}
-      {{/card}}
-    {{/unless}}
+      {{#if data.isExternal}}
+          <span class="u-flex u-align-center">
+            Written for
+            {{#if (compare data.externalName "===" "Cloud Four")}}
+              {{>c4-icon iconClass="u-size2 u-space-left-7"}}
+            {{else}}
+              {{data.externalName}}
+            {{/if}}
+          </span>
+      {{/if}}
+    {{/card}}
   {{/each}}
 </ul>
