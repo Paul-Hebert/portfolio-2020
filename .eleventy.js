@@ -101,7 +101,11 @@ module.exports = (eleventyConfig) => {
 
   // Add a shortcode to allow us to render Handlebars partials
   eleventyConfig.addShortcode("partial", (name, params) => {
-    return templates[name](JSON.parse(params));
+    const HTML = templates[name](JSON.parse(params));
+    // When used in markdown, anything indented 4 spaces is treated as
+    // a code snippet. We can remove these spaces so HTML isn't escaped.
+    // @see https://www.11ty.dev/docs/languages/markdown/#there-are-extra-and-in-my-output
+    return HTML.replace(/    /g, '');
   });
 
   eleventyConfig.setLibrary("md", md);
