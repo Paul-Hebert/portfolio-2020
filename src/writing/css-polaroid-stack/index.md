@@ -2,7 +2,7 @@
 title: A CSS Polaroid Stack
 description: Creating a stack of polaroids with a development animation and pseudo-random stacking.
 subhead: With animation and pseudo-random stacking.
-
+hidden: true
 date: 2020-12-03
 ---
 

@@ -2,6 +2,7 @@
 title: Redesigning my Website
 description: Here we go again!
 date: 2020-02-29
+hidden: true
 ---
 
 As a web designer and developer, my portfolio is the best representation of my
