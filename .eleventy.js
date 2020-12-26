@@ -1,5 +1,6 @@
 const Handlebars = require("handlebars");
 const prettyDate = require("./helpers/prettyDate");
+const uglyDate = require("./helpers/uglyDate");
 const reverse = require("./helpers/reverse");
 const preparePosts = require("./helpers/preparePosts");
 const sortCollection = require("./helpers/sortCollection");
@@ -74,6 +75,7 @@ module.exports = (eleventyConfig) => {
 
 
   Handlebars.registerHelper("prettyDate", prettyDate);
+  Handlebars.registerHelper("uglyDate", uglyDate);
   Handlebars.registerHelper("reverse", reverse);
   Handlebars.registerHelper("preparePosts", preparePosts);
   Handlebars.registerHelper("sortCollection", sortCollection);
