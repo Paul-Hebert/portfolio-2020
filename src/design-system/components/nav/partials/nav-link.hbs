@@ -1,0 +1,7 @@
+  <a
+    href="{{linkUrl}}"
+    {{#if (compare page.url '===' linkUrl)}}aria-current="page"{{/if}}
+    class="nav__link nav__item"
+  >
+    {{> @partial-block}}
+  </a>

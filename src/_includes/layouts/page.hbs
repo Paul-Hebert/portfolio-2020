@@ -15,12 +15,12 @@ layout: layouts/base.hbs
   innerEl="nav"
 }}
   <div class="nav__group nav__group--left">
-    <a href="/" class="nav__link nav__item">Paul Hebert</a>
+    {{#>nav-link linkUrl="/"}}Paul Hebert{{/nav-link}}
   </div>
 
-  <a href="/work" class="nav__link nav__item">Work</a>
-  <a href="/writing" class="nav__link nav__item">Writing</a>
-  {{!-- <a href="/art" class="nav__link nav__item">Art</a> --}}
+  {{#>nav-link linkUrl="/work/"}}Work{{/nav-link}}
+  {{#>nav-link linkUrl="/writing/"}}Writing{{/nav-link}}
+  {{!-- {{#>nav-link linkUrl="/art"}} Art"{{/nav-link}} --}}
 {{/container}}
 
 <main class="page__main {{mainClass}}">
@@ -34,16 +34,16 @@ layout: layouts/base.hbs
   innerEl="nav"
 }}
   <div class="nav__group nav__group--left">
-    <a href="https://github.com/Paul-Hebert" class="nav__item nav__link u-size1">
+    {{#>nav-link linkUrl="https://github.com/Paul-Hebert"}}
       {{>github-icon}}
-    </a>
-    <a href="https://twitter.com/HaulPebert" class="nav__item nav__link u-size1">
+    {{/nav-link}}
+    {{#>nav-link linkUrl="https://twitter.com/HaulPebert"}}
       {{>twitter-icon}}
-    </a>
+    {{/nav-link}}
   </div>
 
-  <a href="/design-system" class="nav__link nav__item">Design System</a>
-  <a href="/work" class="nav__link nav__item">Work</a>
-  <a href="/writing" class="nav__link nav__item">Writing</a>
-  {{!-- <a href="/art" class="nav__link nav__item">Art</a> --}}
+  {{#>nav-link linkUrl="/design-system/"}}Design System{{/nav-link}}
+  {{#>nav-link linkUrl="/work/"}}Work{{/nav-link}}
+  {{#>nav-link linkUrl="/writing/"}}Writing{{/nav-link}}
+  {{!-- {{#>nav-link linkUrl="/art"}} Art"{{/nav-link}} --}}
 {{/container}}

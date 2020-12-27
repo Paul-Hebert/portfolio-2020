@@ -6,11 +6,9 @@ notes: |
 
 <nav class="nav">
   <div class="nav__group nav__group--left">
-    <a href="#" class="nav__item nav__link">Left-Aligned Link</a>
+    {{#>nav-link linkUrl="/"}}Paul Hebert{{/nav-link}}
   </div>
 
-  <a href="#" class="nav__link nav__item">Link</a>
-  <a href="#" class="nav__link nav__item">Link</a>
-  <a href="#" class="nav__link nav__item">Link</a>
-  <a href="#" class="nav__link nav__item">Link</a>
+  {{#>nav-link linkUrl="/work/"}}Work{{/nav-link}}
+  {{#>nav-link linkUrl="/writing/"}}Writing{{/nav-link}}
 </nav>
