@@ -29,7 +29,7 @@
     "del-cli": "^3.0.0",
     "fast-glob": "^3.2.4",
     "globby": "^11.0.0",
-    "handlebars": "^4.7.3",
+    "handlebars": "^4.7.7",
     "handlebars-helper-ternary": "^1.0.0",
     "helper-markdown": "^1.0.0",
     "highlight.js": "^9.18.1",
