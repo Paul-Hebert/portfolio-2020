@@ -1,0 +1,207 @@
+.hero {
+  display: grid;
+  place-items: center;
+  gap: 3em;
+  grid-template-columns: 1fr;
+}
+
+.hero__graphic::before {
+  content: '';
+  display: block;
+  padding-bottom: 120%;
+}
+
+@media(min-width: 40em) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__graphic::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+@media(min-width: 60em) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__graphic::before {
+    content: '';
+    display: block;
+    padding-bottom: 80%;
+  }
+}
+
+.hero__graphic {
+  position: relative;
+  width: 100%;
+}
+
+.hero__graphic::before {
+  content: '';
+  display: block;
+}
+
+.hero__graphic-inner {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/**
+ * Polaroid StackStyles
+ */
+
+.polaroid-stack {
+  display: grid;
+  grid-template-areas: 'content';
+  place-items: center;
+}
+
+.polaroid-stack__card {
+  grid-area: content;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-name: card;
+}
+
+.polaroid-stack__card:first-child {
+  --end-state: rotate(-5deg) translate(-10%, -45%);
+}
+
+.polaroid-stack__card:nth-child(2) {
+  --end-state: rotate(15deg) translate(5%, -20%);
+  display: none;
+}
+
+.polaroid-stack__card:nth-child(3) {
+  --end-state: rotate(25deg) translate(35%, -35%);
+}
+
+.polaroid-stack__card:nth-child(4) {
+  --end-state: rotate(-40deg) translate(-45%, -25%);
+}
+
+.polaroid-stack__card:nth-child(5) {
+  --end-state: rotate(13deg) translate(15%, 35%);
+}
+
+@keyframes card {
+  from {
+    transform: rotate(0) translate(0, 5em);
+  }
+
+  to {
+    transform: var(--end-state);
+  }
+}
+
+/**
+ * Polaroid Styles
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root {
+  --scale-value: 0.7in;
+
+  /* Based off of info from https://support.polaroid.com/hc/en-us/articles/115012363647-Polaroid-Originals-photo-dimensions */
+  --polaroid-width: calc(3.5 * var(--scale-value));
+  --polaroid-height: calc(4.2 * var(--scale-value));
+  --polaroid-image-size: calc(3.1 * var(--scale-value));
+  --polaroid-gutter: calc((var(--polaroid-width) - var(--polaroid-image-size)) / 2);
+  --polaroid-caption-height: calc(var(--polaroid-height) - var(--polaroid-image-size));
+
+  --polaroid-undeveloped: opacity(0) brightness(0.3) contrast(300%);
+}
+
+.polaroid {
+  background: #fff;
+  /* Generated using https://brumm.af/shadows */
+  box-shadow:
+    0 0.4px 0.8px rgba(0, 0, 0, 0.037),
+    0 1px 1.9px rgba(0, 0, 0, 0.053),
+    0 1.9px 3.6px rgba(0, 0, 0, 0.065),
+    0 3.4px 6.5px rgba(0, 0, 0, 0.077),
+    0 6.3px 12.1px rgba(0, 0, 0, 0.093),
+    0 15px 29px rgba(0, 0, 0, 0.13)
+  ;
+  display: flex;
+  flex-direction: column;
+  padding: var(--polaroid-gutter);
+  padding-bottom: 0;
+  width: var(--polaroid-width);
+}
+
+.polaroid__frame {
+  background: #424647;
+  height: var(--polaroid-image-size);
+  width: var(--polaroid-image-size);
+}
+
+.polaroid__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.polaroid__image--crop-right {
+  object-position: 100% 50%
+}
+
+.polaroid__image--crop-left {
+  object-position: 0% 50%
+}
+
+.polaroid__image--crop-top {
+  object-position: 50% 0%
+}
+
+.polaroid__image--crop-bottom {
+  object-position: 50% 100%
+}
+
+/**
+ * Animation inspired by Polaroids Revealed
+ * https://www.latimes.com/104036986-132.html
+ */
+@keyframes developing {
+  from {
+    filter: var(--polaroid-undeveloped);
+  }
+
+  to {
+    filter: opacity(100%) brightness(1) contrast(100%);
+  }
+}
+
+.polaroid__image {
+  animation-delay: 0.2s;
+  animation-duration: 0.5s;
+  animation-name: developing;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  filter: var(--polaroid-undeveloped);
+}
+
+.polaroid__caption {
+  color: #336;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--polaroid-caption-height);
+  font-family: 'Permanent Marker', sans-serif;
+}
+
+.polaroid__title {
+  font-size: 1em;
+}
+
+.polaroid__date {
+  font-size: 0.8em;
+}
