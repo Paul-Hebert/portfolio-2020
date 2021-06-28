@@ -1,12 +1,30 @@
+
+:root {
+  --scale-value: 12vw;
+
+  /* Based off of info from https://support.polaroid.com/hc/en-us/articles/115012363647-Polaroid-Originals-photo-dimensions */
+  --polaroid-width: calc(3.5 * var(--scale-value));
+  --polaroid-height: calc(4.2 * var(--scale-value));
+  --polaroid-image-size: calc(3.1 * var(--scale-value));
+  --polaroid-gutter: calc((var(--polaroid-width) - var(--polaroid-image-size)) / 2);
+  --polaroid-caption-height: calc(var(--polaroid-height) - var(--polaroid-image-size));
+
+  --polaroid-undeveloped: opacity(0) brightness(0.3) contrast(300%);
+}
+
 .hero {
   display: grid;
   place-items: center;
   gap: 3em;
   grid-template-columns: 1fr;
+  grid-template-areas:
+  'graphic'
+  'text';
 }
 
 .hero__graphic::before {
   content: '';
+  // background: #ccc;
   display: block;
   padding-bottom: 120%;
 }
@@ -14,12 +32,16 @@
 @media(min-width: 40em) {
   .hero {
     grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'text graphic';
   }
 
   .hero__graphic::before {
-    content: '';
-    display: block;
     padding-bottom: 100%;
+  }
+
+  :root {
+    --scale-value: 5vw;
   }
 }
 
@@ -38,6 +60,7 @@
 .hero__graphic {
   position: relative;
   width: 100%;
+  grid-area: graphic;
 }
 
 .hero__graphic::before {
@@ -50,6 +73,10 @@
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.hero__text {
+  grid-area: text;
 }
 
 /**
@@ -101,24 +128,20 @@
   }
 }
 
+// .polaroid {
+//   transition: transform 0.2s ease-out;
+// }
+
+// .polaroid:hover {
+//   transform: translateY(-5%);
+// }
+
 /**
  * Polaroid Styles
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-:root {
-  --scale-value: 0.7in;
-
-  /* Based off of info from https://support.polaroid.com/hc/en-us/articles/115012363647-Polaroid-Originals-photo-dimensions */
-  --polaroid-width: calc(3.5 * var(--scale-value));
-  --polaroid-height: calc(4.2 * var(--scale-value));
-  --polaroid-image-size: calc(3.1 * var(--scale-value));
-  --polaroid-gutter: calc((var(--polaroid-width) - var(--polaroid-image-size)) / 2);
-  --polaroid-caption-height: calc(var(--polaroid-height) - var(--polaroid-image-size));
-
-  --polaroid-undeveloped: opacity(0) brightness(0.3) contrast(300%);
-}
 
 .polaroid {
   background: #fff;
@@ -199,9 +222,13 @@
 }
 
 .polaroid__title {
-  font-size: 1em;
+  font-size: calc(var(--scale-value) / 3.2);
 }
 
 .polaroid__date {
-  font-size: 0.8em;
+  font-size: calc(var(--scale-value) / 3.5);
+}
+
+.alert-banner {
+  display: none !important;
 }
