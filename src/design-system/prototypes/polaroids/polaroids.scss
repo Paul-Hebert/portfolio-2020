@@ -29,6 +29,16 @@
   padding-bottom: 120%;
 }
 
+@media(min-width: 30em) {
+  :root {
+    --scale-value: 9vw;
+  }
+
+  .hero__graphic::before {
+    padding-bottom: 90%;
+  }
+}
+
 @media(min-width: 40em) {
   .hero {
     grid-template-columns: 1fr 1fr;
@@ -60,6 +70,7 @@
 .hero__graphic {
   position: relative;
   width: 100%;
+  height:100%;
   grid-area: graphic;
 }
 
@@ -95,6 +106,7 @@
   animation-timing-function: ease;
   animation-fill-mode: forwards;
   animation-name: card;
+  margin: auto;
 }
 
 .polaroid-stack__card:first-child {
@@ -128,13 +140,13 @@
   }
 }
 
-// .polaroid {
-//   transition: transform 0.2s ease-out;
-// }
+.polaroid {
+  transition: transform 0.2s ease-out;
+}
 
-// .polaroid:hover {
-//   transform: translateY(-5%);
-// }
+.polaroid:hover {
+  transform: translateY(-5%);
+}
 
 /**
  * Polaroid Styles
