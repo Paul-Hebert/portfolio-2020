@@ -102,11 +102,17 @@
 
 .polaroid-stack__card {
   grid-area: content;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-name: card;
   margin: auto;
+  transform: var(--end-state);
+}
+
+@media(prefers-reduced-motion: no-preference) {
+  .polaroid-stack__card {
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-name: card;
+  }
 }
 
 .polaroid-stack__card:first-child {
@@ -132,7 +138,7 @@
 
 @keyframes card {
   from {
-    transform: rotate(0) translate(0, 5em);
+    transform: rotate(0) translate(0, 5em) scale(0.7);
   }
 
   to {
