@@ -3,6 +3,8 @@ title: Polaroids
 layout: layouts/page
 stylesheets:
 - /design-system/prototypes/polaroids/polaroids
+scripts:
+- /design-system/prototypes/polaroids/polaroids
 ---
 
 {{#>container containerModifier="container--secondary" innerClass="hero"}}
@@ -116,6 +118,44 @@ stylesheets:
           </figcaption>
         </div>
       </div>
+    </div>
+  </div>
+{{/container}}
+
+{{#>container containerModifier="container--secondary container--offset" innerClass="hero"}}
+  <div class="prose hero__text">
+    <h1>Work</h1>
+    <p>Et praesentium voluptatem in quas quam. Magni odio animi numquam voluptates numquam unde. Nam voluptatibus impedit
+    blanditiis consectetur qui deserunt. Et impedit voluptatum est similique perspiciatis modi ipsum consectetur. Optio a
+    voluptatum et necessitatibus rerum.</p>
+  </div>
+  <div class="hero__graphic">
+    <div class="hero__graphic-inner window-stack">
+      <article class="window" style="--window-left: 0px; --window-content-height: 10em; --window-top: 50px;">
+        <header class="window__header">
+          <button class="window__close-button"></button>
+
+          <h3 class="window__title">
+            Image Compare Web Component
+          </h3>
+        </header>
+        <div class="window__content">
+          <iframe loading="lazy" src="https://image-compare-component.netlify.app/"></iframe>
+        </div>
+      </article>
+
+      <article class="window" style="--window-left: 30px; --window-content-height: 12em; --window-top: 120px;">
+        <header class="window__header">
+          <button class="window__close-button"></button>
+
+          <h3 class="window__title">
+            The Colors of the Web
+          </h3>
+        </header>
+        <div class="window__content">
+          <iframe loading="lazy" src="http://paulhebertdesigns.com/web_colors/"></iframe>
+        </div>
+      </article>
     </div>
   </div>
 {{/container}}

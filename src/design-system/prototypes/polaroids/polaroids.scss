@@ -1,3 +1,4 @@
+@import "../../../assets/styles/base/config";
 
 :root {
   --scale-value: 12vw;
@@ -255,4 +256,122 @@
 
 .alert-banner {
   display: none !important;
+}
+
+.container--offset {
+  background-color: $color-main-lighter;
+}
+
+.window {
+  background-color: #fff;
+  border-radius: 0.5em;
+  border: 1px solid hsla(0, 0%, 0%, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  resize: both;
+  width: 25em;
+  height: 20em;
+  position: absolute;
+  left: var(--window-left);
+  top: var(--window-top);
+/* Generated using https://brumm.af/shadows */
+  box-shadow:
+    0 0.4px 0.8px rgba(0, 0, 0, 0.037),
+    0 1px 1.9px rgba(0, 0, 0, 0.053),
+    0 1.9px 3.6px rgba(0, 0, 0, 0.065),
+    0 3.4px 6.5px rgba(0, 0, 0, 0.077),
+    0 6.3px 12.1px rgba(0, 0, 0, 0.093),
+    0 15px 29px rgba(0, 0, 0, 0.13)
+  ;
+}
+
+@keyframes closing {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  99% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+.window.is-closing {
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-name: closing;
+}
+
+.window.is-dragging .window__header {
+  cursor: grabbing;
+}
+
+.window.is-dragging .window__content {
+  pointer-events: none;
+}
+
+.window-stack {
+  place-items: center;
+  display: grid;
+}
+
+.window__header {
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  background-color: $color-secondary-lighter;
+  padding: 0.5em;
+}
+
+// TODO: Better focus styles
+.window__close-button {
+  appearance: none;
+  background-color: $color-secondary;
+  border-color: hsla(0, 0%, 0%, 0.2);
+  color: hsla(0, 0%, 100%, 0.8);
+  cursor: pointer;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  display: grid;
+  place-items: center;
+
+  &::before {
+    content: '×';
+    display: none;
+    line-height: 0;
+    font-size: 0.9em;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    display: block;
+  }
+}
+
+.window__title {
+  font-family: $font-body;
+  color: #333;
+  font-weight: normal;
+  font-size: 1em;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.window__content {
+  display: grid;
+  place-items: stretch;
+  flex-grow: 1;
+}
+
+.window__content iframe {
+  border: none;
 }
