@@ -1,5 +1,11 @@
 [
   {
+    "title": "Image Compare",
+    "role": "Primary Contributor",
+    "description": "A tiny, zero-dependency web component for comparing two images using a slider. Built with a focus on accessibility, performance, and progressive enhancement.",
+    "url": "https://image-compare-component.netlify.app/"
+  },
+  {
     "title": "Eleventy Patterns",
     "role": "Primary Contributor",
     "description": "(WIP) A boilerplate template used to quickly generate pattern libraries and prototyping environments",
