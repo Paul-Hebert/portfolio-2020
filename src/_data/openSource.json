@@ -6,6 +6,12 @@
     "url": "https://image-compare-component.netlify.app/"
   },
   {
+    "title": "Elastic Textarea",
+    "role": "Primary Contributor",
+    "description": "A web component for progressively-enhanced auto-expanding textareas.",
+    "url": "https://github.com/cloudfour/elastic-textarea"
+  },
+  {
     "title": "Eleventy Patterns",
     "role": "Primary Contributor",
     "description": "(WIP) A boilerplate template used to quickly generate pattern libraries and prototyping environments",
