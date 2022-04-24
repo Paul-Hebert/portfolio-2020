@@ -1,8 +1,10 @@
 <div class="card {{cardClass}}">
   <div class="card__content">
-    <a class="card__primary-action" href="{{link}}">
-      <h2 class="card__title">{{title}}</h2>
-    </a>
+    <{{#if headingTag}}{{headingTag}}{{else}}h2{{/if}} class="card__title">
+      <a class="card__primary-action" href="{{link}}">
+        {{title}}
+      </a>
+    </{{#if headingTag}}{{headingTag}}{{else}}h2{{/if}}>
 
     <p class="card__description">
       {{description}}

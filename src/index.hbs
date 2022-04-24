@@ -1,31 +1,122 @@
 ---
 title: Paul Hebert
-layout: layouts/single-container-page
-layoutContainerClass: container--prose-width
+layout: layouts/page.hbs
 ---
 
-<div class="prose">
-  <h1>Hey, I'm Paul!</h1>
+{{#>container containerModifier="container--tall container--prose-width" innerClass="u-space-items"}}
+  <div class="prose">
+    <h1>Hey, I'm Paul!</h1>
 
-  <p class="subhead">I design and code inclusive websites and web apps.</p>
+    <p class="subhead">I design and code inclusive websites and web apps.</p>
 
-  <p>
-    I love switching back and forth between my sketchbook and code editor,
-    obsessing over design systems, accessible interfaces, and performant code.
-  </p>
+    <p>
+      I love switching back and forth between my sketchbook and code editor,
+      obsessing over design systems, accessible interfaces, and performant code.
+    </p>
 
-  <p>
-    I live in
-    <a href="https://www.currentresults.com/Weather-Extremes/US/cloudiest-cities.php">sunny Portland Oregon</a>
-    where I build accessible design systems and progressive web apps with the
-    talented folks at <a href="https://cloudfour.com">Cloud Four</a>.
-  </p>
+    <p>
+      I live in
+      <a href="https://www.currentresults.com/Weather-Extremes/US/cloudiest-cities.php">sunny Portland Oregon</a>
+      where I build accessible design systems and progressive web apps with the
+      talented folks at <a href="https://cloudfour.com">Cloud Four</a>.
+    </p>
 
-  <p>
-    In addition to designing and developing websites I enjoy
-    <a href="/writing">writing</a>,
-    drawing,
-    {{!-- <a href="/art">drawing</a>, --}}
-    gardening, cooking, and exploring the great outdoors.
-  </p>
-</div>
+    <p>
+      In addition to designing and developing websites I enjoy
+      <a href="/writing">writing</a>,
+      drawing,
+      {{!-- <a href="/art">drawing</a>, --}}
+      gardening, cooking, and exploring the great outdoors.
+    </p>
+  </div>
+{{/container}}
+
+
+{{#>container containerModifier="container--tall container--prose-width" innerClass="u-space-items"}}
+  <div class="prose">
+    <h2>Selected Writing</h2>
+
+    <p class="subhead">
+      I enjoy writing to share knowledge and improve my own understanding.
+      Here are a few of my favorite articles:
+    </p>
+  </div>
+
+  <ul class="listings">
+    {{!-- TODO: Sort by priority? --}}
+    {{#each (preparePosts collections.writing)}}
+      {{#if data.isFavorite}}
+        {{#> card
+          link=(ternary data.isExternal data.externalUrl (url url))
+          title=data.title
+          headingTag="h3"
+          description=data.description
+        }}
+          <span>{{prettyDate data.date}}</span>
+
+          {{#if data.isExternal}}
+              <span class="u-flex u-align-center">
+                Written for
+                {{#if (compare data.externalName "===" "Cloud Four")}}
+                  {{>c4-icon iconClass="u-size2 u-space-left-7"}}
+                {{else}}
+                  {{data.externalName}}
+                {{/if}}
+              </span>
+          {{/if}}
+        {{/card}}
+      {{/if}}
+    {{/each}}
+  </ul>
+
+  <p><a href="/writing">View more articles →</a></p>
+{{/container}}
+
+{{#>container containerModifier="container--tall container--prose-width" innerClass="u-space-items"}}
+  <div class="prose">
+    <h2>Selected Work</h2>
+
+    <p class="subhead">
+      I enjoy creating side projects to experiment and push the boundaries of the web.
+      Here are a few of my favorite works:
+    </p>
+  </div>
+
+  <ul class="listings">
+    {{#each collections.work}}
+      {{#if data.isFavorite}}
+        {{#> card
+          link=(ternary data.externalUrl data.externalUrl (url url))
+          title=data.title
+          description=data.description
+        }}
+        {{/card}}
+      {{/if}}
+    {{/each}}
+    {{#each openSource}}
+      {{#if this.isFavorite}}
+        {{#> card
+          link=this.url
+          title=this.title
+          description=this.description
+          headingTag="h3"
+        }}
+        {{/card}}
+      {{/if}}
+    {{/each}}
+  </ul>
+
+  <p><a href="/work">View more work →</a></p>
+{{/container}}
+
+
+{{#>container containerModifier="container--tall container--prose-width" innerClass="u-space-items"}}
+  <div class="prose">
+    <h2>Getting in Touch</h2>
+
+    <p>
+      Outside of work you can find me gardening, hiking, cooking, or hanging out with my girlfriend and dog.
+      Your best bet for getting in touch with me is reaching out over <a href="https://twitter.com/HaulPebert">Twitter</a>, <a href="https://github.com/Paul-Hebert">GitHub</a>, or <a href="https://www.linkedin.com/in/paul-hebert-20b75162/">LinkedIn</a>.
+    </p>
+  </div>
+{{/container}}

@@ -6,4 +6,5 @@ externalUrl: https://cloudfour.com/thinks/css-animation-timelines-building-a-rub
 externalName: Cloud Four
 date: 2020-04-13
 status: published
+isFavorite: true
 ---

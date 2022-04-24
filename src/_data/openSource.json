@@ -3,7 +3,8 @@
     "title": "Image Compare",
     "role": "Primary Contributor",
     "description": "A tiny, zero-dependency web component for comparing two images using a slider. Built with a focus on accessibility, performance, and progressive enhancement.",
-    "url": "https://image-compare-component.netlify.app/"
+    "url": "https://image-compare-component.netlify.app/",
+    "isFavorite": "true"
   },
   {
     "title": "Elastic Textarea",
@@ -21,7 +22,8 @@
     "title": "Transition Hidden Element",
     "role": "Primary Contributor",
     "description": "A JavaScript utility to help you use CSS transitions when showing and hiding elements with the `hidden` attribute.",
-    "url": "https://github.com/cloudfour/transition-hidden-element/"
+    "url": "https://github.com/cloudfour/transition-hidden-element/",
+    "isFavorite": "true"
   },
   {
     "title": "Cloud Four Guides",
