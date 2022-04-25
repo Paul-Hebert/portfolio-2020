@@ -11,7 +11,7 @@
 
 .card::before,
 .card::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: $border-thick-offset;
   z-index: 0;
@@ -57,6 +57,11 @@
 .card__primary-action {
   color: var(--color-heading);
   text-decoration: none;
+  transition: color $transition-speed $transition-easing;
+
+  &:hover {
+    color: var(--color-interactive);
+  }
 
   &::before {
     content: "";
@@ -66,7 +71,6 @@
     bottom: 0;
     left: 0;
   }
-
   &:focus {
     outline: none;
 
@@ -82,11 +86,6 @@
 
 .card__title {
   font-size: scale.step(1);
-  transition: color $transition-speed $transition-easing;
-}
-
-.card:hover .card__title {
-  color: var(--color-interactive);
 }
 
 .card__meta {
