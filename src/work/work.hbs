@@ -11,7 +11,7 @@ layout: layouts/page.hbs
   </div>
 
   <ul class="listings">
-    {{#each collections.work}}in
+    {{#each collections.work}}
       {{#> card
         link=(ternary data.externalUrl data.externalUrl (url url))
         title=data.title
