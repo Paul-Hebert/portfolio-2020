@@ -42,7 +42,7 @@ layout: layouts/page.hbs
     </p>
   </div>
 
-  <ul class="listings">
+  <ul class="u-space-items">
     {{!-- TODO: Sort by priority? --}}
     {{#each (preparePosts collections.writing)}}
       {{#if data.isFavorite}}
@@ -82,7 +82,7 @@ layout: layouts/page.hbs
     </p>
   </div>
 
-  <ul class="listings">
+  <ul class="u-space-items">
     {{#each collections.work}}
       {{#if data.isFavorite}}
         {{#> card

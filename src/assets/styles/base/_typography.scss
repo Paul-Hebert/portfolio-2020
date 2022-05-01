@@ -4,11 +4,13 @@
 // https://fonts.google.com/specimen/Roboto?query=robot&selection.family=Libre+Baskerville:ital,wght@0,700;1,400|Roboto:ital,wght@0,400;0,700;1,400;1,700&sidebar.open
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+html {
+  font-size: clamp(1em, calc(1em + 0.5vw), 1.25em);
+}
+
 // Scale up our core font size as the screen size increases.
 body {
   font-family: $font-body;
-  // TODO: Change to SCSS lock when I have breakpoints?
-  font-size: calc(1em + 0.25vw);
 }
 
 // Set default styles for non-heading text content.
