@@ -2,7 +2,12 @@
 layout: layouts/single-container-page.hbs
 ---
 
-<h1>{{this.title}}</h1>
+<div class="u-space-items">
+  <h1>{{this.title}}</h1>
 
-<img src="{{this.name}}.{{this.extension}}" alt="{{this.title}}">
+  {{#if this.description}}
+    <p class="subhead">{{this.description}}</p>
+  {{/if}}
 
+  <img src="{{this.name}}.{{this.extension}}" alt="{{this.alt}}">
+</div>
