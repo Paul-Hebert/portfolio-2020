@@ -3,33 +3,31 @@ title: Art
 layout: layouts/single-container-page.hbs
 ---
 
-{{#>container}}
-  <div class="prose">
-    <h1>Art</h1>
+<div class="prose">
+  <h1>Art</h1>
 
-    <p class="subhead">A collection of drawings and other artwork I've made over the years.</p>
+  <p class="subhead">A collection of drawings and other artwork I've made over the years.</p>
 
-    <p>
-      If you're interested in my procedurally generated artwork, you can view that at
-      <a href="https://squigglesanddots.com">Squiggles and Dots</a>.
-    </p>
-  </div>
-  <ul class="gallery">
-    {{#each (sortCollection collections.art 'order')}}
-      {{#unless data.hidden}}
-        {{#if data.alt}}
-          <li class="gallery__item">
-            <a href="{{url url}}">
-              <img
-                src="{{data.name}}/{{data.name}}.{{data.extension}}"
-                alt="{{data.alt}}"
-                loading="lazy"
-                class="gallery__image"
-              >
-            </a>
-          </li>
-        {{/if}}
-      {{/unless}}
-    {{/each}}
-  </ul>
-{{/container}}
+  <p>
+    If you're interested in my procedurally generated artwork, you can view that at
+    <a href="https://squigglesanddots.com">Squiggles and Dots</a>.
+  </p>
+</div>
+<ul class="gallery">
+  {{#each (sortCollection collections.art 'order')}}
+    {{#unless data.hidden}}
+      {{#if data.alt}}
+        <li class="gallery__item">
+          <a href="{{url url}}" class="gallery__link">
+            <img
+              src="{{data.name}}/{{data.name}}.{{data.extension}}"
+              alt="{{data.alt}}"
+              loading="lazy"
+              class="gallery__image"
+            >
+          </a>
+        </li>
+      {{/if}}
+    {{/unless}}
+  {{/each}}
+</ul>

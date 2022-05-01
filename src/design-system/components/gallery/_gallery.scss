@@ -3,12 +3,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: scale.step(1);
+  margin-top: scale.step(1);
 }
 
 .gallery__item {
   transition: transform $transition-speed $transition-easing;
-
-  margin: scale.step(-1);
   position:relative;
   z-index: 1;
 }
@@ -39,6 +39,16 @@
 
 .gallery__item:hover::before {
   transform: scale(1);
+}
+
+.gallery__link {
+  &:focus {
+    outline: 0.3em solid var(--color-accent);
+
+    &:hover {
+      outline-offset: $text-link-border-size;
+    }
+  }
 }
 
 .gallery__image {
