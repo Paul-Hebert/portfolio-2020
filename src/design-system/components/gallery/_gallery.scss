@@ -42,7 +42,7 @@
 }
 
 .gallery__link {
-  &:focus {
+  &:focus-visible {
     outline: 0.3em solid var(--color-accent);
 
     &:hover {
