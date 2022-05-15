@@ -6,5 +6,4 @@ externalUrl: https://cloudfour.com/thinks/web-components-as-progressive-enhancem
 externalName: Cloud Four
 date: 2022-04-21
 status: published
-isFavorite: true
 ---

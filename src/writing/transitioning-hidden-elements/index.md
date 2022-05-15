@@ -6,4 +6,5 @@ externalUrl: https://cloudfour.com/thinks/transitioning-hidden-elements/
 externalName: Cloud Four
 date: 2020-01-17
 status: published
+isFavorite: true
 ---

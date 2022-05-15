@@ -6,4 +6,5 @@ externalUrl: https://cloudfour.com/thinks/building-an-accessible-image-compariso
 externalName: Cloud Four
 date: 2021-07-14
 status: published
+isFavorite: true
 ---
