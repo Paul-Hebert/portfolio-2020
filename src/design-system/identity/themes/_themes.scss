@@ -12,7 +12,7 @@
 
   --color-link: var(--color-interactive);
   --color-link-underline: #{$color-main-light};
-  --color-link-underline-hover: #{$color-main};
+  --color-link-underline-hover: var(--color-interactive);
   --color-link-hover:#{$color-white};
 }
 
@@ -30,7 +30,7 @@
 
   --color-link: var(--color-interactive);
   --color-link-underline: var(--color-accent);
-  --color-link-underline-hover: #{$color-white};
+  --color-link-underline-hover: var(--color-interactive);
   --color-link-hover: #{$color-main};
 
   color: var(--color-text);

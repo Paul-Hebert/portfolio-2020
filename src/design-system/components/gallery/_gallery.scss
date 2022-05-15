@@ -46,7 +46,7 @@
     outline: 0.3em solid var(--color-accent);
 
     &:hover {
-      outline-offset: $text-link-border-size;
+      outline-offset: scale.step(-8);
     }
   }
 }

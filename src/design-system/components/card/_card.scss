@@ -79,7 +79,7 @@
     }
 
     &:hover::before {
-      outline-offset: $text-link-border-size;
+      outline-offset: scale.step(-8);
     }
   }
 }
