@@ -34,7 +34,7 @@
     "handlebars-helper-ternary": "^1.0.0",
     "helper-markdown": "^1.0.0",
     "highlight.js": "^9.18.1",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^12.3.2",
     "moment": "^2.24.0",
     "npm-run-all": "^4.1.5",
     "rollup": "^2.79.1",
