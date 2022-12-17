@@ -1,32 +1,40 @@
 ---
 title: Paul Hebert
 layout: layouts/page.hbs
+scripts:
+- 'assets/scripts/home'
 ---
 
-{{#>container containerModifier="container--tall container--prose-width" innerClass="u-space-items"}}
-  <div class="prose">
-    <h1>Hey, I'm Paul!</h1>
+{{#>container containerModifier="container--tall" innerClass="u-space-items"}}
+  <div class="hero">
+    <a href="https://squigglesanddots.art" class="hero__graphic">
+      <sq-animated-snow-flakes></sq-animated-snow-flakes>
+    </a>
 
-    <p class="subhead">I design and code inclusive websites and web apps.</p>
+    <div class="hero__heading u-space-items">
+      <h1>Hey, I'm Paul!</h1>
 
-    <p>
-      I love switching back and forth between my sketchbook and code editor,
-      obsessing over design systems, accessible interfaces, and performant code.
-    </p>
+      <p class="subhead">I design and code digital products and experiences.</p>
+    </div>
 
-    <p>
-      I live in
-      <a href="https://www.currentresults.com/Weather-Extremes/US/cloudiest-cities.php">sunny Portland Oregon</a>
-      where I build accessible design systems and progressive web apps with the
-      talented folks at <a href="https://cloudfour.com">Cloud Four</a>.
-    </p>
+    <div class="hero__content u-space-items">
+      <p>
+        I live in
+        <a href="https://www.currentresults.com/Weather-Extremes/US/cloudiest-cities.php">sunny Portland, Oregon</a>
+        where I craft accessible, responsive &amp; futuristic web experiences with the
+        talented folks at <a href="https://cloudfour.com">Cloud Four</a>.
+      </p>
 
-    <p>
-      In addition to designing and developing websites I enjoy
-      <a href="/writing">writing</a>,
-      <a href="/art">drawing</a>,
-      gardening, cooking, and exploring the great outdoors.
-    </p>
+      <p>
+        I also enjoy
+        <a href="/writing">writing</a>,
+        <a href="/art">drawing</a>,
+        <a href="https://squigglesanddots.art">creating generative art</a>,
+        gardening, cooking, and exploring the great outdoors.
+        I'm currently building a web-based spaceship game. Check out
+        <a href="https://spaced-game.netlify.app/">the latest prototype!</a>
+      </p>
+    </div>
   </div>
 {{/container}}
 
@@ -115,7 +123,11 @@ layout: layouts/page.hbs
 
     <p>
       Outside of work you can find me gardening, hiking, cooking, or hanging out with my girlfriend and dog.
-      Your best bet for getting in touch with me is reaching out over <a href="https://twitter.com/HaulPebert">Twitter</a>, <a href="https://github.com/Paul-Hebert">GitHub</a>, or <a href="https://www.linkedin.com/in/paul-hebert-20b75162/">LinkedIn</a>.
+      Your best bet for getting in touch with me is reaching out over
+      <a href="https://sunny.garden/@paulhebert">Mastodon</a>,
+      <a href="https://twitter.com/HaulPebert">Twitter</a>,
+      <a href="https://github.com/Paul-Hebert">GitHub</a>, or
+      <a href="https://www.linkedin.com/in/paul-hebert-20b75162/">LinkedIn</a>.
     </p>
   </div>
 {{/container}}

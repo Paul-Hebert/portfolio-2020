@@ -1,0 +1,32 @@
+.hero {
+  display: grid;
+  grid-template-areas:
+    "heading"
+    "graphic"
+    "content";
+  column-gap: calc(1em + 2vw);
+  row-gap: 1em;
+  justify-content: center;
+
+  @media (min-width: 700px) {
+    grid-template-areas:
+      "graphic heading"
+      "graphic content";
+    align-items: center;
+    grid-template-columns: min(30em, 33vw) fit-content($prose-width);
+  }
+}
+
+.hero__graphic {
+  grid-area: graphic;
+}
+
+.hero__heading {
+  grid-area: heading;
+  align-self: end;
+}
+
+.hero__content {
+  grid-area: content;
+  align-self: start;
+}
