@@ -27,7 +27,7 @@
     "@11ty/eleventy": "^0.10.0",
     "@cloudfour/hbs-helpers": "^0.11.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "del-cli": "^3.0.0",
+    "del-cli": "^3.0.1",
     "fast-glob": "^3.2.4",
     "globby": "^11.0.0",
     "handlebars": "^4.7.3",
