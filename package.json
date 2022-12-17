@@ -41,6 +41,6 @@
     "sass": "^1.26.2"
   },
   "dependencies": {
-    "squiggles-and-dots": "^1.0.4"
+    "squiggles-and-dots": "^1.0.5"
   }
 }
