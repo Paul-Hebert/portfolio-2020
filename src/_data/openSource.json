@@ -3,8 +3,7 @@
     "title": "Image Compare",
     "role": "Primary Contributor",
     "description": "A tiny, zero-dependency web component for comparing two images using a slider. Built with a focus on accessibility, performance, and progressive enhancement.",
-    "url": "https://image-compare-component.netlify.app/",
-    "isFavorite": "true"
+    "url": "https://image-compare-component.netlify.app/"
   },
   {
     "title": "Elastic Textarea",
@@ -22,8 +21,7 @@
     "title": "Transition Hidden Element",
     "role": "Primary Contributor",
     "description": "A JavaScript utility to help you use CSS transitions when showing and hiding elements with the `hidden` attribute.",
-    "url": "https://github.com/cloudfour/transition-hidden-element/",
-    "isFavorite": "true"
+    "url": "https://github.com/cloudfour/transition-hidden-element/"
   },
   {
     "title": "Cloud Four Guides",
@@ -65,6 +63,6 @@
     "title": "scroll-lock",
     "role": "Contributor",
     "description": "🔨 Cross-browser JavaScript library to disable scrolling page",
-    "url": "https://github.com/FL3NKEY/scroll-lock"
+    "url": "https://github.com/FL3NKnEY/scroll-lock"
   }
 ]
