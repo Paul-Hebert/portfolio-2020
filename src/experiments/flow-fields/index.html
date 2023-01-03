@@ -1,0 +1,42 @@
+---
+title: "Experimenting With Flow Fields"
+---
+
+<style>
+  html,
+  body {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: #666;
+  }
+
+  .flow-field {
+    background: #000;
+    display: grid;
+    grid-template-areas: "content";
+    place-items: stretch;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  .flow-field > * {
+    grid-area: content;
+    aspect-ratio: 2;
+  }
+</style>
+
+<div class="flow-field">
+  <svg class="flow-field__vectors" viewBox="0 0 200 100"></svg>
+  <canvas class="flow-field__canvas"></canvas>
+</div>
+
+<script type="module" src="demo.js"></script>
