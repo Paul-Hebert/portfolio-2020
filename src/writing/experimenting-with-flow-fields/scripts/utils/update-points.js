@@ -1,6 +1,10 @@
 import { getDeltas } from "./get-deltas.js";
 
-export function updatePoints(points, vectors, distance = 30, speed = 0.0025) {
+export function updatePoints(
+  points,
+  vectors,
+  { distance = 30, speed = 0.0025 }
+) {
   return points.map((point) => {
     vectors
       .filter((vector) => distanceBetweenPoints(point, vector) < distance)

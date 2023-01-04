@@ -1,14 +1,32 @@
 .prose {
+  display: grid;
+  max-width: $prose-width;
+  justify-content: center;
+  grid-template-columns: 1fr;
+
   > * {
-    max-width: $prose-width;
+    max-width: 100%;
   }
 
-  > .prose__breakout {
-    max-width: $breakout-width;
-  }
+  @media (min-width: $prose-width) {
+    grid-template-columns: 1fr $prose-width 1fr;
+    max-width: 100%;
 
-  > .prose__breakout-full {
-    max-width: none;
+    > * {
+      grid-column: 2;
+    }
+
+    > .prose__breakout,
+    > .prose__breakout-full {
+      max-width: min(#{$breakout-width}, 95vw);
+      grid-column: 1/4;
+      margin: auto;
+      width: 100%;
+    }
+
+    > .prose__breakout-full {
+      max-width: 95vw;
+    }
   }
 
   // Space items vertically in prose blocks

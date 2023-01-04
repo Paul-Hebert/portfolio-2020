@@ -2,10 +2,9 @@
 layout: layouts/page.hbs
 ---
 
-{{#>container containerModifier="container--prose-width"}}
-  {{>blog-header}}
-
+{{#>container}}
   <div class="prose">
+    {{>blog-header}}
     {{{ content }}}
   </div>
 {{/container}}
