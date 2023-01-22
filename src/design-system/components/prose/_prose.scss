@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $prose-width) {
-    grid-template-columns: 1fr $prose-width 1fr;
+    grid-template-columns: 1fr min(#{$prose-width}, 100%) 1fr;
     max-width: 100%;
 
     > * {
@@ -20,7 +20,7 @@
     > .prose__breakout-full {
       max-width: min(#{$breakout-width}, 95vw);
       grid-column: 1/4;
-      margin: auto;
+      margin-inline: auto;
       width: 100%;
     }
 

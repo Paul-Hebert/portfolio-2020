@@ -9,7 +9,7 @@ export class Point {
         ${random(50, 80, true)}%,
         ${random(50, 80, true)}%
       )`;
-    this.radius = radius || random(2, 20, true);
+    this.radius = radius || random(0.2, 5, true);
 
     this.x = x;
     this.y = y;

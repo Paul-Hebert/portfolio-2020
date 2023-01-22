@@ -1,5 +1,8 @@
 const dpr = window.devicePixelRatio;
 
+const canvasTargetWidth = 200;
+const canvasAspectRatio = 2;
+
 export function drawCircle(
   ctx,
   wrapperEl,
@@ -8,9 +11,9 @@ export function drawCircle(
   const canvasPos = relativeCanvasPosition(wrapperEl, { x, y });
   ctx.beginPath();
   ctx.arc(
-    canvasPos.x * dpr,
-    canvasPos.y * dpr,
-    radius * dpr,
+    canvasPos.x,
+    canvasPos.y,
+    relativeSize(wrapperEl, radius),
     0,
     2 * Math.PI,
     false
@@ -20,8 +23,15 @@ export function drawCircle(
 }
 
 function relativeCanvasPosition(wrapperEl, { x, y }) {
+  const ratio = wrapperEl.clientWidth / canvasTargetWidth;
+
   return {
-    x: (x * wrapperEl.clientWidth) / 200,
-    y: (y * wrapperEl.clientHeight) / 100,
+    x: x * ratio * dpr,
+    y: y * ratio * dpr,
   };
+}
+
+function relativeSize(wrapperEl, size) {
+  const ratio = wrapperEl.clientWidth / canvasTargetWidth;
+  return ratio * size * dpr;
 }

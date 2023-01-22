@@ -32,15 +32,15 @@ h6 {
 }
 
 h1 {
-  font-size: scale.step(4);
+  font-size: clamp(scale.step(3), calc(#{scale.step(3)} + 1vw), scale.step(4));
 }
 
 h2 {
-  font-size: scale.step(3);
+  font-size: clamp(scale.step(2), calc(#{scale.step(2)} + 1vw), scale.step(3));
 }
 
 h3 {
-  font-size: scale.step(2);
+  font-size: clamp(scale.step(1), calc(#{scale.step(1)} + 1vw), scale.step(2));
 }
 
 // I don't anticipate needing level 5 or 6 headings. If I do this will need to
