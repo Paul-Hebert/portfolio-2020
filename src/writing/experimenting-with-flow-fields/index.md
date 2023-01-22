@@ -3,6 +3,7 @@ title: Experimenting With Flow Fields
 description: Creating generative art with organic flow patterns with a bit of math and code.
 date: 2023-01-22
 status: published
+ogImage: https://paulmh.xyz/writing/experimenting-with-flow-fields/flow-fields.png
 ---
 
 <style>
@@ -88,6 +89,7 @@ I experimented with these techniques and made a few generative art pieces that I
 
 I'm excited to keep exploring how flow fields can be used to generate art. In particular I'm interested in:
 
+- Improving the performance! Using lines instead of dots could make this a lot more performant...
 - Using more advanced functions like Perlin noise to place the "vectors."
 - Combining flow fields with other generative art techniques.
 - Making some physical art pieces with a pen plotter! (Hint, hint Santa!)
