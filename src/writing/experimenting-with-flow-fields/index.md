@@ -3,7 +3,7 @@ title: Experimenting With Flow Fields
 description: Creating generative art with organic flow patterns with a bit of math and code.
 date: 2023-01-22
 status: published
-ogImage: writing/experimenting-with-flow-fields/flow-fields.png
+ogImage: writing/experimenting-with-flow-fields/flow-fields.jpg
 ---
 
 <style>
