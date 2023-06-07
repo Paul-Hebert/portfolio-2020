@@ -90,7 +90,7 @@ scripts:
   </div>
 
   <ul class="u-space-items">
-    {{#each collections.work}}
+    {{#each (sortCollection collections.work 'order')}}
       {{#if data.isFavorite}}
         {{#> card
           link=(ternary data.externalUrl data.externalUrl (url url))
