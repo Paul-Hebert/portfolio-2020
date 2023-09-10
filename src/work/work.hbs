@@ -23,31 +23,3 @@ layout: layouts/page.hbs
     {{/each}}
   </ul>
 {{/container}}
-
-{{#>container containerModifier="container--tall container--secondary" innerClass="u-space-items"}}
-  <div class="u-prose-width u-space-items">
-    <h2>
-      Open Source Contributions
-    </h2>
-
-    <p>
-      Open source projects have been a huge help for me learning and working as a
-      designer and developer. At Cloud Four I've had the opportunity to give back
-      and contribute to a number of open source projects, as well as open source
-      tools we created.
-    </p>
-  </div>
-
-  <ul class="listings">
-    {{#each openSource}}
-      {{#> card
-        link=this.url
-        title=this.title
-        headingTag="h3"
-        description=this.description
-      }}
-        <span>Role: {{this.role}}</span>
-      {{/card}}
-    {{/each}}
-  </ul>
-{{/container}}

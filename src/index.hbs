@@ -100,17 +100,6 @@ scripts:
         {{/card}}
       {{/if}}
     {{/each}}
-    {{#each openSource}}
-      {{#if this.isFavorite}}
-        {{#> card
-          link=this.url
-          title=this.title
-          description=this.description
-          headingTag="h3"
-        }}
-        {{/card}}
-      {{/if}}
-    {{/each}}
   </ul>
 
   <p><a href="/work">View more work →</a></p>
