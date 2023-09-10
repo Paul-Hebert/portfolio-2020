@@ -1,7 +1,9 @@
 <div class="card {{cardClass}}">
   {{#if cover}}
     {{!-- TODO: alt support --}}
-    <img src="{{cover}}"  class="card__cover" alt=""/>
+    {{!-- TODO: lazyloading options --}}
+    {{!-- TODO: width/height options --}}
+    <img src="{{cover}}"  class="card__cover" alt="" loading="lazy"/>
   {{/if}}
 
   <div class="card__content">
