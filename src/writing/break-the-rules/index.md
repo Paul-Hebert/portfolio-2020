@@ -6,4 +6,5 @@ externalUrl: https://cloudfour.com/thinks/break-the-rules/
 externalName: Cloud Four
 date: 2022-11-28
 status: published
+cover: cover.svg
 ---

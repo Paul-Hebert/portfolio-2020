@@ -6,4 +6,5 @@ externalUrl: https://cloudfour.com/thinks/generating-solar-systems-part-2-filter
 externalName: Cloud Four
 date: 2021-09-30
 status: published
+cover: cover.jpg
 ---

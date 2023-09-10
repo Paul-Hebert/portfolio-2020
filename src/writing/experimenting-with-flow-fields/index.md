@@ -4,6 +4,7 @@ description: Creating generative art with organic flow patterns, math, and code.
 date: 2023-01-22
 status: published
 ogImage: writing/experimenting-with-flow-fields/flow-fields.jpg
+cover: flow-fields.jpg
 ---
 
 <style>

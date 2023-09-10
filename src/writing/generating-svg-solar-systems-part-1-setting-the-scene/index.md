@@ -6,4 +6,5 @@ externalUrl: https://cloudfour.com/thinks/generating-svg-solar-systems-part-1-se
 externalName: Cloud Four
 date: 2021-09-30
 status: published
+cover: cover.jpg
 ---

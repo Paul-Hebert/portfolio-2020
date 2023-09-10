@@ -6,4 +6,5 @@ externalUrl: https://cloudfour.com/thinks/so-you-can-set-an-svg-circles-radius-i
 externalName: Cloud Four
 date: 2023-01-24
 status: published
+cover: cover.svg
 ---

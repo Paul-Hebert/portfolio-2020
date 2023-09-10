@@ -6,4 +6,5 @@ externalUrl: https://cloudfour.com/thinks/the-math-behind-nesting-rounded-corner
 externalName: Cloud Four
 date: 2022-10-26
 status: published
+isFavorite: true
 ---

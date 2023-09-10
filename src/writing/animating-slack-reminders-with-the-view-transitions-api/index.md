@@ -6,4 +6,5 @@ externalUrl: https://cloudfour.com/thinks/animating-slack-reminders-with-the-vie
 externalName: Cloud Four
 date: 2023-06-27
 status: published
+cover: cover.svg
 ---

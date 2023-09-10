@@ -15,7 +15,7 @@ layout: layouts/single-container-page.hbs
       link=(ternary data.isExternal data.externalUrl (url url))
       title=data.title
       description=data.description
-      cardClass=(ternary (compare @index "===" 0) "listings__featured-item" "")
+      cover=(articleCoverUrl data.cover url)
     }}
       <span>{{prettyDate data.date}}</span>
 

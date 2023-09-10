@@ -6,4 +6,5 @@ externalUrl: https://cloudfour.com/thinks/watch-out-for-layout-shifts-with-ch-un
 externalName: Cloud Four
 date: 2023-05-31
 status: published
+cover: cover.jpg
 ---

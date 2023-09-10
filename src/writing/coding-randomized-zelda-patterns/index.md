@@ -6,4 +6,5 @@ externalUrl: https://cloudfour.com/thinks/coding-randomized-zelda-patterns/
 externalName: Cloud Four
 date: 2023-07-06
 status: published
+isFavorite: true
 ---
