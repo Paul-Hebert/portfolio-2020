@@ -39,17 +39,17 @@ scripts:
 {{/container}}
 
 
-{{#>container containerModifier="container--tall container--prose-width" innerClass="u-space-items"}}
+{{#>container containerModifier="container--tall container--secondary" innerClass="u-space-items"}}
   <div class="prose">
     <h2>Selected Writing</h2>
 
     <p class="subhead">
       I enjoy writing to share knowledge and improve my own understanding.
-      Here are a few of my favorite articles:
+      Here are a few of my favorite articles I've written:
     </p>
   </div>
 
-  <ul class="u-space-items">
+  <ul class="listings">
     {{!-- TODO: Sort by priority? --}}
     {{#each (preparePosts collections.writing)}}
       {{#if data.isFavorite}}

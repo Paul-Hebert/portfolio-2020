@@ -3,6 +3,14 @@
   transition: transform $transition-speed $transition-easing;
   border-radius: $border-radius-med;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--horizontal {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  max-width: 60em;
 }
 
 .card:hover {
@@ -37,6 +45,11 @@
 
 .card:hover::after {
   transform: scaleY(1);
+}
+
+.card__cover {
+  position: relative;
+  z-index: 1;
 }
 
 .card__content {
