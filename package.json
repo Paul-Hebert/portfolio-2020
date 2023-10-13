@@ -33,7 +33,7 @@
     "handlebars": "^4.7.3",
     "handlebars-helper-ternary": "^1.0.0",
     "helper-markdown": "^1.0.0",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.4.1",
     "markdown-it": "^10.0.0",
     "moment": "^2.24.0",
     "npm-run-all": "^4.1.5",
